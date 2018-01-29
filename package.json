@@ -2,7 +2,11 @@
   "name": "fullcalendar-typescript-example",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fullcalendar/typescript-example.git"
+  },
+  "main": "dist/example.js",
   "dependencies": {
     "fullcalendar": "^3.8.1",
     "jquery": "^3.3.1"
