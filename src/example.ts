@@ -2,7 +2,9 @@ import * as $ from 'jquery';
 import 'fullcalendar';
 
 $(function() {
-  $('#calendar').fullCalendar({
+  let containerEl: JQuery = $('#calendar');
+
+  containerEl.fullCalendar({
     header: {
       left: 'prev,next today',
       center: 'title',
