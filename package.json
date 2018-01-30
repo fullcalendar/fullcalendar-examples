@@ -1,0 +1,29 @@
+{
+  "name": "fullcalendar-scheduler-typescript-example",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fullcalendar/scheduler-typescript-example.git"
+  },
+  "main": "dist/example.js",
+  "dependencies": {
+    "fullcalendar": "^3.8.1",
+    "fullcalendar-scheduler": "^1.9.2",
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.3.0",
+    "awesome-typescript-loader": "^3.4.1",
+    "source-map-loader": "^0.2.3",
+    "typescript": "^2.6.2",
+    "webpack": "^3.10.0"
+  },
+  "scripts": {
+    "build": "./node_modules/webpack/bin/webpack.js",
+    "watch": "./node_modules/webpack/bin/webpack.js --watch",
+    "clean": "rm -rf ./dist"
+  },
+  "author": "Adam Shaw <arshaw@arshaw.com> (http://arshaw.com/)",
+  "license": "ISC"
+}
