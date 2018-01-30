@@ -1,10 +1,10 @@
 
-# FullCalendar Scheduler Typescript Example
+# FullCalendar Scheduler TypeScript Example
 
-An example dev environment for FullCalendar Scheduler + [Typescript],
-using [Webpack] and [Awesome Typescript Loader].
+An example dev environment for FullCalendar Scheduler + [TypeScript],
+using [Webpack] and [Awesome TypeScript Loader].
 
-[More information on setting up Typescript with Webpack &raquo;](https://www.typescriptlang.org/docs/handbook/react-&-webpack.html)
+[More information on setting up TypeScript with Webpack &raquo;](https://www.typescriptlang.org/docs/handbook/react-&-webpack.html)
 
 
 ## Installation
@@ -31,6 +31,6 @@ npm install --save-dev @types/jquery
 ```
 
 
-[Typescript]: https://www.typescriptlang.org/
+[TypeScript]: https://www.typescriptlang.org/
 [Webpack]: https://webpack.js.org/
-[Awesome Typescript Loader]: https://github.com/s-panferov/awesome-typescript-loader
+[Awesome TypeScript Loader]: https://github.com/s-panferov/awesome-typescript-loader
