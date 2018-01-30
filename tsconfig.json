@@ -3,7 +3,7 @@
     "target": "es5",
     "module": "commonjs",
     "noImplicitAny": true,
-    "strictNullChecks": true
+    "strict": true
   },
   "include": [
     "src/**/*.ts"
