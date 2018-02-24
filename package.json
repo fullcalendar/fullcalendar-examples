@@ -20,8 +20,8 @@
     "webpack": "^3.10.0"
   },
   "scripts": {
-    "build": "./node_modules/webpack/bin/webpack.js",
-    "watch": "./node_modules/webpack/bin/webpack.js --watch",
+    "build": "webpack",
+    "watch": "webpack --watch",
     "clean": "rm -rf ./dist"
   },
   "author": "Adam Shaw <arshaw@arshaw.com> (http://arshaw.com/)",
