@@ -1,10 +1,7 @@
 
-# FullCalendar TypeScript Example
+# FullCalendar Webpack Example
 
-An example dev environment for FullCalendar + [TypeScript],
-using [Webpack] and [Awesome TypeScript Loader].
-
-[More information on setting up TypeScript with Webpack &raquo;](https://www.typescriptlang.org/docs/handbook/react-&-webpack.html)
+An example dev environment for FullCalendar using [Webpack].
 
 
 ## Installation
@@ -26,11 +23,9 @@ Here are the installation commands for use in your own project:
 
 ```sh
 npm install --save jquery fullcalendar
-npm install --save-dev typescript webpack awesome-typescript-loader source-map-loader
+npm install --save-dev webpack source-map-loader
 npm install --save-dev @types/jquery
 ```
 
 
-[TypeScript]: https://www.typescriptlang.org/
 [Webpack]: https://webpack.js.org/
-[Awesome TypeScript Loader]: https://github.com/s-panferov/awesome-typescript-loader
