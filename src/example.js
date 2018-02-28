@@ -1,9 +1,9 @@
-import * as $ from 'jquery';
+import $ from 'jquery';
 import 'fullcalendar';
 import 'fullcalendar-scheduler';
 
 $(function() {
-  let containerEl: JQuery = $('#calendar');
+  var containerEl = $('#calendar');
 
   containerEl.fullCalendar({
     now: '2018-02-07',

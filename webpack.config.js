@@ -1,7 +1,7 @@
 const path = require('path')
 
 module.exports = {
-  entry: './src/example.ts',
+  entry: './src/example.js',
   output: {
     filename: 'example.js',
     path: path.join(__dirname, 'dist')
@@ -15,12 +15,6 @@ module.exports = {
   },
   devtool: 'sourcemap',
   resolve: {
-    extensions: [ '.ts', '.js' ],
-  },
-  module: {
-    rules: [
-      { test: /\.tsx?$/, loader: 'awesome-typescript-loader' },
-      { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' }
-    ]
+    extensions: [ '.js' ]
   }
 }
