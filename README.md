@@ -23,8 +23,7 @@ Here are the installation commands for use in your own project:
 
 ```sh
 npm install --save jquery fullcalendar
-npm install --save-dev webpack source-map-loader
-npm install --save-dev @types/jquery
+npm install --save-dev webpack
 ```
 
 

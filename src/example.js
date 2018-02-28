@@ -1,8 +1,8 @@
-import * as $ from 'jquery';
+import $ from 'jquery';
 import 'fullcalendar';
 
 $(function() {
-  let containerEl: JQuery = $('#calendar');
+  var containerEl = $('#calendar');
 
   containerEl.fullCalendar({
     header: {

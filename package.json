@@ -1,10 +1,10 @@
 {
-  "name": "fullcalendar-typescript-example",
+  "name": "fullcalendar-webpack-example",
   "version": "1.0.0",
   "description": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fullcalendar/typescript-example.git"
+    "url": "https://github.com/fullcalendar/webpack-example.git"
   },
   "main": "dist/example.js",
   "dependencies": {
@@ -12,10 +12,6 @@
     "jquery": "^3.3.1"
   },
   "devDependencies": {
-    "@types/jquery": "^3.3.0",
-    "awesome-typescript-loader": "^3.4.1",
-    "source-map-loader": "^0.2.3",
-    "typescript": "^2.6.2",
     "webpack": "^3.10.0"
   },
   "scripts": {
