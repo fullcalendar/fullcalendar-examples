@@ -8,8 +8,8 @@
   },
   "main": "dist/example.js",
   "dependencies": {
-    "fullcalendar": "^3.8.1",
-    "fullcalendar-scheduler": "^1.9.2",
+    "fullcalendar": "^3.9.0",
+    "fullcalendar-scheduler": "^1.9.3",
     "jquery": "^3.3.1"
   },
   "devDependencies": {
