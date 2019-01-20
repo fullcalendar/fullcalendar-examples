@@ -16,7 +16,7 @@
   "scripts": {
     "build": "webpack",
     "watch": "webpack --watch",
-    "clean": "rm -rf ./dist"
+    "clean": "rm -rf dist"
   },
   "author": "Adam Shaw <arshaw@arshaw.com> (http://arshaw.com/)",
   "license": "ISC"
