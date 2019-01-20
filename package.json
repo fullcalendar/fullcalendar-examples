@@ -8,7 +8,7 @@
   },
   "main": "dist/example.js",
   "dependencies": {
-    "fullcalendar": "^4.0.0"
+    "fullcalendar": "4.0.0-alpha.4"
   },
   "devDependencies": {
     "webpack": "^3.10.0"

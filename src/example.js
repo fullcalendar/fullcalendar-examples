@@ -1,10 +1,9 @@
-import $ from 'jquery';
-import 'fullcalendar';
+import { Calendar } from 'fullcalendar';
 
-$(function() {
-  var containerEl = $('#calendar');
+document.addEventListener('DOMContentLoaded', function() {
+  var calendarEl = document.getElementById('calendar');
 
-  containerEl.fullCalendar({
+  var calendar = new Calendar(calendarEl, {
     header: {
       left: 'prev,next today',
       center: 'title',
@@ -70,5 +69,7 @@ $(function() {
         start: '2018-01-28'
       }
     ]
-  })
+  });
+
+  calendar.render();
 });
