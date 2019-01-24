@@ -1,0 +1,17 @@
+{
+  "name": "fullcalendar-example-repos",
+  "version": "1.0.0",
+  "description": "Holds all example repos and hosts an internal NPM registry to test them.",
+  "author": {
+    "name": "Adam Shaw",
+    "email": "arshaw@arshaw.com",
+    "url": "http://arshaw.com/"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "verdaccio": "^3.10.2"
+  },
+  "scripts": {
+    "registry": "verdaccio"
+  }
+}

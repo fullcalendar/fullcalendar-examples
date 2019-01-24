@@ -1,0 +1,3 @@
+[submodule "webpack-example"]
+	path = webpack-example
+	url = https://github.com/fullcalendar/webpack-example.git
