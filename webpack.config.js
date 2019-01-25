@@ -4,7 +4,7 @@ module.exports = {
   mode: 'development',
   entry: './src/example.js',
   resolve: {
-    extensions: [ '.js' ],
+    extensions: [ '.js' ]
   },
   output: {
     filename: 'example.js',
