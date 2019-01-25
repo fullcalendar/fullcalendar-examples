@@ -8,7 +8,10 @@
   },
   "main": "dist/example.js",
   "dependencies": {
-    "fullcalendar": "4.0.0-alpha.4"
+    "@fullcalendar/core": "4.0.0-beta.1",
+    "@fullcalendar/daygrid": "4.0.0-beta.1",
+    "@fullcalendar/timegrid": "4.0.0-beta.1",
+    "@fullcalendar/list": "4.0.0-beta.1"
   },
   "devDependencies": {
     "webpack": "^3.10.0"
