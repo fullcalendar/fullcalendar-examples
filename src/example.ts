@@ -1,10 +1,13 @@
-import * as $ from 'jquery';
-import 'fullcalendar';
+import { Calendar } from '@fullcalendar/core';
+import DayGridPlugin from '@fullcalendar/daygrid';
+import TimeGridPlugin from '@fullcalendar/timegrid';
+import ListPlugin from '@fullcalendar/list';
 
-$(function() {
-  let containerEl: JQuery = $('#calendar');
+document.addEventListener('DOMContentLoaded', function() {
+  let calendarEl: HTMLElement = document.getElementById('calendar')!;
 
-  containerEl.fullCalendar({
+  let calendar = new Calendar(calendarEl, {
+    plugins: [ DayGridPlugin, TimeGridPlugin, ListPlugin ],
     header: {
       left: 'prev,next today',
       center: 'title',
@@ -70,5 +73,7 @@ $(function() {
         start: '2018-01-28'
       }
     ]
-  })
+  });
+
+  calendar.render();
 });
