@@ -1,11 +1,14 @@
-import * as $ from 'jquery';
-import 'fullcalendar';
-import 'fullcalendar-scheduler';
+import { Calendar } from '@fullcalendar/core';
+import DayGridPlugin from '@fullcalendar/daygrid';
+import ListPlugin from '@fullcalendar/list';
+import TimeGridPlugin from '@fullcalendar/timegrid';
+import ResourceTimelinePlugin from '@fullcalendar/resource-timeline';
 
-$(function() {
-  let containerEl: JQuery = $('#calendar');
+document.addEventListener('DOMContentLoaded', function() {
+  let calendarEl: HTMLElement = document.getElementById('calendar')!;
 
-  containerEl.fullCalendar({
+  let calendar = new Calendar(calendarEl, {
+    plugins: [ DayGridPlugin, ListPlugin, TimeGridPlugin, ResourceTimelinePlugin ],
     now: '2018-02-07',
     editable: true, // enable draggable events
     aspectRatio: 1.8,
@@ -19,7 +22,8 @@ $(function() {
     views: {
       timelineThreeDays: {
         type: 'timeline',
-        duration: { days: 3 }
+        duration: { days: 3 },
+        buttonText: '3 day'
       }
     },
     resourceLabelText: 'Rooms',
@@ -62,4 +66,6 @@ $(function() {
       { id: '5', resourceId: 'f', start: '2018-02-07T00:30:00', end: '2018-02-07T02:30:00', title: 'event 5' }
     ]
   });
+
+  calendar.render();
 });
