@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     header: {
       left: 'today prev,next',
       center: 'title',
-      right: 'timelineDay,timelineThreeDays,agendaWeek,month,listWeek'
+      right: 'timelineDay,timelineThreeDays,week,month,listWeek'
     },
     defaultView: 'timelineDay',
     views: {
