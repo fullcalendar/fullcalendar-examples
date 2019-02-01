@@ -4,7 +4,7 @@
 set -e
 
 # start in root
-cd "`dirname $0`"
+cd "`dirname $0`/.."
 
 root_dir="$PWD"
 
@@ -33,19 +33,6 @@ do
 
   echo "Clearing..."
   rm -rf node_modules package-lock.json
-
-  echo "Installing..."
-  npm install $npm_registry_str
-
-  echo "Building..."
-  npm run build
-
-  echo "Opening browser..."
-
-  for html_file in *.html
-  do
-    open -a "Google Chrome" "file://$PWD/$html_file"
-  done
 
   cd "$root_dir"
 done
