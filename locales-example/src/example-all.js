@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     header: {
       left: 'prev,next today',
       center: 'title',
-      right: 'month,week,day,listMonth'
+      right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
     },
     defaultDate: '2019-01-12',
     buttonIcons: false, // show the prev/next text

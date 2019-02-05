@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     header: {
       left: 'prev,next today',
       center: 'title',
-      right: 'month,week,day,listWeek'
+      right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
     },
     defaultDate: '2018-01-12',
     navLinks: true, // can click day/week names to navigate views
