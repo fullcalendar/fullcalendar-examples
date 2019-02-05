@@ -1,7 +1,7 @@
 import { Calendar } from '@fullcalendar/core';
-import DayGridPlugin from '@fullcalendar/daygrid';
-import TimeGridPlugin from '@fullcalendar/timegrid';
-import ListPlugin from '@fullcalendar/list';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import timeGridPlugin from '@fullcalendar/timegrid';
+import listPlugin from '@fullcalendar/list';
 import esLocale from '@fullcalendar/core/locales/es';
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var calendar = new Calendar(calendarEl, {
     locales: [ esLocale ],
-    plugins: [ DayGridPlugin, TimeGridPlugin, ListPlugin ],
+    plugins: [ dayGridPlugin, timeGridPlugin, listPlugin ],
     header: {
       left: 'prev,next today',
       center: 'title',
