@@ -1,14 +1,14 @@
 import { Calendar } from '@fullcalendar/core';
-import DayGridPlugin from '@fullcalendar/daygrid';
-import ListPlugin from '@fullcalendar/list';
-import TimeGridPlugin from '@fullcalendar/timegrid';
-import ResourceTimelinePlugin from '@fullcalendar/resource-timeline';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import listPlugin from '@fullcalendar/list';
+import timeGridPlugin from '@fullcalendar/timegrid';
+import resourceTimelinePlugin from '@fullcalendar/resource-timeline';
 
 document.addEventListener('DOMContentLoaded', function() {
   let calendarEl: HTMLElement = document.getElementById('calendar')!;
 
   let calendar = new Calendar(calendarEl, {
-    plugins: [ DayGridPlugin, ListPlugin, TimeGridPlugin, ResourceTimelinePlugin ],
+    plugins: [ dayGridPlugin, listPlugin, timeGridPlugin, resourceTimelinePlugin ],
     now: '2018-02-07',
     editable: true, // enable draggable events
     aspectRatio: 1.8,
@@ -16,12 +16,12 @@ document.addEventListener('DOMContentLoaded', function() {
     header: {
       left: 'today prev,next',
       center: 'title',
-      right: 'timelineDay,timelineThreeDays,week,month,listWeek'
+      right: 'resourceTimelineDay,resourceTimelineThreeDays,timeGridWeek,dayGridMonth,listWeek'
     },
-    defaultView: 'timelineDay',
+    defaultView: 'resourceTimelineDay',
     views: {
-      timelineThreeDays: {
-        type: 'timeline',
+      resourceTimelineThreeDays: {
+        type: 'resourceTimeline',
         duration: { days: 3 },
         buttonText: '3 day'
       }
