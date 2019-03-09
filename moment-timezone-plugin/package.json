@@ -1,0 +1,28 @@
+{
+  "name": "fullcalendar-moment-timezone-example",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fullcalendar/webpack-example.git"
+  },
+  "main": "dist/example.js",
+  "dependencies": {
+    "@fullcalendar/core": "4.0.0-beta.5",
+    "@fullcalendar/daygrid": "4.0.0-beta.5",
+    "@fullcalendar/moment-timezone": "^4.0.0-beta.5",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.23"
+  },
+  "devDependencies": {
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1"
+  },
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "clean": "rm -rf dist"
+  },
+  "author": "Adam Shaw <arshaw@arshaw.com> (http://arshaw.com/)",
+  "license": "ISC"
+}
