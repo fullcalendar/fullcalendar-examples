@@ -1,4 +1,5 @@
 import { Calendar } from '@fullcalendar/core';
+import interactionPlugin from '@fullcalendar/interaction';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import listPlugin from '@fullcalendar/list';
 import timeGridPlugin from '@fullcalendar/timegrid';
@@ -8,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let calendarEl: HTMLElement = document.getElementById('calendar')!;
 
   let calendar = new Calendar(calendarEl, {
-    plugins: [ dayGridPlugin, listPlugin, timeGridPlugin, resourceTimelinePlugin ],
+    plugins: [ interactionPlugin, dayGridPlugin, listPlugin, timeGridPlugin, resourceTimelinePlugin ],
     now: '2018-02-07',
     editable: true, // enable draggable events
     aspectRatio: 1.8,
