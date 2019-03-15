@@ -1,4 +1,5 @@
 import { Calendar } from '@fullcalendar/core';
+import interactionPlugin from '@fullcalendar/interaction';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import momentTimezonePlugin from '@fullcalendar/moment-timezone';
 
@@ -6,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar');
 
   var calendar = new Calendar(calendarEl, {
-    plugins: [ dayGridPlugin, momentTimezonePlugin ],
+    plugins: [ interactionPlugin, dayGridPlugin, momentTimezonePlugin ],
     timeZone: 'Europe/Madrid',
     defaultDate: '2018-01-12',
     navLinks: true, // can click day/week names to navigate views
