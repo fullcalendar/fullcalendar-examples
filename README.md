@@ -1,6 +1,6 @@
 # Fullcalendar React Examples
 
-[Demo](https://joshuaruff.github.io/fullCalendar_examples/).
+[View Demo](https://joshuaruff.github.io/fullCalendar_examples/)
  
 ```jsx
 // import React...
