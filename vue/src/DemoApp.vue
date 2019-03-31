@@ -20,7 +20,7 @@
 <script>
 import FullCalendar from 'arshaw-fullcalendar-vue'
 import dayGridPlugin from '@fullcalendar/daygrid'
-import interactionPlugin from '@fullcalendar/interaction'
+import interactionPlugin from '@fullcalendar/interaction' // needed tor dateClick
 
 export default {
   components: {
