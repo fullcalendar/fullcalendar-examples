@@ -1,6 +1,3 @@
-[submodule "scheduler-typescript-example"]
-	path = scheduler-typescript-example
-	url = https://github.com/fullcalendar/scheduler-typescript-example.git
 [submodule "typescript-example"]
 	path = typescript-example
 	url = https://github.com/fullcalendar/typescript-example.git
