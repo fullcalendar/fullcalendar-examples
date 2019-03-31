@@ -4,6 +4,7 @@
   "description": "Examples for Full Calendar React App",
   "main": "index.js",
   "scripts": {
+    "clean": "rm -rf dist",
     "watch": "webpack --watch",
     "build": "webpack"
   },
