@@ -1,6 +1,3 @@
-[submodule "webpack-example"]
-	path = webpack-example
-	url = https://github.com/fullcalendar/webpack-example.git
 [submodule "scheduler-webpack-example"]
 	path = scheduler-webpack-example
 	url = https://github.com/fullcalendar/scheduler-webpack-example.git
