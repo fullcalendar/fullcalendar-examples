@@ -9,7 +9,7 @@ import '@fullcalendar/daygrid/main.css'
 const today = new Date()
 const tomorrow = new Date()
 
-export default class ExampleComponent extends React.Component {
+export default class DemoApp extends React.Component {
   constructor(props) {
     super(props)
     // Create a reference to the component to use Full Calendar methods
