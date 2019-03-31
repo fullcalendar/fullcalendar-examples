@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch": "webpack --watch",
-    "build": "webpack",
-    "lint": "eslint src"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -31,16 +30,8 @@
     "@babel/polyfill": "^7.0.0-beta.51",
     "@babel/preset-env": "^7.0.0-beta.51",
     "@babel/preset-react": "^7.0.0-beta.51",
-    "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.0-beta.0",
     "css-loader": "^0.28.11",
-    "eslint": "^5.15.3",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-node": "^8.0.1",
-    "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "gh-pages": "^2.0.1",
     "node-sass": "^4.8.3",
     "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",
