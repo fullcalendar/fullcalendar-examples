@@ -1,76 +1,63 @@
 import React from 'react'
 import FullCalendar from 'sardius-fullcalendar-wrapper'
-import interactionPlugin from '@fullcalendar/interaction'
 import dayGridPlugin from '@fullcalendar/daygrid'
+import interactionPlugin from '@fullcalendar/interaction' // needed for dayClick
 
-import '@fullcalendar/core/main.css'
-import '@fullcalendar/daygrid/main.css'
-
-const today = new Date()
-const tomorrow = new Date()
+import './main.scss'
 
 export default class DemoApp extends React.Component {
-  constructor(props) {
-    super(props)
-    // Create a reference to the component to use Full Calendar methods
-    this.calendarApiRef = React.createRef()
-    this.state = {
-      events: [
-        {
-          title: 'Example Event',
-          start: today
-        },
-        {
-          title: 'Example Event',
-          start: tomorrow.setDate(today.getDate() + 1)
-        }
-      ]
+
+  calendarComponentRef = React.createRef()
+  state = {
+    calendarWeekends: true,
+    calendarEvents: [ // initial event data
+      { title: 'Event Now', start: new Date() }
+    ]
+  }
+
+  toggleWeekends = () => {
+    this.setState({ // update a property
+      calendarWeekends: !this.state.calendarWeekends
+    })
+  }
+
+  gotoPast = () => {
+    let calendarApi = this.calendarComponentRef.current.calendar // TODO: use getApi!!!
+    calendarApi.gotoDate('2000-01-01') // call a method on the Calendar object
+  }
+
+  handleDateClick = (arg) => {
+    if (confirm('Would you like to add an event to ' + arg.dateStr + ' ?')) {
+      this.setState({  // add new event data
+        calendarEvents: this.state.calendarEvents.concat({ // creates a new array
+          title: 'New Event',
+          date: arg.date,
+          allDay: arg.allDay
+        })
+      })
     }
-  }
-
-  eventClicked = (eventClickInfo) => {
-    alert('Event has been clicked!')
-  }
-
-  getView = () => {
-    // Use reference to call Full Calendar Methods
-    const view = this.calendarApiRef.current.calendar.getView()
-    alert('We are using FullCalendar Methods!')
-  }
-
-  selectEvent = (selectionInfo) => {
-    alert('Event Selected!')
   }
 
   render() {
     return (
-      <FullCalendar
-        ref={this.calendarApiRef}
-        nowIndicator
-        header={{
-          left: 'prev,today,next',
-          center: 'title',
-          right: 'dayGridMonth, dayGridWeek, dayGridDay'
-        }}
-        navLinks
-        events={this.state.events}
-        select={selectionInfo => {
-          this.selectEvent(selectionInfo)
-        }}
-        // Another example of a callback / handler function
-        eventClick={eventClickInfo => {
-          this.eventClicked(eventClickInfo)
-        }}
-        plugins={[
-          interactionPlugin,
-          dayGridPlugin
-        ]}
-        editable
-        selectable
-        snapDuration="00:05"
-        allDaySlot={false}
-        defaultView="dayGridMonth"
-      />
+      <div className='demo-app'>
+        <div className='demo-app-top'>
+          <button onClick={ this.toggleWeekends }>dynamically toggle weekends</button>&nbsp;
+          <button onClick={ this.gotoPast }>go to a date in the past</button>&nbsp;
+          (also, click a date/time to add an event)
+        </div>
+        <div className='demo-app-calendar'>
+          <FullCalendar
+            plugins={[ dayGridPlugin, interactionPlugin ]}
+            ref={ this.calendarComponentRef }
+            defaultView="dayGridMonth"
+            weekends={ this.state.calendarWeekends }
+            events={ this.state.calendarEvents }
+            dateClick={ this.handleDateClick }
+            />
+        </div>
+      </div>
     )
   }
+
 }
