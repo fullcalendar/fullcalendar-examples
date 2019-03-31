@@ -4,8 +4,8 @@
   "description": "Examples for Full Calendar React App",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode development",
+    "watch": "webpack --watch",
+    "build": "webpack",
     "lint": "eslint src/ ",
     "deploy": "gh-pages -d dist",
     "publish-demo": "npm run build && npm run deploy"
@@ -43,7 +43,6 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
     "gh-pages": "^2.0.1",
-    "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.8.3",
     "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",
