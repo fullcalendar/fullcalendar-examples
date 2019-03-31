@@ -2,6 +2,9 @@
 module.exports = {
   mode: 'development',
   entry: './src/index.js',
+  resolve: {
+    extensions: [ '.js', '.jsx' ]
+  },
   module: {
     rules: [
       {
@@ -27,8 +30,5 @@ module.exports = {
         ]
       }
     ]
-  },
-  resolve: {
-    extensions: ['.js', '.jsx']
   }
 }
