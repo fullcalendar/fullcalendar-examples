@@ -62,8 +62,8 @@ export default {
 
 <style lang='scss'>
 
-/* you must include each plugins' css */
-@import '~@fullcalendar/core/main.css';
+// you must include each plugins' css
+@import '~@fullcalendar/core/main.css'; // should be included in project? yes
 @import '~@fullcalendar/daygrid/main.css';
 
 .demo-app {

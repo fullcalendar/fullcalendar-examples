@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+
+body {
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+// you must include each plugins' css
+@import '~@fullcalendar/core/main.css';
+@import '~@fullcalendar/daygrid/main.css';

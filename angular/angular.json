@@ -26,7 +26,8 @@
               "src/styles.scss"
             ],
             "scripts": [],
-            "es5BrowserSupport": true
+            "es5BrowserSupport": true,
+            "preserveSymlinks": true
           },
           "configurations": {
             "production": {
