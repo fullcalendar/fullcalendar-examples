@@ -7,11 +7,15 @@
     (also, click a date/time to add an event)
   </div>
 
-  <full-calendar
-    #calendar
-    class='app-calendar'
-    [plugins]='calendarPlugins'
-    [weekends]='calendarWeekends'
-  ></full-calendar>
+  <div class='app-calendar'>
+    <full-calendar
+      #calendar
+      defaultView="dayGridMonth"
+      [plugins]="calendarPlugins"
+      [weekends]="calendarWeekends"
+      [events]="calendarEvents"
+      (dateClick)="handleDateClick($event)"
+    ></full-calendar>
+  </div>
 
 </div>

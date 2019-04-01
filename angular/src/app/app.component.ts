@@ -1,7 +1,8 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
 import { FullCalendarComponent } from '@fullcalendar/angular';
+import { EventInput } from '@fullcalendar/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
-import interactionPlugin from '@fullcalendar/interaction';
+import interactionPlugin from '@fullcalendar/interaction'; // for dateClick
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,9 @@ export class AppComponent {
 
   calendarPlugins = [dayGridPlugin, interactionPlugin];
   calendarWeekends = true;
+  calendarEvents: EventInput[] = [
+    { title: 'Event Now', start: new Date() }
+  ];
 
   toggleWeekends() {
     this.calendarWeekends = !this.calendarWeekends;
@@ -22,6 +26,16 @@ export class AppComponent {
   gotoPast() {
     let calendarApi = this.calendarComponent.getApi();
     calendarApi.gotoDate('2000-01-01'); // call a method on the Calendar object
+  }
+
+  handleDateClick(arg) {
+    if (confirm('Would you like to add an event to ' + arg.dateStr + ' ?')) {
+      this.calendarEvents = this.calendarEvents.concat({ // add new event data. must create new array
+        title: 'New Event',
+        start: arg.date,
+        allDay: arg.allDay
+      })
+    }
   }
 
 }
