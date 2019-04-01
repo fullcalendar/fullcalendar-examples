@@ -50,7 +50,7 @@ export default {
       if (confirm('Would you like to add an event to ' + arg.dateStr + ' ?')) {
         this.calendarEvents.push({ // add new event data
           title: 'New Event',
-          date: arg.date,
+          start: arg.date,
           allDay: arg.allDay
         })
       }
