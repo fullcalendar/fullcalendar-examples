@@ -10,7 +10,7 @@
     "@fullcalendar/daygrid": "^4.0.1",
     "@fullcalendar/interaction": "^4.0.1",
     "@fullcalendar/timegrid": "^4.0.1",
-    "@fullcalendar/vue": "^4.0.2-beta",
+    "@fullcalendar/vue": "*",
     "css-loader": "^2.1.1",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",

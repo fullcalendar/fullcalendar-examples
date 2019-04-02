@@ -1,31 +1,19 @@
 {
-  "name": "fullcalendar_examples",
-  "version": "1.0.0",
-  "description": "Examples for Full Calendar React App",
+  "private": true,
   "scripts": {
     "clean": "rm -rf dist",
     "watch": "webpack --watch",
     "build": "webpack"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/joshuaRuff/fullCalendar_examples.git"
-  },
-  "keywords": [
-    "fullcalendar"
-  ],
   "author": "Josh Ruff",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/joshuaRuff/fullCalendar_examples/issues"
-  },
-  "homepage": "https://github.com/joshuaRuff/fullCalendar_examples#readme",
   "dependencies": {
     "@fullcalendar/daygrid": "^4.0.1",
     "@fullcalendar/interaction": "^4.0.1",
+    "@fullcalendar/react": "*",
+    "@fullcalendar/timegrid": "^4.0.1",
     "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "sardius-fullcalendar-wrapper": "^1.3.6"
+    "react-dom": "^16.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.0",
