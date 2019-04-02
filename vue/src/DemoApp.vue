@@ -1,7 +1,7 @@
 <template>
   <div class='demo-app'>
     <div class='demo-app-top'>
-      <button @click="toggleWeekends">dynamically toggle weekends</button>
+      <button @click="toggleWeekends">toggle weekends</button>
       <button @click="gotoPast">go to a date in the past</button>
       (also, click a date/time to add an event)
     </div>
