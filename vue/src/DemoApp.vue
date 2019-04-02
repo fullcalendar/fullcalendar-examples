@@ -9,6 +9,11 @@
       class='demo-app-calendar'
       ref="fullCalendar"
       defaultView="dayGridMonth"
+      :header="{
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+      }"
       :plugins="calendarPlugins"
       :weekends="calendarWeekends"
       :events="calendarEvents"
@@ -18,8 +23,9 @@
 </template>
 
 <script>
-import FullCalendar from 'arshaw-fullcalendar-vue'
+import FullCalendar from '@fullcalendar/vue'
 import dayGridPlugin from '@fullcalendar/daygrid'
+import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
 
 export default {
@@ -30,6 +36,7 @@ export default {
     return {
       calendarPlugins: [ // plugins must be defined in the JS
         dayGridPlugin,
+        timeGridPlugin,
         interactionPlugin // needed for dateClick
       ],
       calendarWeekends: true,
@@ -63,8 +70,9 @@ export default {
 <style lang='scss'>
 
 // you must include each plugins' css
-@import '~@fullcalendar/core/main.css'; // should be included in project? yes
+@import '~@fullcalendar/core/main.css';
 @import '~@fullcalendar/daygrid/main.css';
+@import '~@fullcalendar/timegrid/main.css';
 
 .demo-app {
   font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
