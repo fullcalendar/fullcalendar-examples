@@ -1,7 +1,7 @@
 
 module.exports = {
   mode: 'development',
-  entry: './src/main.js',
+  entry: './src/main.jsx',
   resolve: {
     extensions: [ '.js', '.jsx' ]
   },
