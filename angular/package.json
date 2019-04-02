@@ -22,6 +22,7 @@
     "@fullcalendar/core": "^4.0.2",
     "@fullcalendar/daygrid": "^4.0.1",
     "@fullcalendar/interaction": "^4.0.1",
+    "@fullcalendar/timegrid": "^4.0.1",
     "core-js": "^2.5.4",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",

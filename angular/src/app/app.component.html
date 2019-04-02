@@ -2,15 +2,21 @@
 <div class='app'>
 
   <div class='app-top'>
-    <button (click)='toggleWeekends()'>dynamically toggle weekends</button>
+    <button (click)='toggleVisible()'>toggle visible</button>
+    <button (click)='toggleWeekends()'>toggle weekends</button>
     <button (click)='gotoPast()'>go to a date in the past</button>
     (also, click a date/time to add an event)
   </div>
 
-  <div class='app-calendar'>
+  <div class='app-calendar' *ngIf="calendarVisible">
     <full-calendar
       #calendar
       defaultView="dayGridMonth"
+      [header]="{
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+      }"
       [plugins]="calendarPlugins"
       [weekends]="calendarWeekends"
       [events]="calendarEvents"

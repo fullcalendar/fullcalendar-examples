@@ -2,6 +2,7 @@ import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
 import { FullCalendarComponent } from '@fullcalendar/angular';
 import { EventInput } from '@fullcalendar/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
+import timeGrigPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction'; // for dateClick
 
 @Component({
@@ -13,11 +14,16 @@ export class AppComponent {
 
   @ViewChild('calendar') calendarComponent: FullCalendarComponent; // the #calendar in the template
 
-  calendarPlugins = [dayGridPlugin, interactionPlugin];
+  calendarVisible = true;
+  calendarPlugins = [dayGridPlugin, timeGrigPlugin, interactionPlugin];
   calendarWeekends = true;
   calendarEvents: EventInput[] = [
     { title: 'Event Now', start: new Date() }
   ];
+
+  toggleVisible() {
+    this.calendarVisible = !this.calendarVisible;
+  }
 
   toggleWeekends() {
     this.calendarWeekends = !this.calendarWeekends;
