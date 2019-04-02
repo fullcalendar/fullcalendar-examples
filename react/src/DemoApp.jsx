@@ -16,29 +16,6 @@ export default class DemoApp extends React.Component {
     ]
   }
 
-  toggleWeekends = () => {
-    this.setState({ // update a property
-      calendarWeekends: !this.state.calendarWeekends
-    })
-  }
-
-  gotoPast = () => {
-    let calendarApi = this.calendarComponentRef.current.getApi()
-    calendarApi.gotoDate('2000-01-01') // call a method on the Calendar object
-  }
-
-  handleDateClick = (arg) => {
-    if (confirm('Would you like to add an event to ' + arg.dateStr + ' ?')) {
-      this.setState({  // add new event data
-        calendarEvents: this.state.calendarEvents.concat({ // creates a new array
-          title: 'New Event',
-          date: arg.date,
-          allDay: arg.allDay
-        })
-      })
-    }
-  }
-
   render() {
     return (
       <div className='demo-app'>
@@ -64,6 +41,29 @@ export default class DemoApp extends React.Component {
         </div>
       </div>
     )
+  }
+
+  toggleWeekends = () => {
+    this.setState({ // update a property
+      calendarWeekends: !this.state.calendarWeekends
+    })
+  }
+
+  gotoPast = () => {
+    let calendarApi = this.calendarComponentRef.current.getApi()
+    calendarApi.gotoDate('2000-01-01') // call a method on the Calendar object
+  }
+
+  handleDateClick = (arg) => {
+    if (confirm('Would you like to add an event to ' + arg.dateStr + ' ?')) {
+      this.setState({  // add new event data
+        calendarEvents: this.state.calendarEvents.concat({ // creates a new array
+          title: 'New Event',
+          date: arg.date,
+          allDay: arg.allDay
+        })
+      })
+    }
   }
 
 }
