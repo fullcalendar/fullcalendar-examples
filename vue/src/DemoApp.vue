@@ -70,6 +70,7 @@ export default {
 <style lang='scss'>
 
 // you must include each plugins' css
+// paths prefixed with ~ signify node_modules
 @import '~@fullcalendar/core/main.css';
 @import '~@fullcalendar/daygrid/main.css';
 @import '~@fullcalendar/timegrid/main.css';
