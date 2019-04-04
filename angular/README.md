@@ -1,14 +1,24 @@
 
-# Example Project with the FullCalendar Angular Component
+# FullCalendar Angular Example Project
 
-Made with angular cli with `ng new`, but with lots of stuff stripped out, including tests and linting.
+This is a fully-buildable example project for FullCalendar and Angular. It was initially set up with the `ng new` command of the [Angular CLI], but with lots of stuff stripped out including testing and linting. For a complete walkthrough, read the [FullCalendar Angular Docs &raquo;](https://fullcalendar.io/docs/angular)
 
-Most of the action is in the `src/app/` directory.
-TODO: tell where stylesheet reference is
+## Installation
+
+```bash
+git clone https://github.com/fullcalendar/fullcalendar-example-projects.git
+cd fullcalendar-example-projects/angular
+npm install
+```
+
+## Build commands
+
+```bash
+npm run build # build to a directory
+npm run start # continously build, as a server
+```
+
+After running the `npm run start` command, you will be given a localhost URL that can be visited in a browser.
 
 
-TODO: add @fullcalendar/angular as a real dependency. right now, you need to npm-link it (needed to add preserveSymlinks to angular.json)
-
-TODO: instructions how to check-out
-
-TODO: instructions how to build/watch/run
+[Angular CLI]: https://cli.angular.io/

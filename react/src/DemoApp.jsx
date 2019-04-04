@@ -59,7 +59,7 @@ export default class DemoApp extends React.Component {
       this.setState({  // add new event data
         calendarEvents: this.state.calendarEvents.concat({ // creates a new array
           title: 'New Event',
-          date: arg.date,
+          start: arg.date,
           allDay: arg.allDay
         })
       })

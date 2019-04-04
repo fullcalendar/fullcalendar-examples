@@ -1,21 +1,22 @@
 
-# FullCalendar React Component Example
+# FullCalendar React Example Project
 
-An example dev environment for the official FullCalendar React component, leveraging [Webpack], [Babel], and [Sass].
-
+This is a fully-buildable example project for FullCalendar and React, leveraging Webpack, Babel, and Sass. For a complete walkthrough, read the [FullCalendar React Docs &raquo;](https://fullcalendar.io/docs/react)
 
 ## Installation
 
-```sh
+```bash
+git clone https://github.com/fullcalendar/fullcalendar-example-projects.git
+cd fullcalendar-example-projects/react
 npm install
-npm run build
 ```
 
-Then run `index.html` in a browser.
+## Build Commands
 
-For watching, run `npm run watch`.
+```bash
+npm run build
+npm run watch # continously build
+npm run clean # start fresh
+```
 
-
-[Webpack]: https://webpack.js.org/
-[Babel]: https://babeljs.io/
-[Sass]: https://sass-lang.com/
+After running `build` or `watch`, open up `index.html` in a browser.

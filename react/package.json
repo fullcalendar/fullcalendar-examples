@@ -1,12 +1,12 @@
 {
   "private": true,
+  "author": "Josh Ruff",
+  "license": "ISC",
   "scripts": {
     "clean": "rm -rf dist",
     "watch": "webpack --watch",
     "build": "webpack"
   },
-  "author": "Josh Ruff",
-  "license": "ISC",
   "dependencies": {
     "@fullcalendar/daygrid": "^4.0.1",
     "@fullcalendar/interaction": "^4.0.1",
