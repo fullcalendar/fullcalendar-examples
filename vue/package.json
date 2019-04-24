@@ -11,7 +11,7 @@
     "@fullcalendar/daygrid": "^4.0.1",
     "@fullcalendar/interaction": "^4.0.1",
     "@fullcalendar/timegrid": "^4.0.1",
-    "@fullcalendar/vue": "*"
+    "@fullcalendar/vue": "^4.1.0"
   },
   "devDependencies": {
     "css-loader": "^2.1.1",
