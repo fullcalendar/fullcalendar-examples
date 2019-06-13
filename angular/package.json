@@ -1,5 +1,6 @@
 {
   "private": true,
+  "title": "FullCalendar Angular Example Project",
   "license": "ISC",
   "scripts": {
     "ng": "ng",

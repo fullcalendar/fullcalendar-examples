@@ -1,7 +1,7 @@
 {
   "private": true,
-  "author": "Josh Ruff",
   "license": "ISC",
+  "author": "Josh Ruff",
   "scripts": {
     "clean": "rm -rf dist",
     "watch": "webpack --watch",
