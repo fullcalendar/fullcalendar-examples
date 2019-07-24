@@ -13,6 +13,7 @@
     "@fullcalendar/daygrid": "^4.1.0",
     "@fullcalendar/list": "^4.1.0",
     "@fullcalendar/timegrid": "^4.1.0",
+    "@fullcalendar/timeline": "^4.1.0",
     "@fullcalendar/resource-timeline": "^4.1.0"
   },
   "devDependencies": {
