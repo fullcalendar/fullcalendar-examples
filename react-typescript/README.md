@@ -20,3 +20,8 @@ npm run clean # start fresh
 ```
 
 After running `build` or `watch`, open up `index.html` in a browser.
+
+
+## Note to self
+
+@arshaw, remove the `"typeRoots": [ "./node_modules/@types" ]` line in `tsconfig.json` eventually.
