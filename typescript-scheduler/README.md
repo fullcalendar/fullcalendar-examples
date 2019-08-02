@@ -1,7 +1,7 @@
 
 # FullCalendar Scheduler TypeScript Example
 
-This is a fully-buildable example project for FullCalendar and [TypeScript], leveraging [Webpack] and [ts-loader].
+This is a fully-buildable example project for [FullCalendar Scheduler] and [TypeScript], leveraging [Webpack] and [ts-loader].
 
 [More information on setting up TypeScript with Webpack &raquo;](https://www.typescriptlang.org/docs/handbook/react-&-webpack.html)
 
@@ -26,6 +26,7 @@ Then run `index.html` in a browser.
 For watching, run `npm run watch`.
 
 
+[FullCalendar Scheduler]: https://fullcalendar.io/purchase
 [TypeScript]: https://www.typescriptlang.org/
 [Webpack]: https://webpack.js.org/
 [ts-loader]: https://github.com/TypeStrong/ts-loader
