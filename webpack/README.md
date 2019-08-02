@@ -1,10 +1,18 @@
 
 # FullCalendar Webpack Example
 
-An example dev environment for FullCalendar using [Webpack].
+This is a fully-buildable example project for FullCalendar and [Webpack].
 
 
 ## Installation
+
+```bash
+git clone https://github.com/fullcalendar/fullcalendar-example-projects.git
+cd fullcalendar-example-projects/webpack
+npm install
+```
+
+## Build Commands
 
 ```sh
 npm install

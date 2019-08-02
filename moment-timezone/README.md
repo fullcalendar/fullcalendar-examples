@@ -1,19 +1,23 @@
 
-# FullCalendar Webpack Example
+# FullCalendar moment-timezone Example Project
 
-An example dev environment for FullCalendar using [Webpack].
-
+This is a fully-buildable example project for FullCalendar and [moment-timezone](https://momentjs.com/timezone/). For a complete walkthrough, read the [FullCalendar moment-timezone Docs &raquo;](https://fullcalendar.io/docs/moment-plugins#moment-timezone)
 
 ## Installation
 
-```sh
+```bash
+git clone https://github.com/fullcalendar/fullcalendar-example-projects.git
+cd fullcalendar-example-projects/moment-timezone
 npm install
-npm run build
 ```
 
-Then run `index.html` in a browser.
+## Build Commands
 
-For watching, run `npm run watch`.
+```bash
+npm run build
+npm run watch # continously build
+npm run clean # start fresh
+```
 
+After running `build` or `watch`, open up `index.html` in a browser.
 
-[Webpack]: https://webpack.js.org/

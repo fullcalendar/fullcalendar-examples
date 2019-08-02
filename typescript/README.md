@@ -1,13 +1,20 @@
 
-# FullCalendar TypeScript Example
+# FullCalendar TypeScript Example Project
 
-An example dev environment for FullCalendar + [TypeScript],
-using [Webpack] and [ts-loader].
+This is a fully-buildable example project for FullCalendar and [TypeScript], leveraging [Webpack] and [ts-loader].
 
 [More information on setting up TypeScript with Webpack &raquo;](https://www.typescriptlang.org/docs/handbook/react-&-webpack.html)
 
 
 ## Installation
+
+```bash
+git clone https://github.com/fullcalendar/fullcalendar-example-projects.git
+cd fullcalendar-example-projects/typescript
+npm install
+```
+
+## Build Commands
 
 ```sh
 npm install
