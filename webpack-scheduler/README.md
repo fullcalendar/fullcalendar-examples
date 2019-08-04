@@ -14,14 +14,13 @@ npm install
 
 ## Build Commands
 
-```sh
-npm install
+```bash
 npm run build
+npm run watch # continously build
+npm run clean # start fresh
 ```
 
-Then run `index.html` in a browser.
-
-For watching, run `npm run watch`.
+After running `build` or `watch`, open up `index.html` in a browser.
 
 
 [FullCalendar Scheduler]: https://fullcalendar.io/purchase
