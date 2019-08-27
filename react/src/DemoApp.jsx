@@ -3,6 +3,7 @@ import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction' // needed for dayClick
+import listPlugin from '@fullcalendar/list' //needed for list view
 
 import './main.scss'
 
@@ -32,7 +33,7 @@ export default class DemoApp extends React.Component {
               center: 'title',
               right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
             }}
-            plugins={[ dayGridPlugin, timeGridPlugin, interactionPlugin ]}
+            plugins={[ dayGridPlugin, timeGridPlugin, interactionPlugin, listPlugin ]}
             ref={ this.calendarComponentRef }
             weekends={ this.state.calendarWeekends }
             events={ this.state.calendarEvents }
