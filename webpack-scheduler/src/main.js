@@ -4,6 +4,7 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import listPlugin from '@fullcalendar/list';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import resourceTimelinePlugin from '@fullcalendar/resource-timeline';
+import './main.css'
 
 document.addEventListener('DOMContentLoaded', function() {
   let calendarEl = document.getElementById('calendar');
