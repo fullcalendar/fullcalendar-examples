@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "license": "ISC",
+  "author": "Adam Shaw <arshaw@arshaw.com> (http://arshaw.com/)",
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c --watch",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@fullcalendar/core": "^4.1.0",
+    "@fullcalendar/interaction": "^4.1.0",
+    "@fullcalendar/daygrid": "^4.1.0",
+    "@fullcalendar/timegrid": "^4.1.0",
+    "@fullcalendar/list": "^4.1.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^6.1.0",
+    "rollup": "^1.28.0",
+    "rollup-plugin-postcss": "^2.0.3"
+  }
+}
