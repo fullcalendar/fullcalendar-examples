@@ -6,6 +6,7 @@ import listPlugin from '@fullcalendar/list';
 import frLocale from '@fullcalendar/core/locales/fr';
 import ptLocale from '@fullcalendar/core/locales/pt';
 import arLocale from '@fullcalendar/core/locales/ar';
+import './page-styling/with-top-bar.css';
 
 document.addEventListener('DOMContentLoaded', function() {
   var initialLocaleCode = 'ar';

@@ -5,8 +5,7 @@
     "moduleResolution": "node",
     "noImplicitAny": true,
     "strict": true,
-    "sourceMap": true,
-    "outDir": "dist"
+    "sourceMap": true
   },
   "include": [
     "src/main.ts"

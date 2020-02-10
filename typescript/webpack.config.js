@@ -3,20 +3,16 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   mode: 'development',
+  devtool: 'sourcemap',
   entry: './src/main.ts',
   resolve: {
     extensions: [ '.ts', '.js' ]
   },
-  plugins: [
-    new MiniCssExtractPlugin({
-      filename: '[name].css'
-    })
-  ],
   module: {
     rules: [
       {
         test: /\.ts$/,
-        use: 'ts-loader',
+        use: 'ts-loader', // will use tsconfig.json
         exclude: /node_modules/
       },
       {
@@ -32,5 +28,9 @@ module.exports = {
     filename: 'main.js',
     path: path.join(__dirname, 'dist')
   },
-  devtool: 'sourcemap'
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'main.css'
+    })
+  ]
 }

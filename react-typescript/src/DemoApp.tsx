@@ -4,8 +4,7 @@ import { EventInput } from '@fullcalendar/core'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction' // needed for dayClick
-
-import './main.scss'
+import './main.css'
 
 interface DemoAppState {
   calendarWeekends: boolean
