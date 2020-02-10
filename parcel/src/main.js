@@ -79,4 +79,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
   calendar.render();
 });
-s
