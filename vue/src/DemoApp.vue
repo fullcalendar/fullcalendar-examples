@@ -8,8 +8,13 @@
     <FullCalendar
       class='demo-app-calendar'
       ref="fullCalendar"
-      :options="calendarOptions"
-      />
+      :options='calendarOptions'
+    >
+      <template v-slot:eventContent='arg'>
+        <b>{{ arg.timeText }}</b>
+        <i>{{ arg.event.title }}</i>
+      </template>
+    </FullCalendar>
   </div>
 </template>
 
@@ -39,6 +44,7 @@ export default {
           right: 'dayGridMonth,timeGridWeek,timeGridDay'
         },
         defaultView: 'dayGridMonth',
+        editable: true,
         weekends: true,
         events: [
           { title: 'Event Now', start: new Date() }
