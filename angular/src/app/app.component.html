@@ -11,16 +11,7 @@
   <div class='app-calendar' *ngIf="calendarVisible">
     <full-calendar
       #calendar
-      defaultView="dayGridMonth"
-      [header]="{
-        left: 'prev,next today',
-        center: 'title',
-        right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
-      }"
-      [plugins]="calendarPlugins"
-      [weekends]="calendarWeekends"
-      [events]="calendarEvents"
-      (dateClick)="handleDateClick($event)"
+      [options]="calendarOptions"
     ></full-calendar>
   </div>
 
