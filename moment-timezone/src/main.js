@@ -4,6 +4,8 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import momentTimezonePlugin from '@fullcalendar/moment-timezone';
 import './main.css';
 
+// look at the console for a time-zone-aware printout of a date
+
 document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar');
 
@@ -13,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     defaultDate: '2018-01-12',
     navLinks: true, // can click day/week names to navigate views
     editable: true,
-    eventLimit: true, // allow "more" link when too many events
+    dayMaxEvents: true, // allow "more" link when too many events
     events: [
       {
         title: 'All Day Event',

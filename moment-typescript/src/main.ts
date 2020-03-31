@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
     titleFormat: 'MMMM [!!!] YYYY', // a moment format string
     navLinks: true, // can click day/week names to navigate views
     editable: true,
-    eventLimit: true, // allow "more" link when too many events
+    dayMaxEvents: true, // allow "more" link when too many events
     events: [
       {
         title: 'All Day Event',

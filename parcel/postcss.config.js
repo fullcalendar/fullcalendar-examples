@@ -6,7 +6,7 @@ module.exports = {
   plugins: [
     require('postcss-css-variables')({
       variables: {
-        '--fc-unthemed-border-color': 'red'
+        '--fc-theme-standard-border-color': 'red'
       }
     })
   ]

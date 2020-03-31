@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         buttonText: '3 day'
       }
     },
-    resourceLabelText: 'Rooms',
+    resourceAreaHeaderContent: 'Rooms',
     resources: [
       { id: 'a', title: 'Auditorium A' },
       { id: 'b', title: 'Auditorium B', eventColor: 'green' },
