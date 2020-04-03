@@ -35,6 +35,12 @@ export default class DemoApp extends React.Component {
             ref={this.calendarComponentRef}
             weekends={this.state.calendarWeekends}
             events={this.state.calendarEvents}
+            eventContent={(arg) => (
+              <>
+                <b>{arg.timeText}</b>&nbsp;
+                <i>{arg.event.title}</i>
+              </>
+            )}
             dateClick={this.handleDateClick}
           />
         </div>
