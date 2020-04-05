@@ -53,7 +53,7 @@ export class AppComponent {
         title: 'New Event',
         start: arg.date,
         allDay: arg.allDay
-      })
+      });
     }
   }
 
