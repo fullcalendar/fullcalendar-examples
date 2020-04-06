@@ -7,11 +7,11 @@
     "build": "webpack"
   },
   "dependencies": {
-    "@fullcalendar/core": "5.0.0-beta",
-    "@fullcalendar/daygrid": "5.0.0-beta",
-    "@fullcalendar/interaction": "5.0.0-beta",
-    "@fullcalendar/timegrid": "5.0.0-beta",
-    "@fullcalendar/vue": "5.0.0-beta"
+    "@fullcalendar/core": "5.0.0-beta.1",
+    "@fullcalendar/daygrid": "5.0.0-beta.1",
+    "@fullcalendar/interaction": "5.0.0-beta.1",
+    "@fullcalendar/timegrid": "5.0.0-beta.1",
+    "@fullcalendar/vue": "5.0.0-beta.1"
   },
   "devDependencies": {
     "css-loader": "^3.0.0",

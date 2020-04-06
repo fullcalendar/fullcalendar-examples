@@ -8,11 +8,11 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@fullcalendar/core": "5.0.0-beta",
-    "@fullcalendar/interaction": "5.0.0-beta",
-    "@fullcalendar/daygrid": "5.0.0-beta",
-    "@fullcalendar/timegrid": "5.0.0-beta",
-    "@fullcalendar/list": "5.0.0-beta"
+    "@fullcalendar/core": "5.0.0-beta.1",
+    "@fullcalendar/interaction": "5.0.0-beta.1",
+    "@fullcalendar/daygrid": "5.0.0-beta.1",
+    "@fullcalendar/timegrid": "5.0.0-beta.1",
+    "@fullcalendar/list": "5.0.0-beta.1"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^6.1.0",
