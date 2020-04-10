@@ -16,7 +16,7 @@ export class AppComponent {
   calendarVisible = true;
   calendarOptions = {
     plugins: [dayGridPlugin, timeGrigPlugin, interactionPlugin],
-    header: {
+    headerToolbar: {
       left: 'prev,next today',
       center: 'title',
       right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'

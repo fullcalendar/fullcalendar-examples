@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     plugins: [ interactionPlugin, dayGridPlugin, timeGridPlugin, listPlugin ],
     locales: allLocales,
     locale: initialLocaleCode,
-    header: {
+    headerToolbar: {
       left: 'prev,next today',
       center: 'title',
       right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'

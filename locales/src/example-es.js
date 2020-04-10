@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var calendar = new Calendar(calendarEl, {
     locale: esLocale,
     plugins: [ interactionPlugin, dayGridPlugin, timeGridPlugin, listPlugin ],
-    header: {
+    headerToolbar: {
       left: 'prev,next today',
       center: 'title',
       right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'

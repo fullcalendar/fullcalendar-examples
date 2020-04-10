@@ -26,7 +26,7 @@ export default class DemoApp extends React.Component {
         <div className='demo-app-calendar'>
           <FullCalendar
             defaultView="dayGridMonth"
-            header={{
+            headerToolbar={{
               left: 'prev,next today',
               center: 'title',
               right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'

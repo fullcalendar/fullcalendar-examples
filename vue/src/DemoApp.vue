@@ -38,7 +38,7 @@ export default {
           timeGridPlugin,
           interactionPlugin // needed for dateClick
         ],
-        header: {
+        headerToolbar: {
           left: 'prev,next today',
           center: 'title',
           right: 'dayGridMonth,timeGridWeek,timeGridDay'
