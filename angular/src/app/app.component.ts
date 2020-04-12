@@ -1,8 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
 import { FullCalendarComponent } from '@fullcalendar/angular';
 import dayGridPlugin from '@fullcalendar/daygrid';
-import timeGrigPlugin from '@fullcalendar/timegrid';
-import interactionPlugin from '@fullcalendar/interaction'; // for dateClick
+import timeGridPlugin from '@fullcalendar/timegrid';
+import listPlugin from '@fullcalendar/list';
+import interactionPlugin from '@fullcalendar/interaction';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,7 @@ export class AppComponent {
 
   calendarVisible = true;
   calendarOptions = {
-    plugins: [dayGridPlugin, timeGrigPlugin, interactionPlugin],
+    plugins: [dayGridPlugin, timeGridPlugin, listPlugin, interactionPlugin],
     headerToolbar: {
       left: 'prev,next today',
       center: 'title',
@@ -23,6 +24,7 @@ export class AppComponent {
     },
     defaultView: 'dayGridMonth',
     weekends: true,
+    editable: true,
     dateClick: this.handleDateClick.bind(this),
     events: [
       { title: 'Event Now', start: new Date() }
@@ -45,15 +47,13 @@ export class AppComponent {
 
   handleDateClick(arg) {
     if (confirm('Would you like to add an event to ' + arg.dateStr + ' ?')) {
-      const { calendarOptions } = this;
+      let calendarApi = this.calendarComponent.getApi();
 
-      // add new event data
-      // must create new array unless using deepChangeDetection
-      calendarOptions.events = calendarOptions.events.concat({
+      calendarApi.addEvent({
         title: 'New Event',
         start: arg.date,
         allDay: arg.allDay
-      });
+      })
     }
   }
 
