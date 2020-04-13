@@ -22,7 +22,7 @@ export class AppComponent {
       center: 'title',
       right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
     },
-    defaultView: 'dayGridMonth',
+    initialView: 'dayGridMonth',
     weekends: true,
     editable: true,
     dateClick: this.handleDateClick.bind(this),

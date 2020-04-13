@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
       center: 'title',
       right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
     },
-    defaultDate: '2018-01-12',
+    initialDate: '2018-01-12',
     titleFormat: 'MMMM [!!!] YYYY', // a moment format string
     navLinks: true, // can click day/week names to navigate views
     editable: true,

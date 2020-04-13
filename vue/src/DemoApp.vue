@@ -43,7 +43,7 @@ export default {
           center: 'title',
           right: 'dayGridMonth,timeGridWeek,timeGridDay'
         },
-        defaultView: 'dayGridMonth',
+        initialView: 'dayGridMonth',
         editable: true,
         weekends: true,
         events: [

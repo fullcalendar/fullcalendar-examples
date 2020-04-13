@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var calendar = new Calendar(calendarEl, {
     plugins: [ interactionPlugin, dayGridPlugin, momentTimezonePlugin ],
     timeZone: 'Europe/Madrid',
-    defaultDate: '2018-01-12',
+    initialDate: '2018-01-12',
     navLinks: true, // can click day/week names to navigate views
     editable: true,
     dayMaxEvents: true, // allow "more" link when too many events
