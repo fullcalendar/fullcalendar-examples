@@ -49,7 +49,7 @@ export default {
         events: [
           { title: 'Event Now', start: new Date() }
         ],
-        dateClick: this.handleDateClick.bind(this)
+        dateClick: this.handleDateClick
       }
     }
   },
@@ -67,7 +67,8 @@ export default {
 
     handleDateClick(arg) {
       if (confirm('Would you like to add an event to ' + arg.dateStr + ' ?')) {
-        this.calendarOptions.events.push({ // add new event data
+        let calendarApi = this.$refs.fullCalendar.getApi()
+        calendarApi.addEvent({
           title: 'New Event',
           start: arg.date,
           allDay: arg.allDay

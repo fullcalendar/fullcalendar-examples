@@ -2,7 +2,7 @@ import React from 'react'
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
-import interactionPlugin from '@fullcalendar/interaction' // needed for dayClick
+import interactionPlugin from '@fullcalendar/interaction'
 import './main.css'
 
 export default class DemoApp extends React.Component {
@@ -25,14 +25,15 @@ export default class DemoApp extends React.Component {
         </div>
         <div className='demo-app-calendar'>
           <FullCalendar
+            ref={this.calendarComponentRef}
             initialView="dayGridMonth"
             headerToolbar={{
               left: 'prev,next today',
               center: 'title',
-              right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+              right: 'dayGridMonth,timeGridWeek,timeGridDay'
             }}
             plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
-            ref={this.calendarComponentRef}
+            editable={true}
             weekends={this.state.calendarWeekends}
             events={this.state.calendarEvents}
             eventContent={(arg) => (
@@ -61,12 +62,11 @@ export default class DemoApp extends React.Component {
 
   handleDateClick = (arg) => {
     if (confirm('Would you like to add an event to ' + arg.dateStr + ' ?')) {
-      this.setState({  // add new event data
-        calendarEvents: this.state.calendarEvents.concat({ // creates a new array
-          title: 'New Event',
-          start: arg.date,
-          allDay: arg.allDay
-        })
+      let calendarApi = this.calendarComponentRef.current.getApi()
+      calendarApi.addEvent({
+        title: 'New Event',
+        start: arg.date,
+        allDay: arg.allDay
       })
     }
   }
