@@ -1,4 +1,4 @@
-import { Calendar } from '@fullcalendar/core';
+import { Calendar, Component, h } from '@fullcalendar/preact';
 import interactionPlugin from '@fullcalendar/interaction';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
@@ -7,6 +7,12 @@ import './main.css';
 
 document.addEventListener('DOMContentLoaded', function() {
   let calendarEl: HTMLElement = document.getElementById('calendar')!;
+
+  class CustomDayHeader extends Component<{ text: string }> {
+    render() {
+      return h('div', {}, '!' + this.props.text + '!')
+    }
+  }
 
   let calendar = new Calendar(calendarEl, {
     plugins: [ interactionPlugin, dayGridPlugin, timeGridPlugin, listPlugin ],
@@ -19,6 +25,9 @@ document.addEventListener('DOMContentLoaded', function() {
     navLinks: true, // can click day/week names to navigate views
     editable: true,
     dayMaxEvents: true, // allow "more" link when too many events
+    dayHeaderContent(arg: any) { // TODO: give a type
+      return h(CustomDayHeader, { text: arg.text })
+    },
     events: [
       {
         title: 'All Day Event',
