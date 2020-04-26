@@ -3,9 +3,9 @@ import interactionPlugin from '@fullcalendar/interaction';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import listPlugin from '@fullcalendar/list';
-import frLocale from '@fullcalendar/common/locales/fr';
-import ptLocale from '@fullcalendar/common/locales/pt';
-import arLocale from '@fullcalendar/common/locales/ar';
+import frLocale from '@fullcalendar/core/locales/fr';
+import ptLocale from '@fullcalendar/core/locales/pt';
+import arLocale from '@fullcalendar/core/locales/ar';
 import './page-styling/with-top-bar.css';
 
 document.addEventListener('DOMContentLoaded', function() {
