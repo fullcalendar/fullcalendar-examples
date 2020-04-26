@@ -1,9 +1,9 @@
-import { Calendar } from '@fullcalendar/preact';
+import { Calendar } from '@fullcalendar/core';
 import interactionPlugin from '@fullcalendar/interaction';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import listPlugin from '@fullcalendar/list';
-import allLocales from '@fullcalendar/core/locales-all';
+import allLocales from '@fullcalendar/common/locales-all';
 import './page-styling/with-top-bar.css';
 
 document.addEventListener('DOMContentLoaded', function() {

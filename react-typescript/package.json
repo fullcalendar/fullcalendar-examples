@@ -7,7 +7,6 @@
     "build": "webpack"
   },
   "dependencies": {
-    "@fullcalendar/core": "5.0.0-beta.2",
     "@fullcalendar/daygrid": "5.0.0-beta.2",
     "@fullcalendar/interaction": "5.0.0-beta.2",
     "@fullcalendar/react": "5.0.0-beta.2",

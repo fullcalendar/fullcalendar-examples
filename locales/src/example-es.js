@@ -1,9 +1,9 @@
-import { Calendar } from '@fullcalendar/preact';
+import { Calendar } from '@fullcalendar/core';
 import interactionPlugin from '@fullcalendar/interaction';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import listPlugin from '@fullcalendar/list';
-import esLocale from '@fullcalendar/core/locales/es';
+import esLocale from '@fullcalendar/common/locales/es';
 import './page-styling/plain.css';
 
 document.addEventListener('DOMContentLoaded', function() {

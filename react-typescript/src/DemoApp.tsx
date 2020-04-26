@@ -48,7 +48,7 @@ export default class DemoApp extends React.Component<{}, DemoAppState> {
             weekends={this.state.calendarWeekends}
             events={this.state.calendarEvents}
             dateClick={this.handleDateClick}
-            />
+          />
         </div>
       </div>
     )
