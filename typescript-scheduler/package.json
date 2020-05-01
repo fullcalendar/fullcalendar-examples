@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "typescript-scheduler-example-project",
+  "name": "@fullcalendar-example-projects/typescript-scheduler",
   "version": "0.0.0",
   "license": "ISC",
   "author": "Adam Shaw <arshaw@arshaw.com> (http://arshaw.com/)",

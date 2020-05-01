@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "react-typescript-example-project",
+  "name": "@fullcalendar-example-projects/react-typescript",
   "version": "0.0.0",
   "license": "ISC",
   "scripts": {

@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "moment-timezone-example-project",
+  "name": "@fullcalendar-example-projects/moment-timezone",
   "version": "0.0.0",
   "license": "ISC",
   "author": "Adam Shaw <arshaw@arshaw.com> (http://arshaw.com/)",

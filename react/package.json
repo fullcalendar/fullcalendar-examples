@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "react-example-project",
+  "name": "@fullcalendar-example-projects/react",
   "version": "0.0.0",
   "license": "ISC",
   "author": "Josh Ruff",
