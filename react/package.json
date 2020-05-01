@@ -1,5 +1,7 @@
 {
   "private": true,
+  "name": "react-example-project",
+  "version": "0.0.0",
   "license": "ISC",
   "author": "Josh Ruff",
   "scripts": {

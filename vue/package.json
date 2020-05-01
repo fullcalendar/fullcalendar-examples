@@ -1,5 +1,7 @@
 {
   "private": true,
+  "name": "vue-example-project",
+  "version": "0.0.0",
   "license": "ISC",
   "scripts": {
     "clean": "rm -rf dist",

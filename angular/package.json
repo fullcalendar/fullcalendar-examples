@@ -1,5 +1,7 @@
 {
   "private": true,
+  "name": "angular-example-project",
+  "version": "0.0.0",
   "title": "FullCalendar Angular Example Project",
   "license": "ISC",
   "scripts": {
