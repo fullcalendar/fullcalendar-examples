@@ -1,4 +1,4 @@
-import { Calendar, Component, h } from '@fullcalendar/core';
+import { Calendar, Component, createElement } from '@fullcalendar/core';
 import interactionPlugin from '@fullcalendar/interaction';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   class CustomDayHeader extends Component<{ text: string }> {
     render() {
-      return h('div', {}, '!' + this.props.text + '!')
+      return createElement('div', {}, '!' + this.props.text + '!')
     }
   }
 
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     editable: true,
     dayMaxEvents: true, // allow "more" link when too many events
     dayHeaderContent(arg: any) { // TODO: give a type
-      return h(CustomDayHeader, { text: arg.text })
+      return createElement(CustomDayHeader, { text: arg.text })
     },
     events: [
       {
