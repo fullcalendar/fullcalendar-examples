@@ -1,5 +1,5 @@
 const path = require('path')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -19,10 +19,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [
-          { loader: MiniCssExtractPlugin.loader },
-          { loader: 'css-loader', options: { importLoaders: 1 } }
-        ]
+        use: [ 'style-loader', 'css-loader' ]
       }
     ]
   },
@@ -31,8 +28,8 @@ module.exports = {
     path: path.join(__dirname, 'dist')
   },
   plugins: [
-    new MiniCssExtractPlugin({
-      filename: 'main.css'
+    new HtmlWebpackPlugin({
+      title: 'FullCalendar React Example'
     })
   ]
 }

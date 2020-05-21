@@ -3,5 +3,8 @@ import { render } from 'react-dom'
 import DemoApp from './DemoApp'
 
 document.addEventListener('DOMContentLoaded', function() {
-  render(<DemoApp />, document.getElementById('root'))
+  render(
+    <DemoApp />,
+    document.body.appendChild(document.createElement('div'))
+  )
 })

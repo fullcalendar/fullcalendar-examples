@@ -14,9 +14,10 @@ npm install
 ## Build Commands
 
 ```bash
-npm run build
-npm run watch # continously build
+npm run start # builds and opens a web browser
+
+# other commands:
+npm run build # builds files into dist/ directory
+npm run watch # same as build, but watches for changes
 npm run clean # start fresh
 ```
-
-After running `build` or `watch`, open up `index.html` in a browser.
