@@ -19,7 +19,7 @@ export default class DemoApp extends React.Component {
     return (
       <div className='demo-app'>
         <div className='demo-app-top'>
-          <button onClick={this.toggleWeekends}>toggle weekends</button>&nbsp;
+          <button onClick={this.toggleWeekends}>toggle weekendszz</button>&nbsp;
           <button onClick={this.gotoPast}>go to a date in the past</button>&nbsp;
           (also, click a date/time to add an event)
         </div>
