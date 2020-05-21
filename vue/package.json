@@ -13,13 +13,13 @@
     "@fullcalendar/daygrid": "5.0.0-beta.3",
     "@fullcalendar/interaction": "5.0.0-beta.3",
     "@fullcalendar/timegrid": "5.0.0-beta.3",
-    "@fullcalendar/vue": "5.0.0-beta.3"
+    "@fullcalendar/vue": "5.0.0-beta.3",
+    "vue": "^2.6.6"
   },
   "devDependencies": {
     "css-loader": "^3.0.0",
     "html-webpack-plugin": "^4.3.0",
     "source-map-loader": "^0.2.4",
-    "vue": "^2.6.6",
     "vue-loader": "^15.7.0",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.10",
