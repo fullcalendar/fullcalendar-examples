@@ -5,7 +5,10 @@
     "moduleResolution": "node",
     "noImplicitAny": true,
     "strict": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "rootDir": "src",
+    "outDir": "tsc"
   },
   "include": [
     "src/main.ts"
