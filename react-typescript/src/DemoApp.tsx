@@ -2,7 +2,7 @@ import * as React from 'react'
 import FullCalendar, { EventInput } from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
-import interactionPlugin from '@fullcalendar/interaction'
+import interactionPlugin, { DateClickArg } from '@fullcalendar/interaction'
 import './main.css'
 
 interface DemoAppState {
@@ -64,7 +64,7 @@ export default class DemoApp extends React.Component<{}, DemoAppState> {
     calendarApi.gotoDate('2000-01-01') // call a method on the Calendar object
   }
 
-  handleDateClick = (arg: any) => {
+  handleDateClick = (arg: DateClickArg) => {
     if (confirm('Would you like to add an event to ' + arg.dateStr + ' ?')) {
       let calendarApi = this.calendarComponentRef.current!.getApi()
       calendarApi.addEvent({
