@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "license": "ISC",
   "scripts": {
-    "clean": "rm -rf dist",
+    "clean": "rm -rf dist tsc",
     "watch": "webpack --watch",
     "build": "webpack"
   },
