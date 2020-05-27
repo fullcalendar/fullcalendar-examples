@@ -10,10 +10,10 @@
     "start": "webpack-dev-server --open"
   },
   "dependencies": {
-    "@fullcalendar/daygrid": "5.0.0-beta.3",
-    "@fullcalendar/interaction": "5.0.0-beta.3",
-    "@fullcalendar/timegrid": "5.0.0-beta.3",
-    "@fullcalendar/vue": "5.0.0-beta.3",
+    "@fullcalendar/daygrid": "5.0.0-beta.4",
+    "@fullcalendar/interaction": "5.0.0-beta.4",
+    "@fullcalendar/timegrid": "5.0.0-beta.4",
+    "@fullcalendar/vue": "5.0.0-beta.4",
     "vue": "^2.6.6"
   },
   "devDependencies": {
