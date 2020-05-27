@@ -10,6 +10,7 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
+    "@fullcalendar/adaptive": "5.0.0-beta.4",
     "@fullcalendar/core": "5.0.0-beta.4",
     "@fullcalendar/interaction": "5.0.0-beta.4",
     "@fullcalendar/daygrid": "5.0.0-beta.4",
