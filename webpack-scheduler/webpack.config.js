@@ -18,10 +18,11 @@ module.exports = {
           { loader: 'postcss-loader', options: {
             ident: 'postcss',
             plugins: () => [
-              require('postcss-css-variables')({
-                variables: {
-                  '--fc-theme-standard-border-color': 'red'
-                }
+              require('postcss-custom-properties')({ // for css vars
+                preserve: false, // completely reduce all css vars
+                importFrom: [
+                  'src/fullcalendar-vars.css'
+                ]
               })
             ]
           } }

@@ -1,6 +1,6 @@
 const nodeResolve = require('@rollup/plugin-node-resolve')
 const postcss = require('rollup-plugin-postcss')
-const postcssVariables = require('postcss-css-variables')
+const postcssCustomProperties = require('postcss-custom-properties')
 
 module.exports = {
   input: 'src/main.js',
@@ -14,10 +14,11 @@ module.exports = {
       */
       // extract: true,
       plugins: [
-        postcssVariables({
-          variables: {
-            '--fc-theme-standard-border-color': 'red'
-          }
+        postcssCustomProperties({ // for css vars
+          preserve: false, // completely reduce all css vars
+          importFrom: [
+            'src/fullcalendar-vars.css'
+          ]
         })
       ]
     })

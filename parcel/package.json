@@ -18,6 +18,6 @@
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
-    "postcss-css-variables": "^0.14.0"
+    "postcss-custom-properties": "^9.1.1"
   }
 }
