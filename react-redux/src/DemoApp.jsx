@@ -1,20 +1,19 @@
 import React, { createRef } from 'react'
-import FullCalendar, { formatDate } from '@fullcalendar/react'
+import { connect } from 'react-redux'
+import { createSelector } from 'reselect'
+import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
-import { INITIAL_EVENTS, createEventId } from './event-util'
+import actionCreators from './actions'
+import { getHashValues } from './utils'
 
-export default class DemoApp extends React.Component {
+class DemoApp extends React.Component {
 
   calendarRef = createRef()
-  state = {
-    weekendsVisible: true,
-    currentEvents: []
-  }
 
   render() {
-    let { state } = this
+    let { props } = this
 
     return (
       <div className='demo-app'>
@@ -22,8 +21,8 @@ export default class DemoApp extends React.Component {
           <label>
             <input
               type='checkbox'
-              checked={state.weekendsVisible}
-              onChange={this.handleWeekendsToggle}
+              checked={props.weekendsEnabled}
+              onChange={props.toggleWeekends}
             ></input>
             toggle weekends
           </label>
@@ -34,26 +33,28 @@ export default class DemoApp extends React.Component {
               ref={this.calendarRef}
               plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
               initialView='dayGridMonth'
-              events={INITIAL_EVENTS}
               headerToolbar={{
                 left: 'prev,next today',
                 center: 'title',
                 right: 'dayGridMonth,timeGridWeek,timeGridDay'
               }}
               editable={true}
-              weekends={state.weekendsVisible}
+              weekends={props.weekendsEnabled}
+              datesDidUpdate={this.handleVisibleRange}
               selectable={true}
               selectMirror={true}
               select={this.handleDateSelect}
+              events={props.events}
+              eventDrop={this.handleEventChange}
+              eventResize={this.handleEventChange}
               eventContent={renderEventContent}
               eventClick={this.handleEventClick}
-              eventsWillUpdate={this.handleEvents}
             />
           </div>
           <div className='demo-app-sidebar'>
             <h2>Event List</h2>
             <ul>
-              {state.currentEvents.map(renderSidebarEvent)}
+              {props.events.map(renderSidebarEvent)}
             </ul>
           </div>
         </div>
@@ -61,39 +62,39 @@ export default class DemoApp extends React.Component {
     )
   }
 
-  handleWeekendsToggle = () => {
-    this.setState({
-      weekendsVisible: !this.state.weekendsVisible
-    })
+  handleVisibleRange = (rangeInfo) => {
+    this.props.requestEvents(rangeInfo.startStr, rangeInfo.endStr)
+      .catch(reportNetworkError)
   }
 
   handleDateSelect = (selectInfo) => {
     let title = prompt('Please enter a new title for your event')
-    let calendarApi = this.calendarRef.current.getApi()
 
-    calendarApi.unselect()
+    this.calendarRef.current.getApi().unselect()
 
     if (title) {
-      calendarApi.addEvent({
-        id: createEventId(),
+      this.props.createEvent({
         title,
         start: selectInfo.startStr,
         end: selectInfo.endStr,
         allDay: selectInfo.allDay
-      })
+      }).catch(reportNetworkError)
     }
+  }
+
+  handleEventChange = (changeInfo) => {
+    this.props.updateEvent(changeInfo.event.toPlainObject())
+      .catch(() => {
+        reportNetworkError()
+        changeInfo.revert()
+      })
   }
 
   handleEventClick = (clickInfo) => {
     if (confirm(`Are you sure you want to delete the event '${clickInfo.event.title}'`)) {
-      clickInfo.event.remove()
+      this.props.deleteEvent(clickInfo.event.id)
+        .catch(reportNetworkError)
     }
-  }
-
-  handleEvents = (eventInfo) => {
-    this.setState({
-      currentEvents: eventInfo.allEvents
-    })
   }
 
 }
@@ -107,11 +108,31 @@ function renderEventContent(eventInfo) {
   )
 }
 
-function renderSidebarEvent(event) {
+function renderSidebarEvent(plainEventObject) {
   return (
-    <li key={event.id}>
-      <b>{formatDate(event.start, {year: 'numeric', month: 'short', day: 'numeric'})}</b> -
-      <i>{event.title}</i>
+    <li key={plainEventObject.id}>
+      <b>{plainEventObject.start}</b> -
+      <i>{plainEventObject.title}</i>
     </li>
   )
 }
+
+function reportNetworkError() {
+  alert('This action could not be completed')
+}
+
+function mapStateToProps() {
+  const getEventArray = createSelector(
+    (state) => state.eventsById,
+    getHashValues
+  )
+
+  return (state) => {
+    return {
+      events: getEventArray(state),
+      weekendsEnabled: state.weekendsEnabled
+    }
+  }
+}
+
+export default connect(mapStateToProps, actionCreators)(DemoApp)
