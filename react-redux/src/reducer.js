@@ -2,22 +2,22 @@ import { combineReducers } from 'redux'
 import { hashById } from './utils'
 
 export default combineReducers({
-  weekendsEnabled: reduceWeekendsEnabled,
-  eventsById: reduceEventsById
+  weekendsVisible,
+  eventsById
 })
 
-function reduceWeekendsEnabled(weekendsEnabled = true, action) {
+function weekendsVisible(weekendsVisible = true, action) {
   switch (action.type) {
 
     case 'TOGGLE_WEEKENDS':
-      return !weekendsEnabled
+      return !weekendsVisible
 
     default:
-      return weekendsEnabled
+      return weekendsVisible
   }
 }
 
-function reduceEventsById(eventsById = {}, action) {
+function eventsById(eventsById = {}, action) {
   switch (action.type) {
 
     case 'RECEIVE_EVENTS':

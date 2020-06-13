@@ -1,7 +1,7 @@
 import React, { createRef } from 'react'
 import { connect } from 'react-redux'
 import { createSelector } from 'reselect'
-import FullCalendar from '@fullcalendar/react'
+import FullCalendar, { formatDate } from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
@@ -13,64 +13,80 @@ class DemoApp extends React.Component {
   calendarRef = createRef()
 
   render() {
-    let { props } = this
-
     return (
       <div className='demo-app'>
-        <div className='demo-app-top'>
-          <label>
-            <input
-              type='checkbox'
-              checked={props.weekendsEnabled}
-              onChange={props.toggleWeekends}
-            ></input>
-            toggle weekends
-          </label>
-        </div>
+        {this.renderSidebar()}
         <div className='demo-app-main'>
-          <div className='demo-app-calendar'>
-            <FullCalendar
-              ref={this.calendarRef}
-              plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
-              headerToolbar={{
-                left: 'prev,next today',
-                center: 'title',
-                right: 'dayGridMonth,timeGridWeek,timeGridDay'
-              }}
-              initialView='dayGridMonth'
-              editable={true}
-              weekends={props.weekendsEnabled}
-              datesSet={this.handleDates}
-              selectable={true}
-              selectMirror={true}
-              select={this.handleDateSelect}
-              events={props.events}
-              eventContent={renderEventContent}
-              eventClick={this.handleEventClick}
-              eventAdd={this.handleEventAdd}
-              eventChange={this.handleEventChange}
-              eventRemove={this.handleEventRemove}
-            />
-          </div>
-          <div className='demo-app-sidebar'>
-            <h2>Event List</h2>
-            <ul>
-              {props.events.map(renderSidebarEvent)}
-            </ul>
-          </div>
+          <FullCalendar
+            ref={this.calendarRef}
+            plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+            headerToolbar={{
+              left: 'prev,next today',
+              center: 'title',
+              right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            }}
+            initialView='dayGridMonth'
+            editable={true}
+            selectable={true}
+            selectMirror={true}
+            dayMaxEvents={true}
+            weekends={this.props.weekendsVisible}
+            datesSet={this.handleDates}
+            select={this.handleDateSelect}
+            events={this.props.events}
+            eventContent={renderEventContent} // custom render function
+            eventClick={this.handleEventClick}
+            eventAdd={this.handleEventAdd}
+            eventChange={this.handleEventChange} // called for drag-n-drop/resize
+            eventRemove={this.handleEventRemove}
+          />
         </div>
       </div>
     )
   }
 
+  renderSidebar() {
+    return (
+      <div className='demo-app-sidebar'>
+        <div className='demo-app-sidebar-section'>
+          <h2>Instructions</h2>
+          <ul>
+            <li>Select dates and you will be prompted to create a new event</li>
+            <li>Drag, drop, and resize events</li>
+            <li>Click an event to delete it</li>
+          </ul>
+        </div>
+        <div className='demo-app-sidebar-section'>
+          <label>
+            <input
+              type='checkbox'
+              checked={this.props.weekendsVisible}
+              onChange={this.props.toggleWeekends}
+            ></input>
+            toggle weekends
+          </label>
+        </div>
+        <div className='demo-app-sidebar-section'>
+          <h2>All Events ({this.props.events.length})</h2>
+          <ul>
+            {this.props.events.map(renderSidebarEvent)}
+          </ul>
+        </div>
+      </div>
+    )
+  }
+
+  // handlers for user actions
+  // ------------------------------------------------------------------------------------------
+
   handleDateSelect = (selectInfo) => {
     let calendarApi = this.calendarRef.current.getApi()
     let title = prompt('Please enter a new title for your event')
 
-    calendarApi.unselect()
+    calendarApi.unselect() // clear date selection
 
     if (title) {
-      calendarApi.addEvent({
+      calendarApi.addEvent({ // will render immediately. will call handleEventAdd
         title,
         start: selectInfo.startStr,
         end: selectInfo.endStr,
@@ -81,9 +97,12 @@ class DemoApp extends React.Component {
 
   handleEventClick = (clickInfo) => {
     if (confirm(`Are you sure you want to delete the event '${clickInfo.event.title}'`)) {
-      clickInfo.event.remove()
+      clickInfo.event.remove() // will render immediately. will call handleEventRemove
     }
   }
+
+  // handlers that initiate reads/writes via the 'action' props
+  // ------------------------------------------------------------------------------------------
 
   handleDates = (rangeInfo) => {
     this.props.requestEvents(rangeInfo.startStr, rangeInfo.endStr)
@@ -128,7 +147,7 @@ function renderEventContent(eventInfo) {
 function renderSidebarEvent(plainEventObject) {
   return (
     <li key={plainEventObject.id}>
-      <b>{plainEventObject.start}</b> -
+      <b>{formatDate(plainEventObject.start, {year: 'numeric', month: 'short', day: 'numeric'})}</b>
       <i>{plainEventObject.title}</i>
     </li>
   )
@@ -147,7 +166,7 @@ function mapStateToProps() {
   return (state) => {
     return {
       events: getEventArray(state),
-      weekendsEnabled: state.weekendsEnabled
+      weekendsVisible: state.weekendsVisible
     }
   }
 }

@@ -27,12 +27,12 @@ export default class DemoApp extends React.Component {
               right: 'dayGridMonth,timeGridWeek,timeGridDay'
             }}
             initialView='dayGridMonth'
-            initialEvents={INITIAL_EVENTS}
             editable={true}
             selectable={true}
             selectMirror={true}
             dayMaxEvents={true}
             weekends={this.state.weekendsVisible}
+            initialEvents={INITIAL_EVENTS}
             select={this.handleDateSelect}
             eventContent={renderEventContent} // custom render function
             eventClick={this.handleEventClick}
