@@ -32,23 +32,24 @@ class DemoApp extends React.Component {
             <FullCalendar
               ref={this.calendarRef}
               plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
-              initialView='dayGridMonth'
               headerToolbar={{
                 left: 'prev,next today',
                 center: 'title',
                 right: 'dayGridMonth,timeGridWeek,timeGridDay'
               }}
+              initialView='dayGridMonth'
               editable={true}
               weekends={props.weekendsEnabled}
-              datesDidUpdate={this.handleVisibleRange}
+              datesSet={this.handleDates}
               selectable={true}
               selectMirror={true}
               select={this.handleDateSelect}
               events={props.events}
-              eventDrop={this.handleEventChange}
-              eventResize={this.handleEventChange}
               eventContent={renderEventContent}
               eventClick={this.handleEventClick}
+              eventAdd={this.handleEventAdd}
+              eventChange={this.handleEventChange}
+              eventRemove={this.handleEventRemove}
             />
           </div>
           <div className='demo-app-sidebar'>
@@ -62,24 +63,39 @@ class DemoApp extends React.Component {
     )
   }
 
-  handleVisibleRange = (rangeInfo) => {
-    this.props.requestEvents(rangeInfo.startStr, rangeInfo.endStr)
-      .catch(reportNetworkError)
-  }
-
   handleDateSelect = (selectInfo) => {
+    let calendarApi = this.calendarRef.current.getApi()
     let title = prompt('Please enter a new title for your event')
 
-    this.calendarRef.current.getApi().unselect()
+    calendarApi.unselect()
 
     if (title) {
-      this.props.createEvent({
+      calendarApi.addEvent({
         title,
         start: selectInfo.startStr,
         end: selectInfo.endStr,
         allDay: selectInfo.allDay
-      }).catch(reportNetworkError)
+      }, true) // temporary=true, will get overwritten when reducer gives new events
     }
+  }
+
+  handleEventClick = (clickInfo) => {
+    if (confirm(`Are you sure you want to delete the event '${clickInfo.event.title}'`)) {
+      clickInfo.event.remove()
+    }
+  }
+
+  handleDates = (rangeInfo) => {
+    this.props.requestEvents(rangeInfo.startStr, rangeInfo.endStr)
+      .catch(reportNetworkError)
+  }
+
+  handleEventAdd = (addInfo) => {
+    this.props.createEvent(addInfo.event.toPlainObject())
+      .catch(() => {
+        reportNetworkError()
+        addInfo.revert()
+      })
   }
 
   handleEventChange = (changeInfo) => {
@@ -90,11 +106,12 @@ class DemoApp extends React.Component {
       })
   }
 
-  handleEventClick = (clickInfo) => {
-    if (confirm(`Are you sure you want to delete the event '${clickInfo.event.title}'`)) {
-      this.props.deleteEvent(clickInfo.event.id)
-        .catch(reportNetworkError)
-    }
+  handleEventRemove = (removeInfo) => {
+    this.props.deleteEvent(removeInfo.event.id)
+      .catch(() => {
+        reportNetworkError()
+        removeInfo.revert()
+      })
   }
 
 }

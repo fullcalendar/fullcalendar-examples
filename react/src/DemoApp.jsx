@@ -33,13 +33,13 @@ export default class DemoApp extends React.Component {
             <FullCalendar
               ref={this.calendarRef}
               plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
-              initialView='dayGridMonth'
-              events={INITIAL_EVENTS}
               headerToolbar={{
                 left: 'prev,next today',
                 center: 'title',
                 right: 'dayGridMonth,timeGridWeek,timeGridDay'
               }}
+              initialView='dayGridMonth'
+              initialEvents={INITIAL_EVENTS}
               editable={true}
               weekends={state.weekendsVisible}
               selectable={true}
@@ -47,7 +47,7 @@ export default class DemoApp extends React.Component {
               select={this.handleDateSelect}
               eventContent={renderEventContent}
               eventClick={this.handleEventClick}
-              eventsWillUpdate={this.handleEvents}
+              eventsSet={this.handleEvents}
             />
           </div>
           <div className='demo-app-sidebar'>
@@ -90,9 +90,9 @@ export default class DemoApp extends React.Component {
     }
   }
 
-  handleEvents = (eventInfo) => {
+  handleEvents = (events) => {
     this.setState({
-      currentEvents: eventInfo.allEvents
+      currentEvents: events
     })
   }
 
