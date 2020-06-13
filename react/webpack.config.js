@@ -13,9 +13,7 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader' // will use .babelrc
-        }
+        use: 'babel-loader' // will use .babelrc
       },
       {
         test: /\.css$/,
