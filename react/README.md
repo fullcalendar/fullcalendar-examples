@@ -1,7 +1,7 @@
 
 # FullCalendar React Example Project
 
-This is a fully-buildable example project for FullCalendar and React, leveraging Webpack, Babel, and Sass. For a complete walkthrough, read the [FullCalendar React Docs &raquo;](https://fullcalendar.io/docs/react)
+[FullCalendar React Docs &raquo;](https://fullcalendar.io/docs/react)
 
 ## Installation
 

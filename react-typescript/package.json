@@ -1,12 +1,14 @@
 {
   "private": true,
   "name": "@fullcalendar-example-projects/react-typescript",
+  "title": "FullCalendar React+TypeScript Example Project",
   "version": "0.0.0",
   "license": "ISC",
   "scripts": {
     "clean": "rm -rf dist tsc",
+    "build": "webpack",
     "watch": "webpack --watch",
-    "build": "webpack"
+    "start": "webpack-dev-server --open"
   },
   "dependencies": {
     "@fullcalendar/daygrid": "5.0.0-beta.4",
@@ -25,6 +27,7 @@
     "ts-loader": "^5.3.3",
     "typescript": "^3.4.1",
     "webpack": "^4.12.0",
-    "webpack-cli": "^3.3.0"
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.11.0"
   }
 }

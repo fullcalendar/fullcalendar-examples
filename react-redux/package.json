@@ -1,9 +1,9 @@
 {
   "private": true,
   "name": "@fullcalendar-example-projects/react-redux",
+  "title": "FullCalendar React+Redux Example Project",
   "version": "0.0.0",
   "license": "ISC",
-  "author": "Josh Ruff",
   "scripts": {
     "clean": "rm -rf dist",
     "build": "webpack",

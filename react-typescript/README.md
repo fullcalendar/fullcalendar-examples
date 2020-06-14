@@ -1,7 +1,7 @@
 
 # FullCalendar React+TypeScript Example Project
 
-This is a fully-buildable example project for FullCalendar, React, and TypeScript, leveraging Webpack and Sass.
+[FullCalendar React Docs &raquo;](https://fullcalendar.io/docs/react)
 
 ## Installation
 
@@ -14,14 +14,10 @@ npm install
 ## Build Commands
 
 ```bash
-npm run build
-npm run watch # continously build
+npm run start # builds and opens a web browser
+
+# other commands:
+npm run build # builds files into dist/ directory
+npm run watch # same as build, but watches for changes
 npm run clean # start fresh
 ```
-
-After running `build` or `watch`, open up `index.html` in a browser.
-
-
-## Note to self
-
-@arshaw, remove the `"typeRoots": [ "./node_modules/@types" ]` line in `tsconfig.json` eventually.

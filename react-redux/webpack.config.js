@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const packageMeta = require('./package.json')
 
 module.exports = {
   mode: 'development',
@@ -13,9 +14,7 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader' // will use .babelrc
-        }
+        use: 'babel-loader' // will use .babelrc
       },
       {
         test: /\.css$/,
@@ -29,7 +28,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'FullCalendar React Example'
+      title: packageMeta.title
     })
   ]
 }
