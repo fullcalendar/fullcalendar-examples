@@ -1,7 +1,8 @@
 
 # FullCalendar React+TypeScript Example Project
 
-[FullCalendar React Docs &raquo;](https://fullcalendar.io/docs/react)
+An example project showing how [FullCalendar's React Connector](https://fullcalendar.io/docs/react) can be used with [TypeScript](https://www.typescriptlang.org/).
+
 
 ## Installation
 
@@ -10,6 +11,7 @@ git clone https://github.com/fullcalendar/fullcalendar-example-projects.git
 cd fullcalendar-example-projects/react-typescript
 npm install
 ```
+
 
 ## Build Commands
 
