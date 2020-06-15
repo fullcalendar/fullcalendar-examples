@@ -1,8 +1,6 @@
 <script lang='ts'>
 import { Component, Vue } from 'vue-property-decorator'
-// import FullCalendar, { CalendarOptions, EventApi, DateSelectArg, EventClickArg } from '@fullcalendar/vue'
-import '@fullcalendar/core' // for vdom defs to load first
-import FullCalendar from '@fullcalendar/vue'
+import FullCalendar, { CalendarOptions, EventApi, DateSelectArg, EventClickArg } from '@fullcalendar/vue'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
@@ -15,7 +13,7 @@ import { INITIAL_EVENTS, createEventId } from './event-utils'
 })
 export default class DemoApp extends Vue {
 
-  private calendarOptions = { // CalendarOptions
+  private calendarOptions: CalendarOptions = {
     plugins: [
       dayGridPlugin,
       timeGridPlugin,
@@ -33,18 +31,18 @@ export default class DemoApp extends Vue {
     selectMirror: true,
     dayMaxEvents: true,
     weekends: true,
-    select: this.handleDateSelect.bind(this), // bind needed???
-    eventClick: this.handleEventClick.bind(this),
-    eventsSet: this.handleEvents.bind(this)
+    select: this.handleDateSelect,
+    eventClick: this.handleEventClick,
+    eventsSet: this.handleEvents
   }
 
-  private currentEvents: any[] = [] // EventApi
+  private currentEvents: EventApi[] = []
 
   handleWeekendsToggle() {
     this.calendarOptions.weekends = !this.calendarOptions.weekends // update a property
   }
 
-  handleDateSelect(selectInfo: any) { // DateSelectArg
+  handleDateSelect(selectInfo: DateSelectArg) {
     let title = prompt('Please enter a new title for your event')
     let calendarApi = (this.$refs.fullCalendar as any).getApi()
 
@@ -61,13 +59,13 @@ export default class DemoApp extends Vue {
     }
   }
 
-  handleEventClick(clickInfo: any) { // EventClickArg
+  handleEventClick(clickInfo: EventClickArg) {
     if (confirm(`Are you sure you want to delete the event '${clickInfo.event.title}'`)) {
       clickInfo.event.remove()
     }
   }
 
-  handleEvents(events: any) { // EventApi[]
+  handleEvents(events: EventApi[]) {
     this.currentEvents = events
   }
 

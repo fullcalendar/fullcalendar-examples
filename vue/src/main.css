@@ -1,7 +1,6 @@
 
 html,
-body,
-body > div { /* the mount root */
+body {
   margin: 0;
   padding: 0;
   height: 100%;
