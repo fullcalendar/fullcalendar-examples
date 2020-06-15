@@ -1,9 +1,10 @@
 import { Component, ViewChild } from '@angular/core';
-import { FullCalendarComponent } from '@fullcalendar/angular';
+import { FullCalendarComponent, CalendarOptions, DateSelectArg, EventClickArg, EventApi } from '@fullcalendar/angular';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import listPlugin from '@fullcalendar/list';
 import interactionPlugin from '@fullcalendar/interaction';
+import { INITIAL_EVENTS, createEventId } from './event-utils';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,7 @@ export class AppComponent {
   @ViewChild('calendar') calendarComponent: FullCalendarComponent; // the #calendar in the template
 
   calendarVisible = true;
-  calendarOptions = {
+  calendarOptions: CalendarOptions = {
     plugins: [dayGridPlugin, timeGridPlugin, listPlugin, interactionPlugin],
     headerToolbar: {
       left: 'prev,next today',
@@ -23,38 +24,52 @@ export class AppComponent {
       right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
     },
     initialView: 'dayGridMonth',
+    initialEvents: INITIAL_EVENTS,
     weekends: true,
     editable: true,
-    dateClick: this.handleDateClick.bind(this),
-    events: [
-      { title: 'Event Now', start: new Date() }
-    ] as any
+    selectable: true,
+    selectMirror: true,
+    dayMaxEvents: true,
+    select: this.handleDateSelect.bind(this),
+    eventClick: this.handleEventClick.bind(this),
+    eventsSet: this.handleEvents.bind(this)
   };
+  currentEvents: EventApi[] = [];
 
-  toggleVisible() {
+  handleCalendarToggle() {
     this.calendarVisible = !this.calendarVisible;
   }
 
-  toggleWeekends() {
+  handleWeekendsToggle() {
     const { calendarOptions } = this;
     calendarOptions.weekends = !calendarOptions.weekends;
   }
 
-  gotoPast() {
-    let calendarApi = this.calendarComponent.getApi();
-    calendarApi.gotoDate('2000-01-01'); // call a method on the Calendar object
+  handleDateSelect(selectInfo: DateSelectArg) {
+    const title = prompt('Please enter a new title for your event');
+    const calendarApi = this.calendarComponent.getApi();
+
+    calendarApi.unselect(); // clear date selection
+
+    if (title) {
+      calendarApi.addEvent({
+        id: createEventId(),
+        title,
+        start: selectInfo.startStr,
+        end: selectInfo.endStr,
+        allDay: selectInfo.allDay
+      });
+    }
   }
 
-  handleDateClick(arg) {
-    if (confirm('Would you like to add an event to ' + arg.dateStr + ' ?')) {
-      let calendarApi = this.calendarComponent.getApi();
-
-      calendarApi.addEvent({
-        title: 'New Event',
-        start: arg.date,
-        allDay: arg.allDay
-      })
+  handleEventClick(clickInfo: EventClickArg) {
+    if (confirm(`Are you sure you want to delete the event '${clickInfo.event.title}'`)) {
+      clickInfo.event.remove();
     }
+  }
+
+  handleEvents(events: EventApi[]) {
+    this.currentEvents = events;
   }
 
 }
