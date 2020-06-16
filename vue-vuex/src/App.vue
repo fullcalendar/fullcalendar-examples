@@ -1,6 +1,7 @@
 <template>
     <div id="app">
         <calendar-sidebar
+            :events="events"
             :weekends-enabled="weekendsEnabled"
             @set-weekends-enabled="setWeekendsEnabled"
         />

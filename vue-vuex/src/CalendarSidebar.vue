@@ -16,12 +16,29 @@
               Toggle weekends
           </label>
       </section>
+
+      <section class="events-list">
+          <h2>All Events ({{ events.length }})</h2>
+
+          <ul>
+              <li v-for="event in events" :key="event.id">
+                  <b>{{ getFormattedDay(event.start) }}</b>
+                  <i>{{ getEventDurationType(event) }}</i>
+              </li>
+          </ul>
+      </section>
   </div>
 </template>
 
 <script>
+import { format } from 'date-fns'
+
 export default {
   props: {
+    events: {
+      type: Array,
+      required: true
+    },
     weekendsEnabled: {
       type: Boolean,
       required: true
@@ -35,6 +52,20 @@ export default {
       set (value) {
         return this.$emit('set-weekends-enabled', value)
       }
+    }
+  },
+  methods: {
+    getFormattedDay (date) {
+      return format(date, 'MMM d, yyyy')
+    },
+    getEventDurationType (event) {
+      const allDay = (event.allDay !== undefined) ? event.allDay : false
+
+      if (allDay) {
+        return 'All-day event'
+      }
+
+      return 'Timed event'
     }
   }
 }
