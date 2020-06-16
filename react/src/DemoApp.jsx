@@ -1,4 +1,4 @@
-import React, { createRef } from 'react'
+import React from 'react'
 import FullCalendar, { formatDate } from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
@@ -7,7 +7,6 @@ import { INITIAL_EVENTS, createEventId } from './event-utils'
 
 export default class DemoApp extends React.Component {
 
-  calendarRef = createRef()
   state = {
     weekendsVisible: true,
     currentEvents: []
@@ -19,7 +18,6 @@ export default class DemoApp extends React.Component {
         {this.renderSidebar()}
         <div className='demo-app-main'>
           <FullCalendar
-            ref={this.calendarRef}
             plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
             headerToolbar={{
               left: 'prev,next today',
@@ -87,7 +85,7 @@ export default class DemoApp extends React.Component {
 
   handleDateSelect = (selectInfo) => {
     let title = prompt('Please enter a new title for your event')
-    let calendarApi = this.calendarRef.current.getApi()
+    let calendarApi = selectInfo.view.calendar
 
     calendarApi.unselect() // clear date selection
 

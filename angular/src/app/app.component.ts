@@ -1,5 +1,5 @@
-import { Component, ViewChild } from '@angular/core';
-import { FullCalendarComponent, CalendarOptions, DateSelectArg, EventClickArg, EventApi } from '@fullcalendar/angular';
+import { Component } from '@angular/core';
+import { CalendarOptions, DateSelectArg, EventClickArg, EventApi } from '@fullcalendar/angular';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import listPlugin from '@fullcalendar/list';
@@ -12,8 +12,6 @@ import { INITIAL_EVENTS, createEventId } from './event-utils';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
-  @ViewChild('calendar') calendarComponent: FullCalendarComponent; // the #calendar in the template
 
   calendarVisible = true;
   calendarOptions: CalendarOptions = {
@@ -52,7 +50,7 @@ export class AppComponent {
 
   handleDateSelect(selectInfo: DateSelectArg) {
     const title = prompt('Please enter a new title for your event');
-    const calendarApi = this.calendarComponent.getApi();
+    const calendarApi = selectInfo.view.calendar;
 
     calendarApi.unselect(); // clear date selection
 

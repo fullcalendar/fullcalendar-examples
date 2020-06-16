@@ -12,7 +12,6 @@ interface DemoAppState {
 
 export default class DemoApp extends React.Component<{}, DemoAppState> {
 
-  calendarRef = createRef<FullCalendar>()
   state: DemoAppState = {
     weekendsVisible: true,
     currentEvents: []
@@ -24,7 +23,6 @@ export default class DemoApp extends React.Component<{}, DemoAppState> {
         {this.renderSidebar()}
         <div className='demo-app-main'>
           <FullCalendar
-            ref={this.calendarRef}
             plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
             headerToolbar={{
               left: 'prev,next today',
@@ -92,7 +90,7 @@ export default class DemoApp extends React.Component<{}, DemoAppState> {
 
   handleDateSelect = (selectInfo: DateSelectArg) => {
     let title = prompt('Please enter a new title for your event')
-    let calendarApi = this.calendarRef.current!.getApi()
+    let calendarApi = selectInfo.view.calendar
 
     calendarApi.unselect() // clear date selection
 

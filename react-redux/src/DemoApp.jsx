@@ -10,15 +10,12 @@ import { getHashValues } from './utils'
 
 class DemoApp extends React.Component {
 
-  calendarRef = createRef()
-
   render() {
     return (
       <div className='demo-app'>
         {this.renderSidebar()}
         <div className='demo-app-main'>
           <FullCalendar
-            ref={this.calendarRef}
             plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
             headerToolbar={{
               left: 'prev,next today',
@@ -80,7 +77,7 @@ class DemoApp extends React.Component {
   // ------------------------------------------------------------------------------------------
 
   handleDateSelect = (selectInfo) => {
-    let calendarApi = this.calendarRef.current.getApi()
+    let calendarApi = selectInfo.view.calendar
     let title = prompt('Please enter a new title for your event')
 
     calendarApi.unselect() // clear date selection

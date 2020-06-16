@@ -49,7 +49,7 @@ export default class DemoApp extends Vue {
 
   handleDateSelect(selectInfo: DateSelectArg) {
     let title = prompt('Please enter a new title for your event')
-    let calendarApi = (this.$refs.fullCalendar as any).getApi()
+    let calendarApi = selectInfo.view.calendar
 
     calendarApi.unselect() // clear date selection
 
@@ -111,7 +111,6 @@ export default class DemoApp extends Vue {
     <div class='demo-app-main'>
       <FullCalendar
         class='demo-app-calendar'
-        ref='fullCalendar'
         :options='calendarOptions'
       >
         <template v-slot:eventContent='arg'>
