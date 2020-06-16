@@ -13,5 +13,8 @@ export default {
     const index = state.events.findIndex(event => event.id === eventId)
     
     return state.events.splice(index, 1)
+  },
+  [Mutation.SET_WEEKENDS_ENABLED] (state, enabled) {
+    state.weekendsEnabled = enabled
   }
 }

@@ -1,20 +1,14 @@
 <template>
     <div id="app">
-        <FullCalendar :options="config" />
+        <calendar-sidebar
+            :weekends-enabled="weekendsEnabled"
+            @set-weekends-enabled="setWeekendsEnabled"
+        />
 
-        <div class="calendar-actions">
-            <button type="button" @click="createDummyEvent">
-                Add an example event
-            </button>
-
-            <button type="button" @click="updateLastEvent">
-                Update the last event
-            </button>
-
-            <button type="button" @click="deleteLastEvent">
-                Remove the last event
-            </button>
-        </div>
+        <full-calendar
+            class="full-calendar"
+            :options="config"
+        />
     </div>
 </template>
 
@@ -26,16 +20,20 @@ import FullCalendar from '@fullcalendar/vue'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import interactionPlugin from '@fullcalendar/interaction'
 
+import CalendarSidebar from './CalendarSidebar.vue'
+
 export default {
   components: {
-    FullCalendar
+    FullCalendar,
+    CalendarSidebar
   },
   computed: {
-    ...mapGetters(['events']),
+    ...mapGetters(['events', 'weekendsEnabled']),
 
     config () {
       return {
         events: this.events,
+        weekends: this.weekendsEnabled,
         plugins: [dayGridPlugin, interactionPlugin]
       }
     }
@@ -44,7 +42,8 @@ export default {
     ...mapActions([
       'createEvent',
       'updateEvent',
-      'deleteEvent'
+      'deleteEvent',
+      'setWeekendsEnabled'
     ]),
 
     createDummyEvent () {
@@ -86,18 +85,28 @@ export default {
 </script>
 
 <style>
-    #app {
-        font: 16px sans-serif;
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    html, body {
+        height: 100vh;
     }
 </style>
 
 <style scoped>
-    .calendar-actions {
-        padding: 1em;
-        text-align: center;
+    #app {
+        font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+        font-size: 14px;
+
+        display: flex;
+        overflow: hidden;
+        height: 100%;
     }
 
-    .calendar-actions button + button {
-        margin-left: 1em;
+    .full-calendar {
+        flex: 1;
     }
 </style>

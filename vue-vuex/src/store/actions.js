@@ -9,5 +9,8 @@ export default {
   },
   deleteEvent ({ commit }, eventId) {
     return commit(Mutation.DELETE_EVENT, eventId)
+  },
+  setWeekendsEnabled ({ commit }, enabled) {
+    return commit(Mutation.SET_WEEKENDS_ENABLED, enabled)
   }
 }
