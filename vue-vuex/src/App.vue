@@ -67,7 +67,9 @@ export default {
       return {
         dateClick: this.onDateClick,
         eventClick: this.onEventClick,
-        eventDrop: this.onEventDrop
+        eventDrop: this.onEventDrop,
+        eventResize: this.onEventDrop,
+        select: this.onDateSelect
       }
     }
   },
@@ -87,14 +89,20 @@ export default {
       }
 
       const id = (this.events.length + 1) * 10
-      const { date, allDay } = payload
+      const { start, end, date, allDay } = payload
 
       return this.createEvent({
         id,
         title,
         date,
+        start,
+        end,
         allDay
       })
+    },
+
+    onDateSelect (payload) {
+      return this.onDateClick(payload)
     },
 
     onEventClick ({ event }) {
