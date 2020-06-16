@@ -9,12 +9,12 @@ const state = {
     { id: 20, title: 'Event 2', start: addDays(new Date(), 1) },
     { id: 30, title: 'Event 3', start: addDays(new Date(), 2) }
   ],
-  weekendsEnabled: true
+  weekendsVisible: true
 }
 
 const getters = {
   events: state => state.events,
-  weekendsEnabled: state => state.weekendsEnabled
+  weekendsVisible: state => state.weekendsVisible
 }
 
 export default {

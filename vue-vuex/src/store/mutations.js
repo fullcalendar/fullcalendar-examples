@@ -1,20 +1,34 @@
 import * as Mutation from './mutation-types'
+import { getEventIndexById } from './utils'
 
 export default {
   [Mutation.CREATE_EVENT] (state, event) {
     return state.events.push(event)
   },
   [Mutation.UPDATE_EVENT] (state, updatedEvent) {
-    const index = state.events.findIndex(event => event.id === updatedEvent.id)
+    const index = getEventIndexById(state, updatedEvent.id)
+
+    if (index === -1) {
+      return console.warn(`Unable to update event (id ${updatedEvent.id})`)
+    }
     
-    return state.events.splice(index, 1, updatedEvent)
+    return state.events.splice(index, 1, {
+      ...state.events[index],
+      start: updatedEvent.start,
+      end: updatedEvent.end,
+      date: updatedEvent.date
+    })
   },
   [Mutation.DELETE_EVENT] (state, eventId) {
-    const index = state.events.findIndex(event => event.id === eventId)
+    const index = getEventIndexById(state, eventId)
+
+    if (index === -1) {
+      return console.warn(`Unable to delete event (id ${eventId})`)
+    }
     
     return state.events.splice(index, 1)
   },
   [Mutation.SET_WEEKENDS_ENABLED] (state, enabled) {
-    state.weekendsEnabled = enabled
+    state.weekendsVisible = enabled
   }
 }

@@ -12,7 +12,7 @@
 
       <section class="quick-toggles">
           <label>
-              <input type="checkbox" v-model="weekendsEnabledCheckbox">
+              <input type="checkbox" v-model="weekendsVisibleCheckbox">
               Toggle weekends
           </label>
       </section>
@@ -22,7 +22,7 @@
 
           <ul>
               <li v-for="event in events" :key="event.id">
-                  <b>{{ getFormattedDay(event.start) }}</b>
+                  <b>{{ getFormattedDate(event) }}</b>
                   <i>{{ getEventDurationType(event) }}</i>
               </li>
           </ul>
@@ -39,29 +39,36 @@ export default {
       type: Array,
       required: true
     },
-    weekendsEnabled: {
+    weekendsVisible: {
       type: Boolean,
       required: true
     }
   },
   computed: {
-    weekendsEnabledCheckbox: {
+    weekendsVisibleCheckbox: {
       get () {
-        return this.weekendsEnabled
+        return this.weekendsVisible
       },
       set (value) {
-        return this.$emit('set-weekends-enabled', value)
+        return this.$emit('set-weekends-visible', value)
       }
     }
   },
   methods: {
-    getFormattedDay (date) {
+    isAllDay (event) {
+      return (event.allDay !== undefined) ? event.allDay : false
+    },
+    getFormattedDate (event) {
+      const date = this.isAllDay(event) ? event.date : event.start
+
+      if (date === undefined) {
+        return ''
+      }
+
       return format(date, 'MMM d, yyyy')
     },
     getEventDurationType (event) {
-      const allDay = (event.allDay !== undefined) ? event.allDay : false
-
-      if (allDay) {
+      if (this.isAllDay(event)) {
         return 'All-day event'
       }
 

@@ -2,8 +2,8 @@
     <div id="app">
         <calendar-sidebar
             :events="events"
-            :weekends-enabled="weekendsEnabled"
-            @set-weekends-enabled="setWeekendsEnabled"
+            :weekends-visible="weekendsVisible"
+            @set-weekends-visible="setweekendsVisible"
         />
 
         <div class="calendar">
@@ -17,10 +17,10 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
-import { addDays } from 'date-fns'
 
 import FullCalendar from '@fullcalendar/vue'
 import dayGridPlugin from '@fullcalendar/daygrid'
+import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
 
 import CalendarSidebar from './CalendarSidebar.vue'
@@ -31,13 +31,24 @@ export default {
     CalendarSidebar
   },
   computed: {
-    ...mapGetters(['events', 'weekendsEnabled']),
+    ...mapGetters(['events', 'weekendsVisible']),
 
     config () {
       return {
+        editable: true,
         events: this.events,
-        weekends: this.weekendsEnabled,
-        plugins: [dayGridPlugin, interactionPlugin]
+        weekends: this.weekendsVisible,
+        plugins: [dayGridPlugin, timeGridPlugin, interactionPlugin],
+
+        ...this.eventHandlers
+      }
+    },
+
+    eventHandlers () {
+      return {
+        dateClick: this.onDateClick,
+        eventClick: this.onEventClick,
+        eventDrop: this.onEventDrop
       }
     }
   },
@@ -46,42 +57,39 @@ export default {
       'createEvent',
       'updateEvent',
       'deleteEvent',
-      'setWeekendsEnabled'
+      'setweekendsVisible'
     ]),
 
-    createDummyEvent () {
-      const id = this.events.length + 1
+    onDateClick (payload) {
+      const title = prompt('Please enter a new title for your event')
+
+      if (!title) {
+        return
+      }
+
+      const id = (this.events.length + 1) * 10
+      const { date, allDay } = payload
 
       return this.createEvent({
-        id: id * 10,
-        title: `Event ${id}`,
-        start: addDays(new Date(), this.events.length)
+        id,
+        title,
+        date,
+        allDay
       })
     },
 
-    updateLastEvent () {
-      const lastEvent = this.events[this.events.length - 1] || null
+    onEventClick ({ event }) {
+      const confirmed = confirm(`Are you sure you want to delete the event '${event.title}'?`)
 
-      if (lastEvent === null) {
-        return window.alert('No events to update')
+      if (!confirmed) {
+        return
       }
 
-      const updatedEvent = {
-        ...lastEvent,
-        title: `${lastEvent.title} (updated!)`
-      }
-
-      return this.updateEvent(updatedEvent)
+      return this.deleteEvent(event.id)
     },
 
-    deleteLastEvent () {
-      const lastEvent = this.events[this.events.length - 1] || null
-
-      if (lastEvent === null) {
-        return window.alert('No events to delete')
-      }
-
-      return this.deleteEvent(lastEvent.id)
+    onEventDrop ({ event }) {
+      return this.updateEvent(event)
     }
   }
 }
