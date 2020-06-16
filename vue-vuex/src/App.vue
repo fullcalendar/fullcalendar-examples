@@ -10,7 +10,12 @@
             <full-calendar
               class="full-calendar"
               :options="config"
-            />
+            >
+                <template #eventContent="{ timeText, event }">
+                    <b>{{ timeText }}</b>
+                    <i>{{ event.title }}</i>
+                </template>
+            </full-calendar>
         </div>
     </div>
 </template>
@@ -35,12 +40,26 @@ export default {
 
     config () {
       return {
+        ... this.configOptions,
+        ...this.eventHandlers
+      }
+    },
+
+    configOptions () {
+      return {
         editable: true,
+        selectable: true,
+        selectMirror: true,
+        dayMaxEvents: true,
         events: this.events,
         weekends: this.weekendsVisible,
         plugins: [dayGridPlugin, timeGridPlugin, interactionPlugin],
-
-        ...this.eventHandlers
+        headerToolbar: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'dayGridMonth,timeGridWeek,timeGridDay'
+        },
+        initialView: 'dayGridMonth'
       }
     },
 

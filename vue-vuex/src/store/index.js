@@ -5,9 +5,9 @@ import { addDays } from 'date-fns'
 
 const state = {
   events: [
-    { id: 10, title: 'Event 1', start: new Date() },
-    { id: 20, title: 'Event 2', start: addDays(new Date(), 1) },
-    { id: 30, title: 'Event 3', start: addDays(new Date(), 2) }
+    { id: 10, title: 'All day event', date: new Date(), allDay: true },
+    { id: 20, title: 'Timed event', start: addDays(new Date(), 1) },
+    { id: 30, title: 'Timed event', start: addDays(new Date(), 2) }
   ],
   weekendsVisible: true
 }

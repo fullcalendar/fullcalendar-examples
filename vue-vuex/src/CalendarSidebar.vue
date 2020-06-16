@@ -23,7 +23,7 @@
           <ul>
               <li v-for="event in events" :key="event.id">
                   <b>{{ getFormattedDate(event) }}</b>
-                  <i>{{ getEventDurationType(event) }}</i>
+                  <i>{{ event.title }}</i>
               </li>
           </ul>
       </section>
@@ -59,20 +59,13 @@ export default {
       return (event.allDay !== undefined) ? event.allDay : false
     },
     getFormattedDate (event) {
-      const date = this.isAllDay(event) ? event.date : event.start
+      const date = event.date || event.start
 
       if (date === undefined) {
         return ''
       }
 
       return format(date, 'MMM d, yyyy')
-    },
-    getEventDurationType (event) {
-      if (this.isAllDay(event)) {
-        return 'All-day event'
-      }
-
-      return 'Timed event'
     }
   }
 }
