@@ -1,7 +1,9 @@
 const { VueLoaderPlugin } = require('vue-loader')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   mode: 'development',
+  devtool: 'source-map',
   entry: './src/main.js',
   module: {
     rules: [
@@ -10,11 +12,10 @@ module.exports = {
         use: 'vue-loader'
       },
       {
-        test: /\.scss$/,
+        test: /\.css$/,
         use: [
           'vue-style-loader',
-          'css-loader',
-          'sass-loader'
+          'css-loader'
         ]
       },
       {
@@ -25,7 +26,9 @@ module.exports = {
     ]
   },
   plugins: [
-    new VueLoaderPlugin()
-  ],
-  devtool: 'source-map'
+    new VueLoaderPlugin(),
+    new HtmlWebpackPlugin({
+      title: 'FullCalendar Vue Example'
+    })
+  ]
 }

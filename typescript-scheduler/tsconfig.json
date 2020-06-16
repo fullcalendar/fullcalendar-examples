@@ -6,9 +6,10 @@
     "noImplicitAny": true,
     "strict": true,
     "sourceMap": true,
-    "outDir": "dist"
+    "rootDir": "src",
+    "outDir": "tsc"
   },
   "include": [
-    "src/example.ts"
+    "src/main.ts"
   ]
 }

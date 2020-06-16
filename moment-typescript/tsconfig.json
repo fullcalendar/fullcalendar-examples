@@ -6,9 +6,11 @@
     "noImplicitAny": true,
     "strict": true,
     "sourceMap": true,
-    "outDir": "dist"
+    "allowSyntheticDefaultImports": true,
+    "rootDir": "src",
+    "outDir": "tsc"
   },
   "include": [
-    "src/example.ts"
+    "src/main.ts"
   ]
 }

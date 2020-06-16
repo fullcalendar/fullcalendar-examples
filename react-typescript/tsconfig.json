@@ -4,11 +4,16 @@
     "target": "es5",
     "module": "es6",
     "moduleResolution": "node",
-    "typeRoots": [ "./node_modules/@types" ],
+    "lib": [
+      "dom",
+      "es2015"
+    ],
+    "allowSyntheticDefaultImports": true,
     "noImplicitAny": true,
     "strict": true,
     "sourceMap": true,
-    "outDir": "dist"
+    "rootDir": "src",
+    "outDir": "tsc"
   },
   "include": [
     "src/main.tsx"

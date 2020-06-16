@@ -1,80 +1,138 @@
-import * as React from 'react'
-import FullCalendar from '@fullcalendar/react'
-import { EventInput } from '@fullcalendar/core'
+import React, { createRef } from 'react'
+import FullCalendar, { EventApi, DateSelectArg, EventClickArg, EventContentArg, formatDate } from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
-import interactionPlugin from '@fullcalendar/interaction' // needed for dayClick
-
-import './main.scss'
+import interactionPlugin from '@fullcalendar/interaction'
+import { INITIAL_EVENTS, createEventId } from './event-utils'
 
 interface DemoAppState {
-  calendarWeekends: boolean
-  calendarEvents: EventInput[]
+  weekendsVisible: boolean
+  currentEvents: EventApi[]
 }
 
 export default class DemoApp extends React.Component<{}, DemoAppState> {
 
-  calendarComponentRef = React.createRef<FullCalendar>()
-
-  constructor(props: {}) {
-    super(props)
-
-    this.state = {
-      calendarWeekends: true,
-      calendarEvents: [ // initial event data
-        { title: 'Event Now', start: new Date() }
-      ]
-    }
+  state: DemoAppState = {
+    weekendsVisible: true,
+    currentEvents: []
   }
 
   render() {
     return (
       <div className='demo-app'>
-        <div className='demo-app-top'>
-          <button onClick={ this.toggleWeekends }>toggle weekends</button>&nbsp;
-          <button onClick={ this.gotoPast }>go to a date in the past</button>&nbsp;
-          (also, click a date/time to add an event)
-        </div>
-        <div className='demo-app-calendar'>
+        {this.renderSidebar()}
+        <div className='demo-app-main'>
           <FullCalendar
-            defaultView="dayGridMonth"
-            header={{
+            plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+            headerToolbar={{
               left: 'prev,next today',
               center: 'title',
-              right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+              right: 'dayGridMonth,timeGridWeek,timeGridDay'
             }}
-            plugins={[ dayGridPlugin, timeGridPlugin, interactionPlugin ]}
-            ref={ this.calendarComponentRef }
-            weekends={ this.state.calendarWeekends }
-            events={ this.state.calendarEvents }
-            dateClick={ this.handleDateClick }
-            />
+            initialView='dayGridMonth'
+            editable={true}
+            selectable={true}
+            selectMirror={true}
+            dayMaxEvents={true}
+            weekends={this.state.weekendsVisible}
+            initialEvents={INITIAL_EVENTS} // alternatively, use the `events` setting to fetch from a feed
+            select={this.handleDateSelect}
+            eventContent={renderEventContent} // custom render function
+            eventClick={this.handleEventClick}
+            eventsSet={this.handleEvents} // called after events are initialized/added/changed/removed
+            /* you can update a remote database when these fire:
+            eventAdd={function(){}}
+            eventChange={function(){}}
+            eventRemove={function(){}}
+            */
+          />
         </div>
       </div>
     )
   }
 
-  toggleWeekends = () => {
-    this.setState({ // update a property
-      calendarWeekends: !this.state.calendarWeekends
+  renderSidebar() {
+    return (
+      <div className='demo-app-sidebar'>
+        <div className='demo-app-sidebar-section'>
+          <h2>Instructions</h2>
+          <ul>
+            <li>Select dates and you will be prompted to create a new event</li>
+            <li>Drag, drop, and resize events</li>
+            <li>Click an event to delete it</li>
+          </ul>
+        </div>
+        <div className='demo-app-sidebar-section'>
+          <label>
+            <input
+              type='checkbox'
+              checked={this.state.weekendsVisible}
+              onChange={this.handleWeekendsToggle}
+            ></input>
+            toggle weekends
+          </label>
+        </div>
+        <div className='demo-app-sidebar-section'>
+          <h2>All Events ({this.state.currentEvents.length})</h2>
+          <ul>
+            {this.state.currentEvents.map(renderSidebarEvent)}
+          </ul>
+        </div>
+      </div>
+    )
+  }
+
+  handleWeekendsToggle = () => {
+    this.setState({
+      weekendsVisible: !this.state.weekendsVisible
     })
   }
 
-  gotoPast = () => {
-    let calendarApi = this.calendarComponentRef.current!.getApi()
-    calendarApi.gotoDate('2000-01-01') // call a method on the Calendar object
-  }
+  handleDateSelect = (selectInfo: DateSelectArg) => {
+    let title = prompt('Please enter a new title for your event')
+    let calendarApi = selectInfo.view.calendar
 
-  handleDateClick = (arg: any) => {
-    if (confirm('Would you like to add an event to ' + arg.dateStr + ' ?')) {
-      this.setState({  // add new event data
-        calendarEvents: this.state.calendarEvents.concat({ // creates a new array
-          title: 'New Event',
-          start: arg.date,
-          allDay: arg.allDay
-        })
+    calendarApi.unselect() // clear date selection
+
+    if (title) {
+      calendarApi.addEvent({
+        id: createEventId(),
+        title,
+        start: selectInfo.startStr,
+        end: selectInfo.endStr,
+        allDay: selectInfo.allDay
       })
     }
   }
 
+  handleEventClick = (clickInfo: EventClickArg) => {
+    if (confirm(`Are you sure you want to delete the event '${clickInfo.event.title}'`)) {
+      clickInfo.event.remove()
+    }
+  }
+
+  handleEvents = (events: EventApi[]) => {
+    this.setState({
+      currentEvents: events
+    })
+  }
+
+}
+
+function renderEventContent(eventContent: EventContentArg) {
+  return (
+    <>
+      <b>{eventContent.timeText}</b>
+      <i>{eventContent.event.title}</i>
+    </>
+  )
+}
+
+function renderSidebarEvent(event: EventApi) {
+  return (
+    <li key={event.id}>
+      <b>{formatDate(event.start!, {year: 'numeric', month: 'short', day: 'numeric'})}</b>
+      <i>{event.title}</i>
+    </li>
+  )
 }

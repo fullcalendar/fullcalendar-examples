@@ -1,11 +1,8 @@
 
-body {
-  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
-  font-size: 14px;
+html,
+body,
+body > * { /* the app-root */
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
-
-// you must include each plugins' css
-// paths prefixed with ~ signify node_modules
-@import '~@fullcalendar/core/main.css';
-@import '~@fullcalendar/daygrid/main.css';
-@import '~@fullcalendar/timegrid/main.css';

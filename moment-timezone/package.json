@@ -1,5 +1,7 @@
 {
   "private": true,
+  "name": "@fullcalendar-example-projects/moment-timezone",
+  "version": "0.0.0",
   "license": "ISC",
   "author": "Adam Shaw <arshaw@arshaw.com> (http://arshaw.com/)",
   "scripts": {
@@ -8,14 +10,16 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@fullcalendar/core": "^4.1.0",
-    "@fullcalendar/interaction": "^4.1.0",
-    "@fullcalendar/daygrid": "^4.1.0",
-    "@fullcalendar/moment-timezone": "^4.1.0",
+    "@fullcalendar/core": "5.0.0-rc",
+    "@fullcalendar/interaction": "5.0.0-rc",
+    "@fullcalendar/daygrid": "5.0.0-rc",
+    "@fullcalendar/moment-timezone": "5.0.0-rc",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.23"
   },
   "devDependencies": {
+    "css-loader": "^3.4.2",
+    "mini-css-extract-plugin": "^0.9.0",
     "webpack": "^4.29.0",
     "webpack-cli": "^3.2.1"
   }

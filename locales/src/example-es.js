@@ -4,6 +4,7 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import listPlugin from '@fullcalendar/list';
 import esLocale from '@fullcalendar/core/locales/es';
+import './page-styling/plain.css';
 
 document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar');
@@ -11,15 +12,15 @@ document.addEventListener('DOMContentLoaded', function() {
   var calendar = new Calendar(calendarEl, {
     locale: esLocale,
     plugins: [ interactionPlugin, dayGridPlugin, timeGridPlugin, listPlugin ],
-    header: {
+    headerToolbar: {
       left: 'prev,next today',
       center: 'title',
       right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
     },
-    defaultDate: '2018-01-12',
+    initialDate: '2018-01-12',
     navLinks: true, // can click day/week names to navigate views
     editable: true,
-    eventLimit: true, // allow "more" link when too many events
+    dayMaxEvents: true, // allow "more" link when too many events
     events: [
       {
         title: 'All Day Event',

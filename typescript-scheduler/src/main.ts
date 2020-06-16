@@ -1,25 +1,27 @@
 import { Calendar } from '@fullcalendar/core';
+import adaptivePlugin from '@fullcalendar/adaptive';
 import interactionPlugin from '@fullcalendar/interaction';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import listPlugin from '@fullcalendar/list';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import resourceTimelinePlugin from '@fullcalendar/resource-timeline';
+import './main.css';
 
 document.addEventListener('DOMContentLoaded', function() {
-  let calendarEl = document.getElementById('calendar');
+  let calendarEl: HTMLElement = document.getElementById('calendar')!;
 
   let calendar = new Calendar(calendarEl, {
-    plugins: [ interactionPlugin, dayGridPlugin, listPlugin, timeGridPlugin, resourceTimelinePlugin ],
+    plugins: [ adaptivePlugin, interactionPlugin, dayGridPlugin, listPlugin, timeGridPlugin, resourceTimelinePlugin ],
     now: '2018-02-07',
     editable: true, // enable draggable events
     aspectRatio: 1.8,
     scrollTime: '00:00', // undo default 6am scrollTime
-    header: {
+    headerToolbar: {
       left: 'today prev,next',
       center: 'title',
       right: 'resourceTimelineDay,resourceTimelineThreeDays,timeGridWeek,dayGridMonth,listWeek'
     },
-    defaultView: 'resourceTimelineDay',
+    initialView: 'resourceTimelineDay',
     views: {
       resourceTimelineThreeDays: {
         type: 'resourceTimeline',
@@ -27,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
         buttonText: '3 day'
       }
     },
-    resourceLabelText: 'Rooms',
+    resourceAreaHeaderContent: 'Rooms',
     resources: [
       { id: 'a', title: 'Auditorium A' },
       { id: 'b', title: 'Auditorium B', eventColor: 'green' },

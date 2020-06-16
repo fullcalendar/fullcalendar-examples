@@ -3,23 +3,22 @@ import interactionPlugin from '@fullcalendar/interaction';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import listPlugin from '@fullcalendar/list';
-import momentPlugin from '@fullcalendar/moment';
+import './main.css';
 
 document.addEventListener('DOMContentLoaded', function() {
-  let calendarEl: HTMLElement = document.getElementById('calendar')!;
+  var calendarEl = document.getElementById('calendar');
 
-  let calendar = new Calendar(calendarEl, {
-    plugins: [ interactionPlugin, dayGridPlugin, timeGridPlugin, listPlugin, momentPlugin ],
-    header: {
+  var calendar = new Calendar(calendarEl, {
+    plugins: [ interactionPlugin, dayGridPlugin, timeGridPlugin, listPlugin ],
+    headerToolbar: {
       left: 'prev,next today',
       center: 'title',
       right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
     },
-    defaultDate: '2018-01-12',
-    titleFormat: 'MMMM [!!!] YYYY', // a moment format string
+    initialDate: '2018-01-12',
     navLinks: true, // can click day/week names to navigate views
     editable: true,
-    eventLimit: true, // allow "more" link when too many events
+    dayMaxEvents: true, // allow "more" link when too many events
     events: [
       {
         title: 'All Day Event',

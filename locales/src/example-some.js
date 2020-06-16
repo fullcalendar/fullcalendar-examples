@@ -6,6 +6,7 @@ import listPlugin from '@fullcalendar/list';
 import frLocale from '@fullcalendar/core/locales/fr';
 import ptLocale from '@fullcalendar/core/locales/pt';
 import arLocale from '@fullcalendar/core/locales/ar';
+import './page-styling/with-top-bar.css';
 
 document.addEventListener('DOMContentLoaded', function() {
   var initialLocaleCode = 'ar';
@@ -16,17 +17,17 @@ document.addEventListener('DOMContentLoaded', function() {
     plugins: [ interactionPlugin, dayGridPlugin, timeGridPlugin, listPlugin ],
     locales: [ frLocale, ptLocale, arLocale ],
     locale: initialLocaleCode,
-    header: {
+    headerToolbar: {
       left: 'prev,next today',
       center: 'title',
       right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
     },
-    defaultDate: '2019-01-12',
+    initialDate: '2019-01-12',
     buttonIcons: false, // show the prev/next text
     weekNumbers: true,
     navLinks: true, // can click day/week names to navigate views
     editable: true,
-    eventLimit: true, // allow "more" link when too many events
+    dayMaxEvents: true, // allow "more" link when too many events
     events: [
       {
         title: 'All Day Event',
