@@ -1,4 +1,5 @@
-import * as Mutation from './mutation-types'
+import actions from './actions'
+import mutations from './mutations'
 
 const state = {
   events: [
@@ -10,26 +11,6 @@ const state = {
 
 const getters = {
   events: state => state.events
-}
-
-const mutations = {
-  [Mutation.ADD_EVENT] (state, event) {
-    return state.events.push(event)
-  },
-  [Mutation.REMOVE_EVENT] (state, eventId) {
-    const index = state.events.findIndex(event => event.id === eventId)
-    
-    return state.events.splice(index, 1)
-  }
-}
-
-const actions = {
-  addEvent ({ commit }, event) {
-    return commit(Mutation.ADD_EVENT, event)
-  },
-  removeEvent ({ commit }, eventId) {
-    return commit(Mutation.REMOVE_EVENT, eventId)
-  }
 }
 
 export default {
