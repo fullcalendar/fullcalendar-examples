@@ -13,6 +13,7 @@
     "@fullcalendar/interaction": "^4.4.2",
     "@fullcalendar/vue": "^4.4.2",
     "core-js": "^3.6.5",
+    "date-fns": "^2.14.0",
     "vue": "^2.6.11",
     "vuex": "^3.4.0"
   },

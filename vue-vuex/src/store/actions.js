@@ -1,10 +1,13 @@
 import * as Mutation from './mutation-types'
 
 export default {
-  addEvent ({ commit }, event) {
-    return commit(Mutation.ADD_EVENT, event)
+  createEvent ({ commit }, event) {
+    return commit(Mutation.CREATE_EVENT, event)
   },
-  removeEvent ({ commit }, eventId) {
-    return commit(Mutation.REMOVE_EVENT, eventId)
+  updateEvent ({ commit }, updatedEvent) {
+    return commit(Mutation.UPDATE_EVENT, updatedEvent)
+  },
+  deleteEvent ({ commit }, eventId) {
+    return commit(Mutation.DELETE_EVENT, eventId)
   }
 }
