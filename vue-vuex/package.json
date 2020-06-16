@@ -1,6 +1,8 @@
 {
-  "name": "vue-vuex",
-  "version": "0.1.0",
+  "name": "@fullcalendar-example-projects/vue-vuex",
+  "title": "FullCalendar Vue+Vuex Example Project",
+  "version": "0.0.0",
+  "license": "ISC",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
