@@ -5,7 +5,8 @@
   "license": "ISC",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "clean": "rm -rf dist"
   },
   "dependencies": {
     "@fullcalendar/daygrid": "5.0.0-beta.4",

@@ -10,7 +10,8 @@
     "build": "ng build",
     "build:prod": "ng build --prod",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "clean": "rm -rf dist"
   },
   "dependencies": {
     "@angular/animations": "~9.0.2",
