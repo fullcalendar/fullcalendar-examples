@@ -1,19 +1,22 @@
-# vue-typescript
 
-## Project setup
-```
+# FullCalendar Vue+TypeScript Example Project
+
+This is a fully-buildable example project for FullCalendar, Vue, and **TypeScript**, leveraging Webpack.
+
+## Installation
+
+```bash
+git clone https://github.com/fullcalendar/fullcalendar-example-projects.git
+cd fullcalendar-example-projects/vue
 npm install
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Build Commands
 
-### Compiles and minifies for production
-```
-npm run build
-```
+```bash
+npm run serve # builds and opens a web browser
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# other commands:
+npm run build # builds files into dist/ directory
+npm run clean # start fresh
+```
