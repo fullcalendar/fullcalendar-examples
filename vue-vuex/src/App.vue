@@ -8,8 +8,8 @@
 
         <div class="calendar">
             <full-calendar
-              class="full-calendar"
-              :options="config"
+                class="full-calendar"
+                :options="config"
             >
                 <template #eventContent="{ timeText, event }">
                     <b>{{ timeText }}</b>

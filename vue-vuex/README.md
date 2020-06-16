@@ -1,10 +1,11 @@
 # FullCalendar Vue+Vuex Example Project
 
-This example stores event state within a [Vuex store](https://vuex.vuejs.org/guide).
+This example stores events within a [Vuex store](https://vuex.vuejs.org/guide). Similar to a [Redux](https://redux.js.org/introduction/getting-started) store, Vuex is a state container for Vue applications. You can read more about Vuex [here](https://vuex.vuejs.org).
 
-Similar to a [Redux](https://redux.js.org/introduction/getting-started) store, Vuex is a state container for Vue applications. You can read more about Vuex [here](https://vuex.vuejs.org).
+The [App](./src/App.vue) component initialises the FullCalendar Vue connector component, passing a computed `configOptions` object prop.
 
 ## Installation
+
 ```
 git clone https://github.com/fullcalendar/fullcalendar-example-projects.git
 cd fullcalendar-example-projects/vue-vuex
