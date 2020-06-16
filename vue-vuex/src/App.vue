@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <FullCalendar v-bind="config" />
+        <FullCalendar :options="config" />
 
         <div class="calendar-actions">
             <button type="button" @click="createDummyEvent">
@@ -84,9 +84,6 @@ export default {
   }
 }
 </script>
-
-<style src="@fullcalendar/core/main.css"></style>
-<style src="@fullcalendar/daygrid/main.css"></style>
 
 <style>
     #app {
