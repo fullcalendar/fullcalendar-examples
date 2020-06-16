@@ -41,7 +41,6 @@ export class EventStore {
       end: selectInfo.end,
       allDay: selectInfo.allDay,
     });
-    console.log("all Events", this.events);
   }
 
   @action
