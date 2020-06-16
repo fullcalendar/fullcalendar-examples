@@ -14,7 +14,7 @@
     "@fullcalendar/interaction": "5.0.0-beta.4",
     "@fullcalendar/timegrid": "5.0.0-beta.4",
     "@fullcalendar/vue": "5.0.0-beta.4",
-    "vue": "^2.6.6"
+    "vue": "^2.6.11"
   },
   "devDependencies": {
     "css-loader": "^3.0.0",
