@@ -79,17 +79,22 @@ export default {
         border-right: 1px solid #d3e2e8;
     }
 
-    .calendar-sidebar ul {
+    ul {
         margin: 0;
         padding: 0 0 0 1.5em;
     }
 
-    .calendar-sidebar ul li {
+    ul li {
         margin: 1.5em 0;
         padding: 0;
     }
 
-    .calendar-sidebar section {
+    section {
         padding: 2em;
+    }
+
+    h2 {
+        margin: 0;
+        font-size: 16px;
     }
 </style>
