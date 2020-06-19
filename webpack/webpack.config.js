@@ -14,18 +14,7 @@ module.exports = {
         test: /\.css$/,
         use: [
           { loader: MiniCssExtractPlugin.loader },
-          { loader: 'css-loader', options: { importLoaders: 1 } },
-          { loader: 'postcss-loader', options: {
-            ident: 'postcss',
-            plugins: () => [
-              require('postcss-custom-properties')({ // for css vars
-                preserve: false, // completely reduce all css vars
-                importFrom: [
-                  'src/fullcalendar-vars.css'
-                ]
-              })
-            ]
-          } }
+          { loader: 'css-loader', options: { importLoaders: 1 } }
         ]
       }
     ]

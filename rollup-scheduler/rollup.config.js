@@ -6,9 +6,7 @@ module.exports = {
   plugins: [
     nodeResolve(),
     postcss({
-      config: {
-        path: 'postcss.config.js'
-      },
+      config: false, // don't attempt to load a postcss config
       // extract: true
       // ^^^ for writing CSS to a separate file (dist/main.css).
       // in rollup v2, this writes CSS rules in wrong order (https://github.com/egoist/rollup-plugin-postcss/issues/96)

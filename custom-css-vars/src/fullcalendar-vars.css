@@ -1,0 +1,6 @@
+
+/* this file is included direcly from the webpack/postcss config */
+
+:root {
+  --fc-border-color: green;
+}
