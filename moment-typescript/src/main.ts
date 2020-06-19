@@ -32,12 +32,12 @@ document.addEventListener('DOMContentLoaded', function() {
         end: '2018-01-10'
       },
       {
-        id: '999',
+        groupId: '999',
         title: 'Repeating Event',
         start: '2018-01-09T16:00:00'
       },
       {
-        id: '999',
+        groupId: '999',
         title: 'Repeating Event',
         start: '2018-01-16T16:00:00'
       },
