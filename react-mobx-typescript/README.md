@@ -6,7 +6,7 @@ An example project showing how [FullCalendar's React Connector](https://fullcale
 
 ```bash
 git clone https://github.com/fullcalendar/fullcalendar-example-projects.git
-cd fullcalendar-example-projects/react-typescript
+cd fullcalendar-example-projects/react-mobx-typescript
 npm install
 ```
 
