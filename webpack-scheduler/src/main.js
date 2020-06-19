@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   let calendar = new Calendar(calendarEl, {
     plugins: [ adaptivePlugin, interactionPlugin, dayGridPlugin, listPlugin, timeGridPlugin, resourceTimelinePlugin ],
+    schedulerLicenseKey: 'XXX',
     now: '2018-02-07',
     editable: true, // enable draggable events
     aspectRatio: 1.8,
