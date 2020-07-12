@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "name": "@fullcalendar-example-projects/next",
+  "version": "0.0.0",
+  "license": "ISC",
+  "author": "Adam Shaw <arshaw@arshaw.com> (http://arshaw.com/)",
+  "scripts": {
+    "watch": "next",
+    "build": "next build",
+    "start": "next start",
+    "clean": "rm -rf .next"
+  },
+  "dependencies": {
+    "next": "^9.4.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
