@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "name": "@fullcalendar-example-projects/nuxt",
+  "version": "0.0.0",
+  "license": "ISC",
+  "author": "Adam Shaw <arshaw@arshaw.com> (http://arshaw.com/)",
+  "scripts": {
+    "watch": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "clean": "rm -rf .nuxt"
+  },
+  "dependencies": {
+    "nuxt": "^2.13.3"
+  }
+}
