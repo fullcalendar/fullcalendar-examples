@@ -26,7 +26,7 @@ npm run clean # clear all built files
 ## Workarounds Explained
 
 1. Install [next-transpile-modules](https://www.npmjs.com/package/next-transpile-modules) to process FullCalendar's ES modules. See [next.config.js](next.config.js). If you don't like this, [vote to give Next ESM support for third-party packages](https://github.com/vercel/next.js/issues/706).
-2. Configure Babel to ignore imports of CSS files, which FullCalendar uses to include styles. See [babel.config.js](babel.config.js)
+2. Configure Babel to ignore imports of CSS files, which FullCalendar uses to include styles. Uses the [babel-plugin-transform-require-ignore](https://www.npmjs.com/package/babel-plugin-transform-require-ignore) plugin. See [babel.config.js](babel.config.js)
 3. In [_app.jsx](pages/_app.jsx), include FullCalendar's global stylesheets manually...
 
 
