@@ -116,8 +116,8 @@
     "use-lifecycle-interface": true,
     "use-pipe-transform-interface": true,
     "component-class-suffix": true,
-    "directive-class-suffix": true
-  ,    "variable-name": {
+    "directive-class-suffix": true,
+    "variable-name": {
       "options": [
         "ban-keywords",
         "check-format",
