@@ -16,7 +16,7 @@
     "@fullcalendar/interaction": "^5.0.0",
     "@fullcalendar/timegrid": "^5.0.0",
     "babel-plugin-transform-require-ignore": "^0.1.1",
-    "next": "^9.4.4",
+    "next": "^9.5.5",
     "next-transpile-modules": "^4.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
