@@ -4,7 +4,7 @@ const MomentLocalesPlugin = require('moment-locales-webpack-plugin')
 
 module.exports = {
   mode: 'development',
-  devtool: 'sourcemap',
+  devtool: 'source-map',
   entry: './src/main.js',
   resolve: {
     extensions: [ '.js' ]
