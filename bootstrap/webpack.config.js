@@ -1,6 +1,9 @@
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
+// Try the environment variable, otherwise use root
+const ASSET_PATH = process.env.ASSET_PATH || './'
+
 module.exports = {
   mode: 'development',
   devtool: 'source-map',
@@ -36,7 +39,8 @@ module.exports = {
   },
   output: {
     filename: 'main.js',
-    path: path.join(__dirname, 'dist')
+    path: path.join(__dirname, 'dist'),
+    publicPath: ASSET_PATH
   },
   plugins: [
     new MiniCssExtractPlugin({
