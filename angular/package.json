@@ -30,7 +30,7 @@
     "@fullcalendar/timegrid": "^5.0.0",
     "core-js": "^3.6.5",
     "rxjs": "~6.5.4",
-    "tslib": "^2.0.0",
+    "tslib": "^2.0.3",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
