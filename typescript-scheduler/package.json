@@ -12,12 +12,12 @@
   "dependencies": {
     "@fullcalendar/adaptive": "^5.0.0",
     "@fullcalendar/core": "^5.0.0",
-    "@fullcalendar/interaction": "^5.0.0",
     "@fullcalendar/daygrid": "^5.0.0",
+    "@fullcalendar/interaction": "^5.0.0",
     "@fullcalendar/list": "^5.0.0",
+    "@fullcalendar/resource-timeline": "^5.0.0",
     "@fullcalendar/timegrid": "^5.0.0",
-    "@fullcalendar/timeline": "^5.0.0",
-    "@fullcalendar/resource-timeline": "^5.0.0"
+    "@fullcalendar/timeline": "^5.0.0"
   },
   "devDependencies": {
     "css-loader": "^4.3.0",
