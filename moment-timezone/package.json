@@ -14,8 +14,8 @@
     "@fullcalendar/daygrid": "^5.0.0",
     "@fullcalendar/interaction": "^5.0.0",
     "@fullcalendar/moment-timezone": "^5.0.0",
-    "moment": "^2.24.0",
-    "moment-timezone": "^0.5.23"
+    "moment": "^2.29.1",
+    "moment-timezone": "^0.5.31"
   },
   "devDependencies": {
     "css-loader": "^4.3.0",
