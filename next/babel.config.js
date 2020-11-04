@@ -11,8 +11,7 @@ module.exports = {
   // will also work for any other 3rd-party packages that attempt to do this.
   overrides: [{
     include: [
-      './node_modules',
-      '../../node_modules' // only needed for fullcalendar's weird monorepo setup. delete in your own project
+      './node_modules'
     ],
     plugins: [
       ['babel-plugin-transform-require-ignore', {
