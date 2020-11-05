@@ -21,4 +21,9 @@ npm run start # continously build, as a server
 After running the `npm run start` command, you will be given a localhost URL that can be visited in a browser.
 
 
+## Angular Ivy
+
+The `enableIvy` flag has been set to `false` in `tsconfig.base.json` because it is incompatible with FullCalendar's monorepo, which uses Yarn PnP, but if you want to reenable it, please feel free.
+
+
 [Angular CLI]: https://cli.angular.io/
