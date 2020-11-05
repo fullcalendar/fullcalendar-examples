@@ -25,4 +25,3 @@ After running `build` or `watch`, open up `index.html` in a browser.
 
 [Moment]: https://momentjs.com/
 [Webpack]: https://webpack.js.org/
-[ts-loader]: https://github.com/TypeStrong/ts-loader
