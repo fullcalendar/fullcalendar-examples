@@ -1,3 +1,5 @@
+import '@fullcalendar/common/main.css'
+import '@fullcalendar/timegrid/main.css'
 import React from 'react'
 import FullCalendar from '@fullcalendar/react'
 import interactionPlugin from '@fullcalendar/interaction'
