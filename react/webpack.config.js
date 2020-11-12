@@ -30,8 +30,5 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: packageMeta.title
     })
-  ],
-  devServer: {
-    disableHostCheck: true // for codepen.io, REMOVE THIS IN YOUR PROJECT
-  }
+  ]
 }

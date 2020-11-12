@@ -7,7 +7,7 @@
     "clean": "rm -rf dist",
     "build": "webpack",
     "watch": "webpack --watch",
-    "start": "webpack-dev-server --open"
+    "start": "webpack serve"
   },
   "dependencies": {
     "@fullcalendar/daygrid": "^5.0.0",
