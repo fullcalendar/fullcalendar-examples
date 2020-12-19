@@ -10,10 +10,10 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@fullcalendar/daygrid": "^5.5.0",
-    "@fullcalendar/interaction": "^5.5.0",
-    "@fullcalendar/timegrid": "^5.5.0",
-    "@fullcalendar/vue": "^5.5.0",
+    "@fullcalendar/daygrid": "^5.4.0",
+    "@fullcalendar/interaction": "^5.4.0",
+    "@fullcalendar/timegrid": "^5.4.0",
+    "@fullcalendar/vue": "^5.4.0",
     "core-js": "^3.6.5",
     "date-fns": "^2.14.0",
     "vue": "^2.6.12",
