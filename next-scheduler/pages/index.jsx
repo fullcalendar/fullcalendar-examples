@@ -6,7 +6,7 @@ import resourceTimelinePlugin from '@fullcalendar/resource-timeline'
 export default () => (
   <FullCalendar
     plugins={[interactionPlugin, resourceTimelinePlugin]}
-    initialView='resourceTimelineWeek'
+    initialView='resourceTimelineDay'
     nowIndicator={true}
     editable={true}
     initialEvents={[
@@ -14,8 +14,8 @@ export default () => (
     ]}
     initialResources={[
       { id: 'a', title: 'Auditorium A' },
-      { id: 'b', title: 'Auditorium B', eventColor: 'green' },
-      { id: 'c', title: 'Auditorium C', eventColor: 'orange' }
+      { id: 'b', title: 'Auditorium B' },
+      { id: 'c', title: 'Auditorium C' }
     ]}
   />
 )
