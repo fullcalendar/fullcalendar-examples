@@ -25,7 +25,7 @@ npm run clean # start fresh
 After running `build` or `watch`, open up `index.html` in a browser.
 
 
-[FullCalendar Scheduler]: https://fullcalendar.io/purchase
+[FullCalendar Scheduler]: https://fullcalendar.io/pricing
 [TypeScript]: https://www.typescriptlang.org/
 [Webpack]: https://webpack.js.org/
 [ts-loader]: https://github.com/TypeStrong/ts-loader

@@ -1,14 +1,14 @@
 
-# FullCalendar Scheduler Webpack Example
+# FullCalendar Scheduler Rollup Example
 
-This is a fully-buildable example project for [FullCalendar Scheduler] and [Webpack].
+This is a fully-buildable example project for [FullCalendar Scheduler] and [Rollup].
 
 
 ## Installation
 
 ```bash
 git clone https://github.com/fullcalendar/fullcalendar-example-projects.git
-cd fullcalendar-example-projects/webpack-scheduler
+cd fullcalendar-example-projects/rollup-scheduler
 npm install
 ```
 
@@ -24,4 +24,4 @@ After running `build` or `watch`, open up `index.html` in a browser.
 
 
 [FullCalendar Scheduler]: https://fullcalendar.io/pricing
-[Webpack]: https://webpack.js.org/
+[Rollup]: https://rollupjs.org/
