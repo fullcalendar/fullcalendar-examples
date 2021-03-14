@@ -30,17 +30,17 @@ npm run clean # clear all built files
 In environments other than Next.js, FullCalendar is able to include its own stylesheets so that you don't need to worry about it. Next disallows this however, and you inherit the responsibility as a developer. So, try to trace the FullCalendar's dependency tree and include any `main.css` files in each package. For example, if you import these JS modules:
 
 ```js
-import FullCalendar from "@fullcalendar/react";
-import interactionPlugin from "@fullcalendar/interaction";
-import timeGridPlugin from "@fullcalendar/timegrid";
+import FullCalendar from '@fullcalendar/react'
+import interactionPlugin from '@fullcalendar/interaction'
+import timeGridPlugin from '@fullcalendar/timegrid'
 ```
 
 You'll need to manually import these stylesheets in `_app.jsx`:
 
 ```jsx
-import "@fullcalendar/common/main.css"; // @fullcalendar/react imports @fullcalendar/common
-import "@fullcalendar/daygrid/main.css"; // @fullcalendar/timegrid imports @fullcalendar/daygrid
-import "@fullcalendar/timegrid/main.css"; // @fullcalendar/timegrid is a direct import
+import '@fullcalendar/common/main.css' // @fullcalendar/react imports @fullcalendar/common
+import '@fullcalendar/daygrid/main.css' // @fullcalendar/timegrid imports @fullcalendar/daygrid
+import '@fullcalendar/timegrid/main.css' // @fullcalendar/timegrid is a direct import
 // (and @fullcalendar/interaction has no stylesheet)
 ```
 

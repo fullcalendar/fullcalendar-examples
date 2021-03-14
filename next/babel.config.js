@@ -1,5 +1,5 @@
 module.exports = {
-  presets: ["next/babel"],
+  presets: ['next/babel'],
 
   // fullcalendar attempts to import its own CSS files, but next.js does not allow this.
   // throw away these statements before they arrive at next.js,
@@ -7,10 +7,10 @@ module.exports = {
   // will also work for any other 3rd-party packages that attempt to do this.
   overrides: [
     {
-      include: ["./node_modules"],
+      include: ['./node_modules'],
       plugins: [
-        ["babel-plugin-transform-import-ignore", { patterns: [".css"] }]
+        ['babel-plugin-transform-import-ignore', { patterns: ['.css'] }]
       ]
     }
   ]
-};
+}

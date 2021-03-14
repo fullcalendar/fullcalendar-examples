@@ -1,7 +1,7 @@
-import React from "react";
-import FullCalendar from "@fullcalendar/react";
-import interactionPlugin from "@fullcalendar/interaction";
-import timeGridPlugin from "@fullcalendar/timegrid";
+import React from 'react'
+import FullCalendar from '@fullcalendar/react'
+import interactionPlugin from '@fullcalendar/interaction'
+import timeGridPlugin from '@fullcalendar/timegrid'
 
 const Page = () => {
   return (
@@ -10,9 +10,9 @@ const Page = () => {
       initialView="timeGridWeek"
       nowIndicator={true}
       editable={true}
-      initialEvents={[{ title: "nice event", start: new Date() }]}
+      initialEvents={[{ title: 'nice event', start: new Date() }]}
     />
-  );
-};
+  )
+}
 
-export default Page;
+export default Page
