@@ -8,6 +8,7 @@
     "watch": "next",
     "build": "next build",
     "start": "next start",
+    "dev": "next dev --port 3003",
     "clean": "rm -rf .next"
   },
   "dependencies": {
