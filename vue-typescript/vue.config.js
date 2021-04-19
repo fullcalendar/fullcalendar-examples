@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: './' // for the `build` command
-}
+  publicPath: "./", // for the `build` command
+};
