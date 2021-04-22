@@ -5,9 +5,9 @@
   "license": "ISC",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@fullcalendar/daygrid": "^5.4.0",
@@ -20,10 +20,8 @@
     "vuex": "^3.4.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.4.0",
-    "@vue/cli-plugin-vuex": "^4.4.4",
-    "@vue/cli-service": "^4.5.8",
-    "vue-template-compiler": "^2.6.12"
+    "vite": "^2.2.1",
+    "vite-plugin-vue2": "^1.4.4"
   },
   "browserslist": [
     "> 1%",
