@@ -8,5 +8,6 @@
   },
   "settings": {},
   "extends": ["eslint:recommended"],
-  "rules": {}
+  "rules": {},
+  "root": true
 }
