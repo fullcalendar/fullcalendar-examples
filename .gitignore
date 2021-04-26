@@ -4,5 +4,4 @@ package-lock.json
 npm-debug.log
 
 dist
-
-.parcel-cache/
+.cache
