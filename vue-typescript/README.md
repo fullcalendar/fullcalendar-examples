@@ -1,9 +1,7 @@
 
 # FullCalendar Vue+TypeScript Example Project
 
-This is a fully-buildable example project for FullCalendar, Vue, and **TypeScript**, leveraging Webpack.
-
-This project began with the [Vue cli](https://cli.vuejs.org/) `vue create` command.
+This is a fully-buildable example project for FullCalendar, Vue, and **TypeScript**, leveraging [Vite](https://github.com/vitejs/vite).
 
 
 ## Installation
