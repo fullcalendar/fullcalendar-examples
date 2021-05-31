@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "name": "@fullcalendar-example-projects/vue3-typescript",
+  "version": "0.0.0",
+  "license": "ISC",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@fullcalendar/daygrid": "^5.5.0",
+    "@fullcalendar/interaction": "^5.5.0",
+    "@fullcalendar/timegrid": "^5.5.0",
+    "@fullcalendar/vue3": "^5.5.0",
+    "vue": "^3.0.11"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.2.2",
+    "@vue/compiler-sfc": "^3.0.11",
+    "typescript": "^4.2.4",
+    "vite": "^2.3.2"
+  }
+}
