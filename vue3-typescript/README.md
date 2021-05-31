@@ -1,7 +1,7 @@
 
-# FullCalendar Vue+TypeScript Example Project
+# FullCalendar Vue 3 & TypeScript Example Project
 
-This is a fully-buildable example project for FullCalendar, Vue, and **TypeScript**, leveraging [Vite](https://github.com/vitejs/vite).
+This is a fully-buildable example project for FullCalendar, Vue 3, and **TypeScript**, leveraging [Vite](https://github.com/vitejs/vite).
 
 
 ## Installation
