@@ -5,6 +5,7 @@ module.exports = {
   mode: 'development',
   devtool: 'source-map',
   entry: './src/main.js',
+  target: ['web', 'es5'],
   module: {
     rules: [
       {
@@ -22,6 +23,18 @@ module.exports = {
         test: /\.js$/,
         use: [ 'source-map-loader' ],
         enforce: 'pre'
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              ['@babel/preset-env', { targets: { ie: '11' }}]
+            ]
+          }
+        }
       }
     ]
   },

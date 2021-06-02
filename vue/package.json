@@ -18,6 +18,9 @@
     "vue": "^2.6.12"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "babel-loader": "^8.2.2",
     "css-loader": "^4.3.0",
     "html-webpack-plugin": "^4.5.0",
     "source-map-loader": "^1.1.1",
