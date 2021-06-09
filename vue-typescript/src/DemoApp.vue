@@ -1,5 +1,6 @@
 <script lang='ts'>
 import { Component, Vue } from 'vue-property-decorator'
+import '@fullcalendar/core/vdom' // solve problem with Vite
 import FullCalendar, { CalendarOptions, EventApi, DateSelectArg, EventClickArg } from '@fullcalendar/vue'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
