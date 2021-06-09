@@ -13,7 +13,7 @@
     "@fullcalendar/daygrid": "^5.7.2",
     "@fullcalendar/interaction": "^5.7.2",
     "@fullcalendar/timegrid": "^5.7.2",
-    "@fullcalendar/vue": "^5.7.1",
+    "@fullcalendar/vue": "^5.7.2",
     "style-loader": "^2.0.0",
     "vue": "^2.6.12"
   },

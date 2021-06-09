@@ -15,7 +15,7 @@
     "@babel/preset-react": "^7.10.4",
     "@fullcalendar/common": "^5.7.2",
     "@fullcalendar/interaction": "^5.7.2",
-    "@fullcalendar/react": "^5.7.0",
+    "@fullcalendar/react": "^5.7.2",
     "@fullcalendar/resource-timeline": "^5.4.0",
     "@fullcalendar/timeline": "^5.7.2",
     "babel-plugin-transform-require-ignore": "^0.1.1",
