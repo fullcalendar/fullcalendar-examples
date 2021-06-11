@@ -6,7 +6,8 @@
   "author": "Adam Shaw <arshaw@arshaw.com> (http://arshaw.com/)",
   "scripts": {
     "test": "jest",
-    "inspect": "echo 'open chrome://inspect' && yarn run --inspect-brk jest --runInBand"
+    "test:watch": "jest --watch",
+    "test:inspect": "echo 'open chrome://inspect' && yarn run --inspect-brk jest --runInBand"
   },
   "dependencies": {
     "@fullcalendar/daygrid": "^5.7.2",

@@ -11,9 +11,9 @@ const events = [
     start: '2021-06-10T01:00:00',
     end: '2021-06-10T02:00:00'
   }
-];
+]
 
-const Calendar = ({ initialView }) => (
+const Calendar = ({ initialView, eventContent }) => (
   <FullCalendar
     plugins={[
       dayGridPlugin,
@@ -24,6 +24,7 @@ const Calendar = ({ initialView }) => (
     initialDate={initialDate}
     scrollTime={0}
     events={events}
+    eventContent={eventContent}
   />
 )
 
