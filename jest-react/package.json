@@ -5,7 +5,8 @@
   "license": "ISC",
   "author": "Adam Shaw <arshaw@arshaw.com> (http://arshaw.com/)",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "inspect": "echo 'open chrome://inspect' && yarn run --inspect-brk jest --runInBand"
   },
   "dependencies": {
     "@fullcalendar/daygrid": "^5.7.2",

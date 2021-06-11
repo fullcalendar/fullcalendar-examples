@@ -10,6 +10,6 @@ test('renders the events', () => {
   ).toBeInTheDocument()
 
   expect(
-    container.querySelectorAll('.fc-timegrid-event').length,
+    container.querySelectorAll('.fc-timegrid-event').length
   ).toBeGreaterThan(0)
 })
