@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "name": "@fullcalendar-example-projects/jest-react",
+  "version": "0.0.0",
+  "license": "ISC",
+  "author": "Adam Shaw <arshaw@arshaw.com> (http://arshaw.com/)",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "@fullcalendar/daygrid": "^5.7.2",
+    "@fullcalendar/react": "^5.7.2",
+    "@fullcalendar/timegrid": "^5.7.2",
+    "@fullcalendar/timeline": "^5.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.5",
+    "@babel/preset-env": "^7.14.5",
+    "@babel/preset-react": "^7.14.5",
+    "@testing-library/jest-dom": "^5.13.0",
+    "@testing-library/react": "^11.2.7",
+    "babel-jest": "^27.0.2",
+    "jest": "^27.0.4"
+  }
+}
