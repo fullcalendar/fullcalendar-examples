@@ -4,6 +4,7 @@ import interactionPlugin from '@fullcalendar/interaction';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import listPlugin from '@fullcalendar/list';
+import resourceTimelinePlugin from '@fullcalendar/resource-timeline'
 
 class FullCalendarComponent extends LitElement {
   render() { // stylesheet is a hack
@@ -15,13 +16,14 @@ class FullCalendarComponent extends LitElement {
   firstUpdated() {
     let calendarEl = this.shadowRoot.getElementById('calendar');
     let calendar = new Calendar(calendarEl, {
-      plugins: [ interactionPlugin, dayGridPlugin, timeGridPlugin, listPlugin ],
+      plugins: [ interactionPlugin, dayGridPlugin, timeGridPlugin, listPlugin, resourceTimelinePlugin ],
       headerToolbar: {
         left: 'prev,next today',
         center: 'title',
         right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
       },
       initialDate: '2018-01-12',
+      initialView: 'resourceTimelineWeek',
       navLinks: true, // can click day/week names to navigate views
       editable: true,
       dayMaxEvents: true, // allow "more" link when too many events

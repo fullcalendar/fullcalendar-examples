@@ -14,6 +14,7 @@
     "@fullcalendar/daygrid": "^5.8.0",
     "@fullcalendar/interaction": "^5.8.0",
     "@fullcalendar/list": "^5.8.0",
+    "@fullcalendar/resource-timeline": "^5.8.0",
     "@fullcalendar/timegrid": "^5.8.0",
     "lit": "^2.0.0-rc.1"
   },
