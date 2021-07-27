@@ -82,7 +82,9 @@ class FullCalendarComponent extends LitElement {
         }
       ]
     });
-    calendar.render();
+    setTimeout(function() { // HACK to wait for external stylesheet loading
+      calendar.render();
+    }, 0)
   }
 }
 
