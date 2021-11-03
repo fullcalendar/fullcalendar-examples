@@ -10,11 +10,11 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@fullcalendar/core": "^5.10.0",
-    "@fullcalendar/daygrid": "^5.10.0",
-    "@fullcalendar/interaction": "^5.10.0",
-    "@fullcalendar/timegrid": "^5.10.0",
-    "@fullcalendar/vue": "^5.10.0",
+    "@fullcalendar/core": "^5.10.1",
+    "@fullcalendar/daygrid": "^5.10.1",
+    "@fullcalendar/interaction": "^5.10.1",
+    "@fullcalendar/timegrid": "^5.10.1",
+    "@fullcalendar/vue": "^5.10.1",
     "vue": "^2.6.12",
     "vue-class-component": "^7.2.6",
     "vue-property-decorator": "^9.1.2"
