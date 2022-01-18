@@ -1,0 +1,39 @@
+{
+  "private": true,
+  "name": "fullcalendar-examples",
+  "workspaces": [
+    "bootstrap",
+    "custom-css-vars",
+    "jest-react",
+    "lit",
+    "locales",
+    "moment",
+    "moment-timezone",
+    "moment-typescript",
+    "nuxt",
+    "react",
+    "react-mobx-typescript",
+    "react-redux",
+    "react-typescript",
+    "rollup",
+    "rollup-scheduler",
+    "typescript",
+    "typescript-scheduler",
+    "vue",
+    "vue-typescript",
+    "vue-vuex",
+    "vue3-typescript",
+    "webpack",
+    "webpack-scheduler"
+  ],
+  "disabledWorkspaces": [
+    "# this block is for documentation purposes only",
+    "angular - Angular CLI does not support Yarn PnP",
+    "next - This example is disabled till the next major release",
+    "next-scheduler - This example is disabled till the next major release",
+    "parcel - This example is being transitioned to a newer version",
+    "parcel-2 - There is currently a bug in parcel which prevents this from working",
+    "# https://github.com/parcel-bundler/parcel/issues/4729",
+    "# tries to load babel within each fc file and fails"
+  ]
+}
