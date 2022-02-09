@@ -1,5 +1,5 @@
 
-# FullCalendar Bootstrap Example
+# FullCalendar Bootstrap 5 Example
 
 This is a fully-buildable example project for FullCalendar and [Bootstrap].
 
@@ -8,7 +8,7 @@ This is a fully-buildable example project for FullCalendar and [Bootstrap].
 
 ```bash
 git clone https://github.com/fullcalendar/fullcalendar-example-projects.git
-cd fullcalendar-example-projects/bootstrap
+cd fullcalendar-example-projects/bootstrap5
 npm install
 ```
 
@@ -21,13 +21,3 @@ npm run clean # start fresh
 ```
 
 After running `build` or `watch`, open up `index.html` in a browser.
-
-
-## A Note on Dependencies
-
-This project's dependencies specify `jquery` and `popper.js`. However, they are not used.
-They are only included to satisfy the `bootstrap` package's peerDependency requirement,
-which prevents an error from displaying.
-
-
-[Bootstrap]: https://getbootstrap.com/

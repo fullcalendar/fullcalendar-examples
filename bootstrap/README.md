@@ -1,5 +1,5 @@
 
-# FullCalendar Bootstrap Example
+# FullCalendar Bootstrap 4 Example
 
 This is a fully-buildable example project for FullCalendar and [Bootstrap].
 
