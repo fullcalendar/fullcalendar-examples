@@ -3,6 +3,7 @@
   "name": "fullcalendar-examples",
   "workspaces": [
     "bootstrap",
+    "bootstrap5",
     "custom-css-vars",
     "jest-react",
     "lit",
