@@ -1,7 +1,7 @@
 
 # FullCalendar Bootstrap 5 Example
 
-This is a fully-buildable example project for FullCalendar and [Bootstrap].
+This is a fully-buildable example project for FullCalendar and [Bootstrap 5][Bootstrap].
 
 
 ## Installation
@@ -21,3 +21,5 @@ npm run clean # start fresh
 ```
 
 After running `build` or `watch`, open up `index.html` in a browser.
+
+[Bootstrap]: https://getbootstrap.com/

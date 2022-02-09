@@ -1,7 +1,7 @@
 
 # FullCalendar Bootstrap 4 Example
 
-This is a fully-buildable example project for FullCalendar and [Bootstrap].
+This is a fully-buildable example project for FullCalendar and [Bootstrap 4][Bootstrap4].
 
 
 ## Installation
@@ -30,4 +30,4 @@ They are only included to satisfy the `bootstrap` package's peerDependency requi
 which prevents an error from displaying.
 
 
-[Bootstrap]: https://getbootstrap.com/
+[Bootstrap4]: https://getbootstrap.com/docs/4.0/getting-started/introduction/
