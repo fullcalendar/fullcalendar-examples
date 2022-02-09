@@ -1,2 +1,0 @@
-
-# FullCalendar Parcel Example
