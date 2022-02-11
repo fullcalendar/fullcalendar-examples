@@ -1,0 +1,8 @@
+{
+  "events":[
+      {"e_id":"1","title":"asdasdasd","start":"02-12-2022" },
+      {"e_id":"2","title":"asdasdasd","start":"12-12-2022" },
+      {"e_id":"3","title":"asdasdasd","start":"05-12-2022" },
+      {"e_id":"4","title":"asdasdasd","start":"13-12-2022" }
+  ]
+}

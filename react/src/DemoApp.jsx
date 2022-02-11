@@ -3,13 +3,13 @@ import FullCalendar, { formatDate } from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
+import listPlugin from '@fullcalendar/list'
 import { INITIAL_EVENTS, createEventId } from './event-utils'
 
 export default class DemoApp extends React.Component {
-
   state = {
     weekendsVisible: true,
-    currentEvents: []
+    currentEvents: [],
   }
 
   render() {
@@ -18,14 +18,38 @@ export default class DemoApp extends React.Component {
         {this.renderSidebar()}
         <div className='demo-app-main'>
           <FullCalendar
-            plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+            plugins={[
+              dayGridPlugin,
+              listPlugin,
+              timeGridPlugin,
+              interactionPlugin,
+            ]}
             headerToolbar={{
               left: 'prev,next today',
               center: 'title',
-              right: 'dayGridMonth,timeGridWeek,timeGridDay'
+              right: 'month,week,day,listWeek',
+            }}
+            views={{
+              month: {
+                type: 'dayGridMonth',
+                buttonText: 'Month',
+              },
+              week: {
+                type: 'dayGridWeek',
+                duration: { days: 7 },
+                buttonText: 'Week',
+              },
+              day: {
+                type: 'dayGridWeek',
+                duration: { days: 1 },
+                buttonText: 'Day',
+              },
+              listWeek: {
+                buttonText: 'List',
+              },
             }}
             initialView='dayGridMonth'
-            editable={true}
+            editable={false}
             selectable={true}
             selectMirror={true}
             dayMaxEvents={true}
@@ -34,7 +58,8 @@ export default class DemoApp extends React.Component {
             select={this.handleDateSelect}
             eventContent={renderEventContent} // custom render function
             eventClick={this.handleEventClick}
-            eventsSet={this.handleEvents} // called after events are initialized/added/changed/removed
+            eventsSet={this.handleEvents}
+            // called after events are initialized/added/changed/removed
             /* you can update a remote database when these fire:
             eventAdd={function(){}}
             eventChange={function(){}}
@@ -69,9 +94,7 @@ export default class DemoApp extends React.Component {
         </div>
         <div className='demo-app-sidebar-section'>
           <h2>All Events ({this.state.currentEvents.length})</h2>
-          <ul>
-            {this.state.currentEvents.map(renderSidebarEvent)}
-          </ul>
+          <ul>{this.state.currentEvents.map(renderSidebarEvent)}</ul>
         </div>
       </div>
     )
@@ -79,7 +102,7 @@ export default class DemoApp extends React.Component {
 
   handleWeekendsToggle = () => {
     this.setState({
-      weekendsVisible: !this.state.weekendsVisible
+      weekendsVisible: !this.state.weekendsVisible,
     })
   }
 
@@ -95,23 +118,26 @@ export default class DemoApp extends React.Component {
         title,
         start: selectInfo.startStr,
         end: selectInfo.endStr,
-        allDay: selectInfo.allDay
+        allDay: selectInfo.allDay,
       })
     }
   }
 
   handleEventClick = (clickInfo) => {
-    if (confirm(`Are you sure you want to delete the event '${clickInfo.event.title}'`)) {
+    if (
+      confirm(
+        `Are you sure you want to delete the event '${clickInfo.event.title}'`
+      )
+    ) {
       clickInfo.event.remove()
     }
   }
 
   handleEvents = (events) => {
     this.setState({
-      currentEvents: events
+      currentEvents: events,
     })
   }
-
 }
 
 function renderEventContent(eventInfo) {
@@ -126,7 +152,13 @@ function renderEventContent(eventInfo) {
 function renderSidebarEvent(event) {
   return (
     <li key={event.id}>
-      <b>{formatDate(event.start, {year: 'numeric', month: 'short', day: 'numeric'})}</b>
+      <b>
+        {formatDate(event.start, {
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric',
+        })}
+      </b>
       <i>{event.title}</i>
     </li>
   )
