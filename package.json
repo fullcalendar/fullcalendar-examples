@@ -13,6 +13,7 @@
     "moment-typescript",
     "nuxt",
     "react",
+    "react-lazy",
     "react-mobx-typescript",
     "react-redux",
     "react-typescript",
