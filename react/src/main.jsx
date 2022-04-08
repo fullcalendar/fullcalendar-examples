@@ -1,11 +1,9 @@
 import React from 'react'
-import { render } from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import DemoApp from './DemoApp'
 import './main.css'
 
 document.addEventListener('DOMContentLoaded', function() {
-  render(
-    <DemoApp />,
-    document.body.appendChild(document.createElement('div'))
-  )
+  createRoot(document.body.appendChild(document.createElement('div')))
+    .render(<DemoApp />)
 })
