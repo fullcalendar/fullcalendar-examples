@@ -1,5 +1,5 @@
 {
-  "name": "angular13",
+  "name": "@fullcalendar-example-projects/angular13",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
