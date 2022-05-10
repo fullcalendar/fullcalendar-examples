@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CalendarOptions, DateSelectArg, EventClickArg, EventApi } from '@fullcalendar/angular';
+import { CalendarOptions, DateSelectArg, EventClickArg, EventApi } from '@fullcalendar/angular-ivy';
 import { INITIAL_EVENTS, createEventId } from './event-utils';
 
 @Component({
