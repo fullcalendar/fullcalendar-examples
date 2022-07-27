@@ -11,12 +11,12 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.1",
-    "@fullcalendar/bootstrap": "^5.11.0",
-    "@fullcalendar/core": "^5.11.0",
-    "@fullcalendar/daygrid": "^5.11.0",
-    "@fullcalendar/interaction": "^5.11.0",
-    "@fullcalendar/list": "^5.11.0",
-    "@fullcalendar/timegrid": "^5.11.0",
+    "@fullcalendar/bootstrap": "^5.11.2",
+    "@fullcalendar/core": "^5.11.2",
+    "@fullcalendar/daygrid": "^5.11.2",
+    "@fullcalendar/interaction": "^5.11.2",
+    "@fullcalendar/list": "^5.11.2",
+    "@fullcalendar/timegrid": "^5.11.2",
     "bootstrap": "^4.5.0",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1"

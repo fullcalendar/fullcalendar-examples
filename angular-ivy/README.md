@@ -1,4 +1,7 @@
 
+EXPERIMENTAL - DO NOT USE
+
+
 # FullCalendar Angular Example Project
 
 This is a fully-buildable example project for FullCalendar and Angular. It was initially set up with the `ng new` command of the [Angular CLI], but with lots of stuff stripped out including testing and linting. For a complete walkthrough, read the [FullCalendar Angular Docs &raquo;](https://fullcalendar.io/docs/angular)
