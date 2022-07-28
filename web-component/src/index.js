@@ -6,6 +6,8 @@ import listPlugin from '@fullcalendar/list'
 import resourceTimelinePlugin from '@fullcalendar/resource-timeline'
 import './index.css'
 
+// TODO: test with shadow-dom
+// (will have trouble with attaching stylesheets)
 class FullCalendarElement extends HTMLElement {
   connectedCallback() {
     this.innerHTML = '<div></div>'
