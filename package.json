@@ -6,7 +6,7 @@
     "bootstrap5",
     "custom-css-vars",
     "jest-react",
-    "lit",
+    "web-component",
     "locales",
     "moment",
     "moment-timezone",

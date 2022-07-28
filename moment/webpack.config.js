@@ -1,33 +1,27 @@
 const path = require('path')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MomentLocalesPlugin = require('moment-locales-webpack-plugin')
 
 module.exports = {
   mode: 'development',
   devtool: 'source-map',
-  entry: './src/main.js',
-  resolve: {
-    extensions: [ '.js' ]
-  },
+  entry: './src/index.js',
   module: {
     rules: [
       {
         test: /\.css$/,
-        use: [
-          { loader: MiniCssExtractPlugin.loader },
-          { loader: 'css-loader', options: { importLoaders: 1 } }
-        ]
-      }
+        use: ['style-loader', 'css-loader'],
+      },
     ]
   },
   output: {
-    filename: 'main.js',
-    path: path.join(__dirname, 'dist')
+    path: path.join(__dirname, 'dist'),
+    filename: 'index.js',
   },
   plugins: [
     new MomentLocalesPlugin(), // strip all locales except 'en'
-    new MiniCssExtractPlugin({
-      filename: 'main.css'
-    })
+    new HtmlWebpackPlugin({
+      template: './src/index.html'
+    }),
   ]
 }

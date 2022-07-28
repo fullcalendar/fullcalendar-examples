@@ -13,5 +13,5 @@
     "outDir": "tsc",
     "experimentalDecorators": true
   },
-  "include": ["src/main.tsx"]
+  "include": ["src/index.tsx"]
 }

@@ -20,6 +20,6 @@ npm run watch # continously build
 npm run clean # start fresh
 ```
 
-After running `build` or `watch`, open up `index.html` in a browser.
+After running `build` or `watch`, open up `dist/index.html` in a browser.
 
 [Bootstrap]: https://getbootstrap.com/
