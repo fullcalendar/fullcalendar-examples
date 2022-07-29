@@ -7,8 +7,10 @@ cd node_modules
 mkdir -p '@fullcalendar'
 cd '@fullcalendar'
 rm -rf *
+cp -r ../../../../packages-contrib/angular/dist/fullcalendar angular
 cp -r ../../../../packages/core core
 cp -r ../../../../packages/common common
 cp -r ../../../../packages/daygrid daygrid
 cp -r ../../../../packages/interaction interaction
+cp -r ../../../../packages/list list
 cp -r ../../../../packages/timegrid timegrid
