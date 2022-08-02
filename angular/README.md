@@ -1,32 +1,27 @@
+# @fullcalendarExampleProjects/angular
 
-EXPERIMENTAL - DO NOT USE
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
 
+## Development server
 
-# FullCalendar Angular Example Project
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-This is a fully-buildable example project for FullCalendar and Angular. It was initially set up with the `ng new` command of the [Angular CLI], but with lots of stuff stripped out including testing and linting. For a complete walkthrough, read the [FullCalendar Angular Docs &raquo;](https://fullcalendar.io/docs/angular)
+## Code scaffolding
 
-## Installation
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-```bash
-git clone https://github.com/fullcalendar/fullcalendar-example-projects.git
-cd fullcalendar-example-projects/angular
-npm install
-```
+## Build
 
-## Build commands
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-```bash
-npm run build # build to a directory
-npm run start # continously build, as a server
-```
+## Running unit tests
 
-After running the `npm run start` command, you will be given a localhost URL that can be visited in a browser.
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
+## Running end-to-end tests
 
-## Angular Ivy
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-The `enableIvy` flag has been set to `false` in `tsconfig.base.json` because it is incompatible with FullCalendar's monorepo, which uses Yarn PnP, but if you want to reenable it, please feel free.
+## Further help
 
-
-[Angular CLI]: https://cli.angular.io/
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

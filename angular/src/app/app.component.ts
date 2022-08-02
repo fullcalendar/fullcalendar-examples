@@ -12,7 +12,7 @@ import { INITIAL_EVENTS, createEventId } from './event-utils';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
 
@@ -47,8 +47,10 @@ export class AppComponent {
   }
 
   handleWeekendsToggle() {
-    const { calendarOptions } = this;
-    calendarOptions.weekends = !calendarOptions.weekends;
+    this.calendarOptions = {
+      ...this.calendarOptions,
+      weekends: !this.calendarOptions.weekends
+    }
   }
 
   handleDateSelect(selectInfo: DateSelectArg) {
