@@ -44,7 +44,10 @@ export class AppModule { }
 Install the FullCalendar-related packages:
 
 ```sh
-npm install @fullcalendar/web-component @fullcalendar/core @fullcalendar/daygrid
+npm install \
+  @fullcalendar/web-component@beta \
+  @fullcalendar/core@beta \
+  @fullcalendar/daygrid@beta
 ```
 
 In `app.component.ts`, import the FullCalendar-related packages and configure FullCalendar's
