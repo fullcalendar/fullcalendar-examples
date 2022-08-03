@@ -4,7 +4,7 @@ import {
   DateSelectArg,
   EventClickArg,
   EventApi,
-  install as defineFullCalendarElement,
+  defineFullCalendarElement,
 } from '@fullcalendar/web-component';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
