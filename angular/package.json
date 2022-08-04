@@ -22,6 +22,7 @@
     "@fullcalendar/interaction": "6.0.0-beta.1",
     "@fullcalendar/list": "6.0.0-beta.1",
     "@fullcalendar/timegrid": "6.0.0-beta.1",
+    "@fullcalendar/web-component": "6.0.0-beta.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

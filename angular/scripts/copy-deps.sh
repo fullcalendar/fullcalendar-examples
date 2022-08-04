@@ -14,5 +14,3 @@ cp -r ../../../../packages/daygrid daygrid
 cp -r ../../../../packages/interaction interaction
 cp -r ../../../../packages/list list
 cp -r ../../../../packages/timegrid timegrid
-
-# TODO: eventually add @fullcalendar/web-component to package.json dependencies
