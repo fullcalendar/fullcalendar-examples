@@ -44,8 +44,8 @@ export class AppModule { }
 Install the FullCalendar-related packages:
 
 ```sh
-npm install \
-  @fullcalendar/web-component@beta \
+npm install --save \
+  @fullcalendar/web-component \
   @fullcalendar/core@beta \
   @fullcalendar/daygrid@beta
 ```
