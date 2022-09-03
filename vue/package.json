@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@fullcalendar-example-projects/vue",
+  "name": "@fullcalendar/vue-example",
   "version": "0.0.0",
   "license": "ISC",
   "scripts": {

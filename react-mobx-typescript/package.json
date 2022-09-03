@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@fullcalendar-example-projects/react-mobx-typescript",
+  "name": "@fullcalendar/react-mobx-typescript-example",
   "title": "FullCalendar React+MobX+TypeScript Example Project",
   "version": "0.0.0",
   "license": "ISC",
