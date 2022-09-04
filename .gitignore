@@ -1,7 +1,6 @@
 
-node_modules
-package-lock.json
-npm-debug.log
+# TODO: move to individual projects
 
+node_modules
 dist
 .cache
