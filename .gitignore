@@ -1,6 +1,7 @@
 
-# TODO: move to individual projects
-
-node_modules
 dist
-.cache
+tmp
+node_modules
+tsconfig.json
+.tsbuildinfo
+.turbo
