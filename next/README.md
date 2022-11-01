@@ -16,13 +16,15 @@ npm install
 ## Build Commands
 
 ```
-npm run watch # watch and rebuild while developing
+npm run dev # watch and rebuild while developing
 npm run build # build for production
 npm run start # run the production build
-npm run clean # clear all built files
+npm run lint # lint source files
 ```
 
 
 ## Workarounds Explained
+
+Still needed?
 
 Install [next-transpile-modules](https://www.npmjs.com/package/next-transpile-modules) to process FullCalendar's ES modules. See [next.config.js](next.config.js). If you don't like this, [vote to give Next ESM support for third-party packages](https://github.com/vercel/next.js/issues/706).

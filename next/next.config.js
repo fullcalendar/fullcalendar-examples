@@ -1,9 +1,7 @@
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+}
 
-// for transpiling all ESM @fullcalendar/* packages
-const withTM = require('next-transpile-modules')([
-  '@fullcalendar'
-])
-
-module.exports = withTM({
-  // any other general next.js settings
-})
+module.exports = nextConfig
