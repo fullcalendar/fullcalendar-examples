@@ -5,6 +5,7 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import listPlugin from '@fullcalendar/list';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import resourceTimelinePlugin from '@fullcalendar/resource-timeline';
+import '@fullcalendar/premium-common';
 import './index.css';
 
 document.addEventListener('DOMContentLoaded', function() {
