@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "license": "ISC",
   "author": "Adam Shaw <arshaw@arshaw.com> (http://arshaw.com/)",
+  "type": "module",
   "scripts": {
     "build": "parcel build --cache-dir ./.cache --dist-dir ./dist ./src/index.html",
     "start": "parcel serve --cache-dir ./.cache --no-hmr ./src/index.html",
