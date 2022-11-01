@@ -1,6 +1,6 @@
 import vue from '@vitejs/plugin-vue'
 
-module.exports = {
+export default {
   root: './',
   base: './',
   build: {
