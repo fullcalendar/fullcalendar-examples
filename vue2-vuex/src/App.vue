@@ -23,7 +23,6 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
 
-import '@fullcalendar/core/vdom' // solve problem with Vite
 import FullCalendar from '@fullcalendar/vue'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'

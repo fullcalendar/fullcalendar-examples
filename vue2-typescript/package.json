@@ -3,6 +3,7 @@
   "name": "@fullcalendar/vue2-typescript-example",
   "version": "0.0.0",
   "license": "ISC",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
