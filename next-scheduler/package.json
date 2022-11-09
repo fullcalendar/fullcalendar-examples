@@ -12,6 +12,7 @@
     "@fullcalendar/core": "6.0.0-beta.1",
     "@fullcalendar/interaction": "6.0.0-beta.1",
     "@fullcalendar/react": "6.0.0-beta.1",
+    "@fullcalendar/resource": "6.0.0-beta.1",
     "@fullcalendar/resource-timeline": "6.0.0-beta.1",
     "next": "^12.3.2",
     "react": "^18.2.0",
