@@ -5,7 +5,6 @@
   "license": "ISC",
   "author": "Adam Shaw <arshaw@arshaw.com> (http://arshaw.com/)",
   "scripts": {
-    "build": "echo 'No build command. Running tests...' && jest",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:inspect": "echo 'open chrome://inspect' && yarn run --inspect-brk jest --runInBand"
