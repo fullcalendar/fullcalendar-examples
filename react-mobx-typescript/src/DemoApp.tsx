@@ -1,11 +1,12 @@
 import { observer } from "mobx-react-lite";
 import React, { useContext } from "react";
-import FullCalendar, {
+import {
   EventContentArg,
   EventClickArg,
   DateSelectArg,
   EventChangeArg,
-} from "@fullcalendar/react";
+} from "@fullcalendar/core";
+import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import timeGridPlugin from "@fullcalendar/timegrid";
