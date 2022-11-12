@@ -4,15 +4,15 @@ import {
   DateSelectArg,
   EventClickArg,
   EventApi,
-  defineFullCalendarElement,
-} from '@fullcalendar/web-component';
+} from '@fullcalendar/core';
+import { FullCalendarElement } from '@fullcalendar/web-component';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import listPlugin from '@fullcalendar/list';
 import interactionPlugin from '@fullcalendar/interaction';
 import { INITIAL_EVENTS, createEventId } from './event-utils';
 
-defineFullCalendarElement()
+customElements.define('full-calendar', FullCalendarElement)
 
 @Component({
   selector: 'app-root',
