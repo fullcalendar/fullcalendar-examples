@@ -1,4 +1,4 @@
-const nodeResolve = require('@rollup/plugin-node-resolve')
+const nodeResolve = require('@rollup/plugin-node-resolve').default
 const postcss = require('rollup-plugin-postcss')
 
 module.exports = {
