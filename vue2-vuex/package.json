@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "license": "ISC",
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -25,6 +24,7 @@
     "@vitejs/plugin-vue2": "^1.1.2",
     "vite": "^2.2.1"
   },
+  "type": "module",
   "browserslist": [
     "> 1%",
     "last 2 versions",

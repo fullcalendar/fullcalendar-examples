@@ -3,13 +3,6 @@
   "name": "@fullcalendar/vue3-typescript-example",
   "version": "0.0.0",
   "license": "ISC",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "clean": "rm -rf dist"
-  },
   "dependencies": {
     "@fullcalendar/core": "6.0.0-beta.1",
     "@fullcalendar/daygrid": "6.0.0-beta.1",
@@ -23,5 +16,12 @@
     "@vue/compiler-sfc": "^3.2.41",
     "typescript": "^4.2.4",
     "vite": "^3.2.2"
-  }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean": "rm -rf dist"
+  },
+  "type": "module"
 }
