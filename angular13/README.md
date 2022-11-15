@@ -23,3 +23,5 @@ After running the `npm run start` command, you will be given a localhost URL tha
 ## Workarounds
 
 Please see `.browserslistrc` for a workaround for [this bug](https://github.com/angular/angular-cli/issues/22606).
+
+[Angular CLI]: https://angular.io/cli
