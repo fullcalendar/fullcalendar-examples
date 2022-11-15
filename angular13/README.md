@@ -7,7 +7,7 @@ This is a fully-buildable example project for FullCalendar and Angular. It was i
 
 ```bash
 git clone https://github.com/fullcalendar/fullcalendar-example-projects.git
-cd fullcalendar-example-projects/angular
+cd fullcalendar-example-projects/angular13
 npm install
 ```
 
