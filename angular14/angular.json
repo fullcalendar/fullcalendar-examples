@@ -16,6 +16,9 @@
             "customWebpackConfig": {
               "path": "./custom-webpack.config.js"
             },
+            "allowedCommonJsDependencies": [
+              "fast-deep-equal"
+            ],
             "outputPath": "dist/angular14",
             "index": "src/index.html",
             "main": "src/main.ts",
