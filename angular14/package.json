@@ -1,5 +1,5 @@
 {
-  "name": "angular14",
+  "name": "@fullcalendar-example-projects/angular14",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -18,6 +18,11 @@
     "@angular/platform-browser": "^14.1.0",
     "@angular/platform-browser-dynamic": "^14.1.0",
     "@angular/router": "^14.1.0",
+    "@fullcalendar/angular": "^5.11.3",
+    "@fullcalendar/daygrid": "^5.11.3",
+    "@fullcalendar/interaction": "^5.11.3",
+    "@fullcalendar/list": "^5.11.3",
+    "@fullcalendar/timegrid": "^5.11.3",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
