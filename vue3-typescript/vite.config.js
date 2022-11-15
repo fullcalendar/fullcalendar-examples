@@ -1,8 +1,7 @@
 import vue from '@vitejs/plugin-vue'
 
 export default {
-  root: './',
-  base: './',
+  base: './', // for dist files referencing themselves
   build: {
     sourcemap: 'inline'
   },
