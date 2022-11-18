@@ -1,8 +1,13 @@
 import { createContext } from "react";
-import { observable, action } from "mobx";
+import { observable, action, makeObservable } from "mobx";
 import { EventInput, DateSelectArg, EventChangeArg } from "@fullcalendar/react";
 
 export class EventStore {
+  constructor() {
+    // see https://mobx.js.org/enabling-decorators.html
+    makeObservable(this);
+  }
+
   @observable
   weekendsVisible = true;
 
