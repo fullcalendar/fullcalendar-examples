@@ -8,4 +8,6 @@ ng new "@fullcalendar/angular${ng_version}-example" --directory "angular${ng_ver
 
 Answer NO to routing. Answer CSS.
 
+Npm-script "test"/"test:dev" tweaked.
+
 Problems with tsconfig.json and .gitignore
