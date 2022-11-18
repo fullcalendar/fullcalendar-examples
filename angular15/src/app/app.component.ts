@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { CalendarOptions, DateSelectArg, EventClickArg, EventApi } from '@fullcalendar/angular';
+import { CalendarOptions, DateSelectArg, EventClickArg, EventApi } from '@fullcalendar/core';
+import dayGridPlugin from '@fullcalendar/daygrid'
+import interactionPlugin from '@fullcalendar/interaction'
 import { INITIAL_EVENTS, createEventId } from './event-utils';
 
 @Component({
@@ -10,6 +12,10 @@ import { INITIAL_EVENTS, createEventId } from './event-utils';
 export class AppComponent {
   calendarVisible = true;
   calendarOptions: CalendarOptions = {
+    plugins: [
+      dayGridPlugin,
+      interactionPlugin,
+    ],
     headerToolbar: {
       left: 'prev,next today',
       center: 'title',
