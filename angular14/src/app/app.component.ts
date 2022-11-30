@@ -1,18 +1,8 @@
 import { Component } from '@angular/core';
-import {
-  CalendarOptions,
-  DateSelectArg,
-  EventClickArg,
-  EventApi,
-} from '@fullcalendar/core';
-import { FullCalendarElement } from '@fullcalendar/web-component';
-import dayGridPlugin from '@fullcalendar/daygrid';
-import timeGridPlugin from '@fullcalendar/timegrid';
-import listPlugin from '@fullcalendar/list';
-import interactionPlugin from '@fullcalendar/interaction';
+import { CalendarOptions, DateSelectArg, EventClickArg, EventApi } from '@fullcalendar/core';
+import dayGridPlugin from '@fullcalendar/daygrid'
+import interactionPlugin from '@fullcalendar/interaction'
 import { INITIAL_EVENTS, createEventId } from './event-utils';
-
-customElements.define('full-calendar', FullCalendarElement)
 
 @Component({
   selector: 'app-root',
@@ -20,10 +10,12 @@ customElements.define('full-calendar', FullCalendarElement)
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
   calendarVisible = true;
   calendarOptions: CalendarOptions = {
-    plugins: [dayGridPlugin, timeGridPlugin, listPlugin, interactionPlugin],
+    plugins: [
+      dayGridPlugin,
+      interactionPlugin,
+    ],
     headerToolbar: {
       left: 'prev,next today',
       center: 'title',
@@ -52,10 +44,8 @@ export class AppComponent {
   }
 
   handleWeekendsToggle() {
-    this.calendarOptions = {
-      ...this.calendarOptions,
-      weekends: !this.calendarOptions.weekends
-    }
+    const { calendarOptions } = this;
+    calendarOptions.weekends = !calendarOptions.weekends;
   }
 
   handleDateSelect(selectInfo: DateSelectArg) {
@@ -84,5 +74,4 @@ export class AppComponent {
   handleEvents(events: EventApi[]) {
     this.currentEvents = events;
   }
-
 }

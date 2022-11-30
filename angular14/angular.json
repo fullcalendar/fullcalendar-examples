@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "@fullcalendar-example-projects/angular": {
+    "example": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/fullcalendar-example-projects/angular",
+            "outputPath": "dist/example",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "@fullcalendar-example-projects/angular:build:production"
+              "browserTarget": "example:build:production"
             },
             "development": {
-              "browserTarget": "@fullcalendar-example-projects/angular:build:development"
+              "browserTarget": "example:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "@fullcalendar-example-projects/angular:build"
+            "browserTarget": "example:build"
           }
         },
         "test": {

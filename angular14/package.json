@@ -5,7 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development"
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
@@ -17,12 +18,10 @@
     "@angular/platform-browser": "^14.1.0",
     "@angular/platform-browser-dynamic": "^14.1.0",
     "@angular/router": "^14.1.0",
+    "@fullcalendar/angular": "6.0.0-beta.2",
     "@fullcalendar/core": "6.0.0-beta.2",
     "@fullcalendar/daygrid": "6.0.0-beta.2",
     "@fullcalendar/interaction": "6.0.0-beta.2",
-    "@fullcalendar/list": "6.0.0-beta.2",
-    "@fullcalendar/timegrid": "6.0.0-beta.2",
-    "@fullcalendar/web-component": "6.0.0-beta.2",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
@@ -33,6 +32,11 @@
     "@angular/compiler-cli": "^14.1.0",
     "@types/jasmine": "~4.0.0",
     "jasmine-core": "~4.2.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.0.0",
     "typescript": "~4.7.2"
   }
 }
