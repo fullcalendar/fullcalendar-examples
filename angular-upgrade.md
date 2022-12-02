@@ -10,6 +10,9 @@ Answer NO to routing. Answer CSS.
 
 Update src/index.html `<title>` to match project name
 
-Npm-script "test"/"test:dev" tweaked.
+Npm-script:
+- "test"
+- "test:dev"
+- "clean"
 
 Problems with tsconfig.json and .gitignore
