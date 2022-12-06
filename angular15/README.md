@@ -20,4 +20,8 @@ npm run start # continously build, as a server
 
 After running the `npm run start` command, you will be given a localhost URL that can be visited in a browser.
 
+## Quirks
+
+This example has `"preserveSymlinks": true` in `angular.json`, but this is only needed within a monorepo.
+
 [Angular CLI]: https://angular.io/cli
