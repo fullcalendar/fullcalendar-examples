@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef } from '@angular/core';
 import { CalendarOptions, DateSelectArg, EventClickArg, EventApi } from '@fullcalendar/core';
-import dayGridPlugin from '@fullcalendar/daygrid'
-import interactionPlugin from '@fullcalendar/interaction'
+import interactionPlugin from '@fullcalendar/interaction';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import timeGridPlugin from '@fullcalendar/timegrid';
+import listPlugin from '@fullcalendar/list';
 import { INITIAL_EVENTS, createEventId } from './event-utils';
 
 @Component({
@@ -13,8 +15,10 @@ export class AppComponent {
   calendarVisible = true;
   calendarOptions: CalendarOptions = {
     plugins: [
-      dayGridPlugin,
       interactionPlugin,
+      dayGridPlugin,
+      timeGridPlugin,
+      listPlugin,
     ],
     headerToolbar: {
       left: 'prev,next today',
@@ -38,6 +42,9 @@ export class AppComponent {
     */
   };
   currentEvents: EventApi[] = [];
+
+  constructor(private changeDetector: ChangeDetectorRef) {
+  }
 
   handleCalendarToggle() {
     this.calendarVisible = !this.calendarVisible;
@@ -73,5 +80,6 @@ export class AppComponent {
 
   handleEvents(events: EventApi[]) {
     this.currentEvents = events;
+    this.changeDetector.detectChanges();
   }
 }
