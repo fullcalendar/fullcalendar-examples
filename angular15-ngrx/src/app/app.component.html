@@ -45,7 +45,7 @@
     <full-calendar
       *ngIf='calendarVisible$ | async'
       [options]='calendarOptions'
-      [events]="(events$ | async) ?? []"
+      [events]="events$ | async"
     >
       <ng-template #eventContent let-arg>
         <b>{{ arg.timeText }}</b>
