@@ -1,5 +1,5 @@
 
-# FullCalendar 15 Angular + NgRx Example Project
+# FullCalendar Angular 15 + NgRx Example Project
 
 For complete instructions on how to initialize your build system, see the [FullCalendar Angular Docs &raquo;](https://fullcalendar.io/docs/angular)
 

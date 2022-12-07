@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
-import { CalendarOptions, DateSelectArg, EventClickArg, EventInput } from '@fullcalendar/core';
-import dayGridPlugin from '@fullcalendar/daygrid'
-import interactionPlugin from '@fullcalendar/interaction'
 import { Store } from '@ngrx/store';
+import { CalendarOptions, DateSelectArg, EventClickArg, EventInput } from '@fullcalendar/core';
+import interactionPlugin from '@fullcalendar/interaction';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import timeGridPlugin from '@fullcalendar/timegrid';
+import listPlugin from '@fullcalendar/list';
 import { createEventId } from './event-utils';
 import { CalendarFeature, selectEventsCount } from './reducer';
 import * as CalendarActions from './actions';
@@ -15,8 +17,10 @@ import * as CalendarActions from './actions';
 export class AppComponent {
   calendarOptions: CalendarOptions = {
     plugins: [
-      dayGridPlugin,
       interactionPlugin,
+      dayGridPlugin,
+      timeGridPlugin,
+      listPlugin,
     ],
     headerToolbar: {
       left: 'prev,next today',
