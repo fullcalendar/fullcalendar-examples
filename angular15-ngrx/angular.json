@@ -13,7 +13,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "preserveSymlinks": true,
             "outputPath": "dist/example",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -78,7 +77,6 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "preserveSymlinks": true,
             "polyfills": [
               "zone.js",
               "zone.js/testing"
