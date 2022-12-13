@@ -9,8 +9,8 @@ This is a fully-buildable example project for FullCalendar and [TypeScript], lev
 ## Installation
 
 ```bash
-git clone https://github.com/fullcalendar/fullcalendar-example-projects.git
-cd fullcalendar-example-projects/typescript
+git clone https://github.com/fullcalendar/fullcalendar-examples.git
+cd fullcalendar-examples/typescript
 npm install
 ```
 

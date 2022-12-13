@@ -7,8 +7,8 @@ This is a fully-buildable example project for FullCalendar and [Rollup].
 ## Installation
 
 ```bash
-git clone https://github.com/fullcalendar/fullcalendar-example-projects.git
-cd fullcalendar-example-projects/rollup
+git clone https://github.com/fullcalendar/fullcalendar-examples.git
+cd fullcalendar-examples/rollup
 npm install
 ```
 

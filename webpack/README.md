@@ -7,8 +7,8 @@ This is a fully-buildable example project for FullCalendar and [Webpack].
 ## Installation
 
 ```bash
-git clone https://github.com/fullcalendar/fullcalendar-example-projects.git
-cd fullcalendar-example-projects/webpack
+git clone https://github.com/fullcalendar/fullcalendar-examples.git
+cd fullcalendar-examples/webpack
 npm install
 ```
 

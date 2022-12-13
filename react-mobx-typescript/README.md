@@ -5,8 +5,8 @@ An example project showing how [FullCalendar's React Connector](https://fullcale
 ## Installation
 
 ```bash
-git clone https://github.com/fullcalendar/fullcalendar-example-projects.git
-cd fullcalendar-example-projects/react-mobx-typescript
+git clone https://github.com/fullcalendar/fullcalendar-examples.git
+cd fullcalendar-examples/react-mobx-typescript
 npm install
 ```
 

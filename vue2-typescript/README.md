@@ -7,8 +7,8 @@ This is a fully-buildable example project for FullCalendar, Vue, and **TypeScrip
 ## Installation
 
 ```bash
-git clone https://github.com/fullcalendar/fullcalendar-example-projects.git
-cd fullcalendar-example-projects/vue-typescript
+git clone https://github.com/fullcalendar/fullcalendar-examples.git
+cd fullcalendar-examples/vue-typescript
 npm install
 ```
 
