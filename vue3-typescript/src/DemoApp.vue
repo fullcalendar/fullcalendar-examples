@@ -7,7 +7,7 @@ import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
 import { INITIAL_EVENTS, createEventId } from './event-utils'
 
-const Demo = defineComponent({
+export default defineComponent({
   components: {
     FullCalendar,
   },
@@ -73,7 +73,7 @@ const Demo = defineComponent({
     },
   }
 })
-export default Demo
+
 </script>
 
 <template>

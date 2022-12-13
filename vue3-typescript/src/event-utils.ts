@@ -1,4 +1,4 @@
-import { EventInput } from '@fullcalendar/vue3'
+import { EventInput } from '@fullcalendar/core'
 
 let eventGuid = 0
 let todayStr = new Date().toISOString().replace(/T.*$/, '') // YYYY-MM-DD of today
