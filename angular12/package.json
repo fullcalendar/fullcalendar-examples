@@ -1,8 +1,8 @@
 {
   "private": true,
-  "name": "@fullcalendar-example-projects/angular",
+  "name": "@fullcalendar-example-projects/angular12",
   "version": "0.0.0",
-  "title": "FullCalendar Angular Example Project",
+  "title": "FullCalendar Angular 12 Example Project",
   "license": "ISC",
   "scripts": {
     "ng": "ng",

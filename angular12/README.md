@@ -1,5 +1,5 @@
 
-# FullCalendar Angular Example Project
+# FullCalendar Angular 12 Example Project
 
 This is a fully-buildable example project for FullCalendar and Angular. It was initially set up with the `ng new` command of the [Angular CLI], but with lots of stuff stripped out including testing and linting. For a complete walkthrough, read the [FullCalendar Angular Docs &raquo;](https://fullcalendar.io/docs/angular)
 
@@ -7,7 +7,7 @@ This is a fully-buildable example project for FullCalendar and Angular. It was i
 
 ```bash
 git clone https://github.com/fullcalendar/fullcalendar-examples.git
-cd fullcalendar-examples/angular
+cd fullcalendar-examples/angular12
 npm install
 ```
 

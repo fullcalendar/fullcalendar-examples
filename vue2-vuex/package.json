@@ -1,6 +1,6 @@
 {
-  "name": "@fullcalendar-example-projects/vue-vuex",
-  "title": "FullCalendar Vue+Vuex Example Project",
+  "name": "@fullcalendar-example-projects/vue2-vuex",
+  "title": "FullCalendar Vue 2 + Vuex Example Project",
   "version": "0.0.0",
   "license": "ISC",
   "private": true,

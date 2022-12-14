@@ -1,5 +1,5 @@
 
-# FullCalendar Vue Example Project
+# FullCalendar Vue 2 Example Project
 
 This is a fully-buildable example project for FullCalendar and Vue, leveraging Webpack. For a complete walkthrough, read the [FullCalendar Vue Docs &raquo;](https://fullcalendar.io/docs/vue)
 
@@ -7,7 +7,7 @@ This is a fully-buildable example project for FullCalendar and Vue, leveraging W
 
 ```bash
 git clone https://github.com/fullcalendar/fullcalendar-examples.git
-cd fullcalendar-examples/vue
+cd fullcalendar-examples/vue2
 npm install
 ```
 
