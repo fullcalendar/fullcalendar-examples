@@ -7,8 +7,8 @@ This is a fully-buildable example project for [FullCalendar Scheduler] and [Roll
 ## Installation
 
 ```bash
-git clone https://github.com/fullcalendar/fullcalendar-example-projects.git
-cd fullcalendar-example-projects/rollup-scheduler
+git clone https://github.com/fullcalendar/fullcalendar-examples.git
+cd fullcalendar-examples/rollup-scheduler
 npm install
 ```
 

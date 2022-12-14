@@ -7,8 +7,8 @@ This is a fully-buildable example project for FullCalendar and [Bootstrap 4][Boo
 ## Installation
 
 ```bash
-git clone https://github.com/fullcalendar/fullcalendar-example-projects.git
-cd fullcalendar-example-projects/bootstrap
+git clone https://github.com/fullcalendar/fullcalendar-examples.git
+cd fullcalendar-examples/bootstrap
 npm install
 ```
 

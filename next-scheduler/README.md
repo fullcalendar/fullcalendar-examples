@@ -7,8 +7,8 @@ Getting FullCalendar Scheduler to work with [Next.js](https://nextjs.org/) requi
 ## Installation
 
 ```bash
-git clone https://github.com/fullcalendar/fullcalendar-example-projects.git
-cd fullcalendar-example-projects/next-scheduler
+git clone https://github.com/fullcalendar/fullcalendar-examples.git
+cd fullcalendar-examples/next-scheduler
 npm install
 ```
 

@@ -6,8 +6,8 @@ This is a fully-buildable example project demonstrating a variety of ways to use
 ## Installation
 
 ```bash
-git clone https://github.com/fullcalendar/fullcalendar-example-projects.git
-cd fullcalendar-example-projects/locales
+git clone https://github.com/fullcalendar/fullcalendar-examples.git
+cd fullcalendar-examples/locales
 npm install
 ```
 

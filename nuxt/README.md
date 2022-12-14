@@ -7,8 +7,8 @@ Getting FullCalendar to work with [Nuxt](https://nuxtjs.org/) requires a bit of 
 ## Installation
 
 ```bash
-git clone https://github.com/fullcalendar/fullcalendar-example-projects.git
-cd fullcalendar-example-projects/nuxt
+git clone https://github.com/fullcalendar/fullcalendar-examples.git
+cd fullcalendar-examples/nuxt
 npm install
 ```
 

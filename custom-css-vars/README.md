@@ -7,8 +7,8 @@ This fully-buildable example project demonstrates how to override FullCalendar's
 ## Installation
 
 ```bash
-git clone https://github.com/fullcalendar/fullcalendar-example-projects.git
-cd fullcalendar-example-projects/custom-css-vars
+git clone https://github.com/fullcalendar/fullcalendar-examples.git
+cd fullcalendar-examples/custom-css-vars
 npm install
 ```
 

@@ -7,8 +7,8 @@ The [App](./src/App.vue) component initialises the FullCalendar Vue connector co
 ## Installation
 
 ```
-git clone https://github.com/fullcalendar/fullcalendar-example-projects.git
-cd fullcalendar-example-projects/vue-vuex
+git clone https://github.com/fullcalendar/fullcalendar-examples.git
+cd fullcalendar-examples/vue-vuex
 npm install
 ```
 
