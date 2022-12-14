@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@fullcalendar-example-projects/nuxt",
+  "name": "@fullcalendar/nuxt-example",
   "version": "0.0.0",
   "license": "ISC",
   "author": "Adam Shaw <arshaw@arshaw.com> (http://arshaw.com/)",
@@ -11,10 +11,10 @@
     "clean": "rm -rf .nuxt"
   },
   "dependencies": {
-    "@fullcalendar/interaction": "^5.11.2",
-    "@fullcalendar/timegrid": "^5.11.2",
-    "@fullcalendar/vue": "^5.11.2",
-    "nuxt": "^2.15.4",
-    "pnp-webpack-plugin": "^1.6.4"
+    "@fullcalendar/core": "^6.0.0",
+    "@fullcalendar/interaction": "^6.0.0",
+    "@fullcalendar/timegrid": "^6.0.0",
+    "@fullcalendar/vue": "^6.0.0",
+    "nuxt": "^2.15.4"
   }
 }

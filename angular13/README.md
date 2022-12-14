@@ -1,13 +1,13 @@
 
-# FullCalendar 13 Angular Example Project
+# FullCalendar Angular 13 Example Project
 
-This is a fully-buildable example project for FullCalendar and Angular. It was initially set up with the `ng new` command of the [Angular CLI], but with lots of stuff stripped out including testing and linting. For a complete walkthrough, read the [FullCalendar Angular Docs &raquo;](https://fullcalendar.io/docs/angular)
+This is a fully-buildable example project for FullCalendar and Angular. It was initially created with the `ng new` command of the [Angular CLI](https://angular.io/cli). For a complete walkthrough, read the [FullCalendar Angular Docs &raquo;](https://fullcalendar.io/docs/angular)
 
 ## Installation
 
 ```bash
-git clone https://github.com/fullcalendar/fullcalendar-example-projects.git
-cd fullcalendar-example-projects/angular13
+git clone https://github.com/fullcalendar/fullcalendar-examples.git
+cd fullcalendar-examples/angular13
 npm install
 ```
 
@@ -20,8 +20,12 @@ npm run start # continously build, as a server
 
 After running the `npm run start` command, you will be given a localhost URL that can be visited in a browser.
 
-## Workarounds
+## Monorepo Quirk
 
-Please see `.browserslistrc` for a workaround for [this bug](https://github.com/angular/angular-cli/issues/22606).
+To get this example working within a monorepo, [this hack](https://stackoverflow.com/a/61801741/96342) was added to `tsconfig.app.json`. It can be safely removed if you're not using a monorepo.
 
-[Angular CLI]: https://angular.io/cli
+```json
+"paths": {
+  "@angular/*": ["./node_modules/@angular/*"]
+},
+```

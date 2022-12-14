@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@fullcalendar-example-projects/rollup",
+  "name": "@fullcalendar/rollup-example",
   "version": "0.0.0",
   "license": "ISC",
   "author": "Adam Shaw <arshaw@arshaw.com> (http://arshaw.com/)",
@@ -10,14 +10,14 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@fullcalendar/core": "^5.11.2",
-    "@fullcalendar/daygrid": "^5.11.2",
-    "@fullcalendar/interaction": "^5.11.2",
-    "@fullcalendar/list": "^5.11.2",
-    "@fullcalendar/timegrid": "^5.11.2"
+    "@fullcalendar/core": "^6.0.0",
+    "@fullcalendar/daygrid": "^6.0.0",
+    "@fullcalendar/interaction": "^6.0.0",
+    "@fullcalendar/list": "^6.0.0",
+    "@fullcalendar/timegrid": "^6.0.0"
   },
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^7.1.3",
+    "@rollup/plugin-node-resolve": "^14.0.1",
     "rollup": "^1.20.0||^2.0.0",
     "rollup-plugin-postcss": "^2.8.2"
   }

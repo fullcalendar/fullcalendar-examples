@@ -6,8 +6,8 @@ This is a fully-buildable example project for FullCalendar and [moment-timezone]
 ## Installation
 
 ```bash
-git clone https://github.com/fullcalendar/fullcalendar-example-projects.git
-cd fullcalendar-example-projects/moment-timezone
+git clone https://github.com/fullcalendar/fullcalendar-examples.git
+cd fullcalendar-examples/moment-timezone
 npm install
 ```
 
@@ -19,5 +19,5 @@ npm run watch # continously build
 npm run clean # start fresh
 ```
 
-After running `build` or `watch`, open up `index.html` in a browser.
+After running `build` or `watch`, open up `dist/index.html` in a browser.
 

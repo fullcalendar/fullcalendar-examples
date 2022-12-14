@@ -1,20 +1,20 @@
 {
   "private": true,
-  "name": "@fullcalendar-example-projects/jest-react",
+  "name": "@fullcalendar/jest-react-example",
   "version": "0.0.0",
   "license": "ISC",
   "author": "Adam Shaw <arshaw@arshaw.com> (http://arshaw.com/)",
   "scripts": {
-    "build": "echo 'No build command. Running tests...' && jest",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:inspect": "echo 'open chrome://inspect' && yarn run --inspect-brk jest --runInBand"
   },
   "dependencies": {
-    "@fullcalendar/daygrid": "^5.11.2",
-    "@fullcalendar/react": "^5.11.2",
-    "@fullcalendar/timegrid": "^5.11.2",
-    "@fullcalendar/timeline": "^5.11.2",
+    "@fullcalendar/core": "^6.0.0",
+    "@fullcalendar/daygrid": "^6.0.0",
+    "@fullcalendar/react": "^6.0.0",
+    "@fullcalendar/timegrid": "^6.0.0",
+    "@fullcalendar/timeline": "^6.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },

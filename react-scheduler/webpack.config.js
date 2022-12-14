@@ -5,9 +5,9 @@ const packageMeta = require('./package.json')
 module.exports = {
   mode: 'development',
   devtool: 'source-map',
-  entry: './src/main.jsx',
+  entry: './src/index.jsx',
   resolve: {
-    extensions: [ '.js', '.jsx' ]
+    extensions: ['.js', '.jsx']
   },
   module: {
     rules: [
@@ -18,13 +18,13 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ]
+        use: ['style-loader', 'css-loader']
       }
     ]
   },
   output: {
-    filename: 'main.js',
-    path: path.join(__dirname, 'dist')
+    path: path.join(__dirname, 'dist'),
+    filename: 'index.js'
   },
   plugins: [
     new HtmlWebpackPlugin({

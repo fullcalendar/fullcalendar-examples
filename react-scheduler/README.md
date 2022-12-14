@@ -9,8 +9,8 @@ For complete instructions on how to initialize your build system, see the [FullC
 ## Installation
 
 ```bash
-git clone https://github.com/fullcalendar/fullcalendar-example-projects.git
-cd fullcalendar-example-projects/react
+git clone https://github.com/fullcalendar/fullcalendar-examples.git
+cd fullcalendar-examples/react
 npm install
 ```
 

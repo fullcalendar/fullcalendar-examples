@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular14": {
+    "example": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -11,15 +11,9 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-builders/custom-webpack:browser",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "customWebpackConfig": {
-              "path": "./custom-webpack.config.js"
-            },
-            "allowedCommonJsDependencies": [
-              "fast-deep-equal"
-            ],
-            "outputPath": "dist/angular14",
+            "outputPath": "dist/example",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -67,25 +61,25 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-builders/custom-webpack:dev-server",
+          "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular14:build:production"
+              "browserTarget": "example:build:production"
             },
             "development": {
-              "browserTarget": "angular14:build:development"
+              "browserTarget": "example:build:development"
             }
           },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
-          "builder": "@angular-builders/custom-webpack:extract-i18n",
+          "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular14:build"
+            "browserTarget": "example:build"
           }
         },
         "test": {
-          "builder": "@angular-builders/custom-webpack:karma",
+          "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "main": "src/test.ts",
             "polyfills": "src/polyfills.ts",

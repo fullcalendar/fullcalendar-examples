@@ -1,36 +1,33 @@
 const path = require('path')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   mode: 'development',
   devtool: 'source-map',
-  entry: './src/main.ts',
+  entry: './src/index.ts',
   resolve: {
-    extensions: [ '.ts', '.js' ]
+    extensions: ['.ts', '.js']
   },
   module: {
     rules: [
       {
         test: /\.ts$/,
-        use: 'ts-loader', // will use tsconfig.json
-        exclude: /node_modules/
+        exclude: /node_modules/,
+        use: 'ts-loader' // will use tsconfig.json
       },
       {
         test: /\.css$/,
-        use: [
-          { loader: MiniCssExtractPlugin.loader },
-          { loader: 'css-loader', options: { importLoaders: 1 } }
-        ]
+        use: ['style-loader', 'css-loader']
       }
     ]
   },
   output: {
-    filename: 'main.js',
-    path: path.join(__dirname, 'dist')
+    path: path.join(__dirname, 'dist'),
+    filename: 'index.js'
   },
   plugins: [
-    new MiniCssExtractPlugin({
-      filename: 'main.css'
+    new HtmlWebpackPlugin({
+      template: './src/index.html'
     })
   ]
 }

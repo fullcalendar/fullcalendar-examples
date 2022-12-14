@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   mode: 'development',
   devtool: 'source-map',
-  entry: './src/main.js',
+  entry: './src/index.js',
   target: ['web', 'es5'],
   module: {
     rules: [
@@ -14,14 +14,11 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ]
+        use: ['style-loader', 'css-loader']
       },
       {
         test: /\.js$/,
-        use: [ 'source-map-loader' ],
+        use: ['source-map-loader'],
         enforce: 'pre'
       },
       {

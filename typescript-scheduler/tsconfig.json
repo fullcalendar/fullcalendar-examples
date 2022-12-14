@@ -10,6 +10,6 @@
     "outDir": "tsc"
   },
   "include": [
-    "src/main.ts"
+    "src/index.ts"
   ]
 }

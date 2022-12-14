@@ -1,12 +1,14 @@
 {
-  "name": "@fullcalendar-example-projects/angular14",
+  "name": "@fullcalendar/angular14-example",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test --watch=false --browsers ChromeHeadless",
+    "test:dev": "ng test",
+    "clean": "rm -rf dist .angular/cache"
   },
   "private": true,
   "dependencies": {
@@ -18,17 +20,17 @@
     "@angular/platform-browser": "^14.1.0",
     "@angular/platform-browser-dynamic": "^14.1.0",
     "@angular/router": "^14.1.0",
-    "@fullcalendar/angular": "^5.11.3",
-    "@fullcalendar/daygrid": "^5.11.3",
-    "@fullcalendar/interaction": "^5.11.3",
-    "@fullcalendar/list": "^5.11.3",
-    "@fullcalendar/timegrid": "^5.11.3",
+    "@fullcalendar/angular": "^6.0.0",
+    "@fullcalendar/core": "^6.0.0",
+    "@fullcalendar/daygrid": "^6.0.0",
+    "@fullcalendar/interaction": "^6.0.0",
+    "@fullcalendar/list": "^6.0.0",
+    "@fullcalendar/timegrid": "^6.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-builders/custom-webpack": "^14.1.0",
     "@angular-devkit/build-angular": "^14.1.0",
     "@angular/cli": "~14.1.0",
     "@angular/compiler-cli": "^14.1.0",
@@ -39,7 +41,6 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
-    "null-loader": "^4.0.1",
     "typescript": "~4.7.2"
   }
 }

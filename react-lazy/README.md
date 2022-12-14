@@ -7,8 +7,8 @@ Like the standard React example, but uses `lazy` and `Suspense`.
 ## Installation
 
 ```bash
-git clone https://github.com/fullcalendar/fullcalendar-example-projects.git
-cd fullcalendar-example-projects/react-lazy
+git clone https://github.com/fullcalendar/fullcalendar-examples.git
+cd fullcalendar-examples/react-lazy
 npm install
 ```
 

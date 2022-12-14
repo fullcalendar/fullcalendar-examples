@@ -1,7 +1,7 @@
-import { createVuePlugin } from 'vite-plugin-vue2'
+import vue from '@vitejs/plugin-vue2'
 
-module.exports = {
+export default {
   root: './',
   base: './',
-  plugins: [createVuePlugin()],
+  plugins: [vue()],
 }

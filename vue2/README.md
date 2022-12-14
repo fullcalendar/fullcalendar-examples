@@ -6,8 +6,8 @@ This is a fully-buildable example project for FullCalendar and Vue, leveraging W
 ## Installation
 
 ```bash
-git clone https://github.com/fullcalendar/fullcalendar-example-projects.git
-cd fullcalendar-example-projects/vue
+git clone https://github.com/fullcalendar/fullcalendar-examples.git
+cd fullcalendar-examples/vue
 npm install
 ```
 

@@ -16,6 +16,6 @@
     "outDir": "tsc"
   },
   "include": [
-    "src/main.tsx"
+    "src/index.tsx"
   ]
 }

@@ -7,15 +7,15 @@ This is a fully-buildable example project for FullCalendar, Vue 3, and **TypeScr
 ## Installation
 
 ```bash
-git clone https://github.com/fullcalendar/fullcalendar-example-projects.git
-cd fullcalendar-example-projects/vue3-typescript
+git clone https://github.com/fullcalendar/fullcalendar-examples.git
+cd fullcalendar-examples/vue3-typescript
 npm install
 ```
 
 ## Build Commands
 
 ```bash
-npm run serve # builds and opens a web browser
+npm run dev # builds and opens a web browser
 
 # other commands:
 npm run build # builds files into dist/ directory
