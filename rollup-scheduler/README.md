@@ -1,7 +1,7 @@
 
-# FullCalendar Scheduler Rollup Example
+# FullCalendar Premium Rollup Example
 
-This is a fully-buildable example project for [FullCalendar Scheduler] and [Rollup].
+This is a fully-buildable example project for [FullCalendar Premium] and [Rollup].
 
 
 ## Installation
@@ -23,5 +23,5 @@ npm run clean # start fresh
 After running `build` or `watch`, open up `index.html` in a browser.
 
 
-[FullCalendar Scheduler]: https://fullcalendar.io/pricing
+[FullCalendar Premium]: https://fullcalendar.io/pricing
 [Rollup]: https://rollupjs.org/

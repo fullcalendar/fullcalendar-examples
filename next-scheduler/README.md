@@ -1,7 +1,7 @@
 
-# FullCalendar Scheduler Next.js Example
+# FullCalendar Premium Next.js Example
 
-Getting FullCalendar Scheduler to work with [Next.js](https://nextjs.org/) requires a bit of configuration. See below.
+Getting FullCalendar Premium to work with [Next.js](https://nextjs.org/) requires a bit of configuration. See below.
 
 
 ## Installation

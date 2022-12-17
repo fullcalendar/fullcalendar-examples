@@ -1,7 +1,7 @@
 
-# FullCalendar Scheduler Webpack Example
+# FullCalendar Premium Webpack Example
 
-This is a fully-buildable example project for [FullCalendar Scheduler] and [Webpack].
+This is a fully-buildable example project for [FullCalendar Premium] and [Webpack].
 
 
 ## Installation
@@ -23,5 +23,5 @@ npm run clean # start fresh
 After running `build` or `watch`, open up `dist/index.html` in a browser.
 
 
-[FullCalendar Scheduler]: https://fullcalendar.io/pricing
+[FullCalendar Premium]: https://fullcalendar.io/pricing
 [Webpack]: https://webpack.js.org/
