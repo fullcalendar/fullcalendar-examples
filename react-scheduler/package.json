@@ -11,13 +11,13 @@
     "start": "webpack serve"
   },
   "dependencies": {
-    "@fullcalendar/core": "^6.0.0",
-    "@fullcalendar/daygrid": "^6.0.0",
-    "@fullcalendar/interaction": "^6.0.0",
-    "@fullcalendar/react": "^6.0.0",
-    "@fullcalendar/resource": "^6.0.0",
+    "@fullcalendar/core": "^6.0.1",
+    "@fullcalendar/daygrid": "^6.0.1",
+    "@fullcalendar/interaction": "^6.0.1",
+    "@fullcalendar/react": "^6.0.1",
+    "@fullcalendar/resource": "^6.0.1",
     "@fullcalendar/resource-timeline": "^6.0.0",
-    "@fullcalendar/timegrid": "^6.0.0",
+    "@fullcalendar/timegrid": "^6.0.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },

@@ -9,10 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@fullcalendar/core": "^6.0.0",
-    "@fullcalendar/interaction": "^6.0.0",
-    "@fullcalendar/react": "^6.0.0",
-    "@fullcalendar/timegrid": "^6.0.0",
+    "@fullcalendar/core": "^6.0.1",
+    "@fullcalendar/interaction": "^6.0.1",
+    "@fullcalendar/react": "^6.0.1",
+    "@fullcalendar/timegrid": "^6.0.1",
     "next": "^12.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
