@@ -27,4 +27,8 @@ npm run lint # lint source files
 
 Still needed?
 
-Install [next-transpile-modules](https://www.npmjs.com/package/next-transpile-modules) to process FullCalendar's ES modules. See [next.config.js](next.config.js). If you don't like this, [vote to give Next ESM support for third-party packages](https://github.com/vercel/next.js/issues/706).
+### Next.JS 13.1
+All features of next-transpile-modules are now natively built-in Next.js 13.1.
+
+## 12.3.2 and earlier
+Install [next-transpile-modules](https://www.npmjs.com/package/next-transpile-modules) to process FullCalendar's ES modules. See [next.config.js](next.config.js). 
