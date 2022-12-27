@@ -10,11 +10,11 @@
     "start": "webpack serve"
   },
   "dependencies": {
-    "@fullcalendar/core": "^6.0.1",
-    "@fullcalendar/daygrid": "^6.0.1",
-    "@fullcalendar/interaction": "^6.0.1",
-    "@fullcalendar/timegrid": "^6.0.1",
-    "@fullcalendar/vue": "^6.0.1",
+    "@fullcalendar/core": "^6.0.2",
+    "@fullcalendar/daygrid": "^6.0.2",
+    "@fullcalendar/interaction": "^6.0.2",
+    "@fullcalendar/timegrid": "^6.0.2",
+    "@fullcalendar/vue": "^6.0.2",
     "style-loader": "^2.0.0",
     "vue": "^2.6.12"
   },

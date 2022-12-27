@@ -10,10 +10,10 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@fullcalendar/core": "^6.0.1",
-    "@fullcalendar/daygrid": "^6.0.1",
-    "@fullcalendar/interaction": "^6.0.1",
-    "@fullcalendar/moment-timezone": "^6.0.0",
+    "@fullcalendar/core": "^6.0.2",
+    "@fullcalendar/daygrid": "^6.0.2",
+    "@fullcalendar/interaction": "^6.0.2",
+    "@fullcalendar/moment-timezone": "^6.0.2",
     "moment": "^2.29.1",
     "moment-timezone": "^0.5.31"
   },
