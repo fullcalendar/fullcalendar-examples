@@ -11,11 +11,11 @@
     "start": "webpack serve"
   },
   "dependencies": {
-    "@fullcalendar/core": "^6.0.2",
-    "@fullcalendar/daygrid": "^6.0.2",
-    "@fullcalendar/interaction": "^6.0.2",
-    "@fullcalendar/react": "^6.0.2",
-    "@fullcalendar/timegrid": "^6.0.2",
+    "@fullcalendar/core": "^6.0.3",
+    "@fullcalendar/daygrid": "^6.0.3",
+    "@fullcalendar/interaction": "^6.0.3",
+    "@fullcalendar/react": "^6.0.3",
+    "@fullcalendar/timegrid": "^6.0.3",
     "mobx": "^6.0.3",
     "mobx-react-lite": "^3.0.1",
     "react": "^16.14.0",
