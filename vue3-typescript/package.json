@@ -10,11 +10,11 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@fullcalendar/core": "^5.11.2",
-    "@fullcalendar/daygrid": "^5.11.2",
-    "@fullcalendar/interaction": "^5.11.2",
-    "@fullcalendar/timegrid": "^5.11.2",
-    "@fullcalendar/vue3": "^5.11.2",
+    "@fullcalendar/core": "^5.11.4",
+    "@fullcalendar/daygrid": "^5.11.4",
+    "@fullcalendar/interaction": "^5.11.4",
+    "@fullcalendar/timegrid": "^5.11.4",
+    "@fullcalendar/vue3": "^5.11.4",
     "vue": "^3.0.11"
   },
   "devDependencies": {

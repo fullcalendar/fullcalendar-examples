@@ -10,11 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@fullcalendar/core": "^5.11.2",
-    "@fullcalendar/daygrid": "^5.11.2",
-    "@fullcalendar/interaction": "^5.11.2",
-    "@fullcalendar/timegrid": "^5.11.2",
-    "@fullcalendar/vue": "^5.11.2",
+    "@fullcalendar/core": "^5.11.4",
+    "@fullcalendar/daygrid": "^5.11.4",
+    "@fullcalendar/interaction": "^5.11.4",
+    "@fullcalendar/timegrid": "^5.11.4",
+    "@fullcalendar/vue": "^5.11.4",
     "core-js": "^3.6.5",
     "date-fns": "^2.14.0",
     "vue": "^2.6.12",
