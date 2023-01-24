@@ -15,7 +15,7 @@
     "@fullcalendar/interaction": "^6.0.3",
     "@fullcalendar/moment-timezone": "^6.0.3",
     "moment": "^2.29.1",
-    "moment-timezone": "^0.5.31"
+    "moment-timezone": "^0.5.40"
   },
   "devDependencies": {
     "css-loader": "^4.3.0",
