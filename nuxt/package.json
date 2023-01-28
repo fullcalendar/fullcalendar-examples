@@ -11,10 +11,10 @@
     "clean": "rm -rf .nuxt"
   },
   "dependencies": {
-    "@fullcalendar/core": "^6.0.3",
-    "@fullcalendar/interaction": "^6.0.3",
-    "@fullcalendar/timegrid": "^6.0.3",
-    "@fullcalendar/vue": "^6.0.3",
+    "@fullcalendar/core": "^6.1.0",
+    "@fullcalendar/interaction": "^6.1.0",
+    "@fullcalendar/timegrid": "^6.1.0",
+    "@fullcalendar/vue": "^6.1.0",
     "nuxt": "^2.15.4"
   }
 }
