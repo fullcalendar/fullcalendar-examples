@@ -14,7 +14,7 @@
     "@fullcalendar/core": "^6.1.1",
     "@fullcalendar/interaction": "^6.1.1",
     "@fullcalendar/timegrid": "^6.1.1",
-    "@fullcalendar/vue": "^6.1.1",
+    "@fullcalendar/vue": "^6.1.2",
     "nuxt": "^2.15.4"
   }
 }
