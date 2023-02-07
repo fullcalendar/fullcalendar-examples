@@ -18,10 +18,11 @@ export default function Home() {
           center: 'title',
           right: 'dayGridMonth,timeGridWeek'
         }}
-        initialView='dayGridMonth'
+        initialView='timeGridWeek'
         nowIndicator={true}
         editable={true}
         selectable={true}
+        selectMirror={true}
         initialEvents={[
           { title: 'nice event', start: new Date() }
         ]}
