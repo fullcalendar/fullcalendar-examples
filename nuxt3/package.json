@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "name": "@fullcalendar13/nuxt-example",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@fullcalendar/core": "^6.1.4",
+    "@fullcalendar/interaction": "^6.1.4",
+    "@fullcalendar/timegrid": "^6.1.4",
+    "@fullcalendar/vue3": "^6.1.4",
+    "nuxt": "^3.3.1"
+  }
+}
