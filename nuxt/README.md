@@ -21,8 +21,3 @@ npm run build # build for production
 npm run start # run the production build
 npm run clean # clear all built files
 ```
-
-
-## Workarounds Explained
-
-FullCalendar only ships with ES modules, and Nuxt does not seem to support that, so you must configure Nuxt to transpile FullCalendar's packages. See [nuxt.config.js](nuxt.config.js).
