@@ -26,7 +26,7 @@
     "@fullcalendar/interaction": "^6.1.4",
     "@fullcalendar/list": "^6.1.4",
     "@fullcalendar/timegrid": "^6.1.4",
-    "preact": "^10.0.5",
+    "preact": "~10.12.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
