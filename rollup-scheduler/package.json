@@ -10,14 +10,14 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@fullcalendar/adaptive": "^6.1.6",
-    "@fullcalendar/core": "^6.1.6",
-    "@fullcalendar/daygrid": "^6.1.6",
-    "@fullcalendar/interaction": "^6.1.6",
-    "@fullcalendar/list": "^6.1.6",
-    "@fullcalendar/resource": "^6.1.6",
-    "@fullcalendar/resource-timeline": "^6.1.6",
-    "@fullcalendar/timegrid": "^6.1.6"
+    "@fullcalendar/adaptive": "^6.1.7",
+    "@fullcalendar/core": "^6.1.7",
+    "@fullcalendar/daygrid": "^6.1.7",
+    "@fullcalendar/interaction": "^6.1.7",
+    "@fullcalendar/list": "^6.1.7",
+    "@fullcalendar/resource": "^6.1.7",
+    "@fullcalendar/resource-timeline": "^6.1.7",
+    "@fullcalendar/timegrid": "^6.1.7"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^14.0.1",
