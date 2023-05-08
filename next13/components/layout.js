@@ -9,9 +9,9 @@ export default function Layout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div className='navbar'>
-        <Link href='/'>Home</Link>
-        <Link href='/calendar'>Calendar</Link>
-        <Link href='/about'>About</Link>
+        <Link prefetch={false} href='/'>Home</Link>
+        <Link prefetch={false} href='/calendar'>Calendar</Link>
+        <Link prefetch={false} href='/about'>About</Link>
       </div>
       <div>
         {children}
