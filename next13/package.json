@@ -14,6 +14,8 @@
     "@fullcalendar/daygrid": "^6.1.6",
     "@fullcalendar/interaction": "^6.1.6",
     "@fullcalendar/react": "^6.1.6",
+    "@fullcalendar/resource": "^6.1.6",
+    "@fullcalendar/resource-timeline": "^6.1.6",
     "@fullcalendar/timegrid": "^6.1.6",
     "@next/font": "13.2.3",
     "next": "13.2.3",
