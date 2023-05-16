@@ -13,6 +13,8 @@
     "@fullcalendar/daygrid": "^6.1.7",
     "@fullcalendar/interaction": "^6.1.7",
     "@fullcalendar/react": "^6.1.7",
+    "@fullcalendar/resource": "^6.1.7",
+    "@fullcalendar/resource-timeline": "^6.1.7",
     "@fullcalendar/timegrid": "^6.1.7",
     "next": "^12.3.2",
     "react": "^18.2.0",

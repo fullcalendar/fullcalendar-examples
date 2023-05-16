@@ -1,24 +1,9 @@
-import FullCalendar from '@fullcalendar/react'
-import dayGridPlugin from '@fullcalendar/daygrid'
-import interactionPlugin from '@fullcalendar/interaction'
-import timeGridPlugin from '@fullcalendar/timegrid'
+import Layout from '../components/layout'
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <FullCalendar
-      plugins={[dayGridPlugin, interactionPlugin, timeGridPlugin]}
-      headerToolbar={{
-        left: 'prev,next today',
-        center: 'title',
-        right: 'dayGridMonth,timeGridWeek'
-      }}
-      initialView='dayGridMonth'
-      nowIndicator={true}
-      editable={true}
-      selectable={true}
-      initialEvents={[
-        { title: 'nice event', start: new Date() }
-      ]}
-    />
+    <Layout>
+      Welcome! Click the links above
+    </Layout>
   )
 }
