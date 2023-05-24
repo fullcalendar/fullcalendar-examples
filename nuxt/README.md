@@ -1,7 +1,7 @@
 
 # FullCalendar Nuxt Example
 
-Getting FullCalendar to work with [Nuxt](https://nuxtjs.org/) requires a bit of configuration. See below.
+FullCalendar works well with the Vue framework [Nuxt](https://nuxtjs.org/).
 
 
 ## Installation

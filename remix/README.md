@@ -1,36 +1,57 @@
-# Welcome to Remix!
 
-This is a very basic example of a simple Remix app using the Remix App Server.
+# FullCalendar Remix Example
 
-- [Remix Docs](https://remix.run/docs)
+FullCalendar works well with the React framework [Remix](https://remix.run/).
+A workaround is required (see below).
 
-## Development
 
-From your terminal:
+## Installation
 
-```sh
+```bash
+git clone https://github.com/fullcalendar/fullcalendar-examples.git
+cd fullcalendar-examples/remix
 npm install
-npm run dev
 ```
 
-This starts your app in development mode, rebuilding assets on file changes.
 
-## Deployment
+## Build Commands
 
-First, build your app for production:
-
-```sh
-npm run build
+```
+npm run dev # watch and rebuild while developing
+npm run build # build for production
+npm run start # run the production build
+npm run typecheck # typecheck source files
 ```
 
-Then run the app in production mode:
 
-```sh
-npm start
+## Workaround Explained
+
+Remix must be told the exact destination of the FullCalendar-generated styles within the DOM.
+Add the following line to `app/root.tsx`:
+
+```tsx
+function Document({
+  children,
+  title,
+}: {
+  children: React.ReactNode;
+  title?: string;
+}) {
+  return (
+    <html lang="en">
+      <head>
+        {title ? <title>{title}</title> : null}
+        <Meta />
+        <style data-fullcalendar />{/* ADD THIS LINE */}
+        <Links />
+      </head>
+      <body>
+        {children}
+        <ScrollRestoration />
+        <Scripts />
+        <LiveReload />
+      </body>
+    </html>
+  );
+}
 ```
-
-## Preview
-
-Open this example on [CodeSandbox](https://codesandbox.com):
-
-[![Open in CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/remix-run/examples/tree/main/basic)

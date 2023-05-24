@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@fullcalendar13/nuxt-example",
+  "name": "@fullcalendar/nuxt3-example",
   "version": "0.0.0",
   "scripts": {
     "build": "nuxt build",
