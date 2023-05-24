@@ -47,6 +47,7 @@ function Document({
       <head>
         {title ? <title>{title}</title> : null}
         <Meta />
+        <style data-fullcalendar />
         <Links />
       </head>
       <body>
