@@ -5,11 +5,11 @@
   "license": "ISC",
   "author": "Adam Shaw <arshaw@arshaw.com> (http://arshaw.com/)",
   "dependencies": {
-    "@fullcalendar/core": "^6.1.7",
-    "@fullcalendar/daygrid": "^6.1.7",
-    "@fullcalendar/interaction": "^6.1.7",
-    "@fullcalendar/list": "^6.1.7",
-    "@fullcalendar/timegrid": "^6.1.7"
+    "@fullcalendar/core": "^6.1.8",
+    "@fullcalendar/daygrid": "^6.1.8",
+    "@fullcalendar/interaction": "^6.1.8",
+    "@fullcalendar/list": "^6.1.8",
+    "@fullcalendar/timegrid": "^6.1.8"
   },
   "devDependencies": {
     "@babel/core": "^7.13.16",

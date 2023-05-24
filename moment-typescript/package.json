@@ -10,12 +10,12 @@
     "clean": "rm -rf dist tsc"
   },
   "dependencies": {
-    "@fullcalendar/core": "^6.1.7",
-    "@fullcalendar/daygrid": "^6.1.7",
-    "@fullcalendar/interaction": "^6.1.7",
-    "@fullcalendar/list": "^6.1.7",
-    "@fullcalendar/moment": "^6.1.7",
-    "@fullcalendar/timegrid": "^6.1.7",
+    "@fullcalendar/core": "^6.1.8",
+    "@fullcalendar/daygrid": "^6.1.8",
+    "@fullcalendar/interaction": "^6.1.8",
+    "@fullcalendar/list": "^6.1.8",
+    "@fullcalendar/moment": "^6.1.8",
+    "@fullcalendar/timegrid": "^6.1.8",
     "moment": "^2.29.1"
   },
   "devDependencies": {

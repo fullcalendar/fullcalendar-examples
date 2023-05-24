@@ -10,11 +10,11 @@
     "test:inspect": "echo 'open chrome://inspect' && yarn run --inspect-brk jest --runInBand"
   },
   "dependencies": {
-    "@fullcalendar/core": "^6.1.7",
-    "@fullcalendar/daygrid": "^6.1.7",
-    "@fullcalendar/react": "^6.1.7",
-    "@fullcalendar/timegrid": "^6.1.7",
-    "@fullcalendar/timeline": "^6.1.7",
+    "@fullcalendar/core": "^6.1.8",
+    "@fullcalendar/daygrid": "^6.1.8",
+    "@fullcalendar/react": "^6.1.8",
+    "@fullcalendar/timegrid": "^6.1.8",
+    "@fullcalendar/timeline": "^6.1.8",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
