@@ -29,3 +29,7 @@ To get this example working within a monorepo, [this hack](https://stackoverflow
   "@angular/*": ["./node_modules/@angular/*"]
 },
 ```
+
+## TODO
+
+Fix `compileComponentFromMetadata` error and restore `test` command.
