@@ -30,6 +30,14 @@ To get this example working within a monorepo, [this hack](https://stackoverflow
 },
 ```
 
+## StackBlitz Quirk
+
+To get this example working within [StackBlitz](https://stackblitz.com/), the following hack was added to `src/main.ts`. It can be safely removed in other environments.
+
+```ts
+import 'zone.js' // hack for StackBlitz
+```
+
 ## TODO
 
 Fix `compileComponentFromMetadata` error and restore `test` command.
