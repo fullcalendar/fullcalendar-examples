@@ -30,6 +30,8 @@ To get this example working within a monorepo, [this hack](https://stackoverflow
 },
 ```
 
+`TODO:` Restore the ability to run the `test` command, fix `Cannot read properties of undefined (reading 'length')` error in `compileComponentFromMetadata`.
+
 ## StackBlitz Quirk
 
 To get this example working within [StackBlitz](https://stackblitz.com/), the following hack was added to `src/main.ts`. It can be safely removed in other environments.
@@ -37,7 +39,3 @@ To get this example working within [StackBlitz](https://stackblitz.com/), the fo
 ```ts
 import 'zone.js' // hack for StackBlitz
 ```
-
-## TODO
-
-Fix `compileComponentFromMetadata` error and restore `test` command.
