@@ -1,4 +1,7 @@
-import { Component, signal, ChangeDetectorRef } from '@angular/core';
+import { Component , signal, ChangeDetectorRef } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterOutlet } from '@angular/router';
+import { FullCalendarModule } from '@fullcalendar/angular';
 import { CalendarOptions, DateSelectArg, EventClickArg, EventApi } from '@fullcalendar/core';
 import interactionPlugin from '@fullcalendar/interaction';
 import dayGridPlugin from '@fullcalendar/daygrid';
@@ -8,8 +11,10 @@ import { INITIAL_EVENTS, createEventId } from './event-utils';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [CommonModule, RouterOutlet, FullCalendarModule],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrl: './app.component.css'
 })
 export class AppComponent {
   calendarVisible = signal(true);
@@ -51,9 +56,10 @@ export class AppComponent {
   }
 
   handleWeekendsToggle() {
-    this.calendarOptions.mutate((options) => {
-      options.weekends = !options.weekends;
-    });
+    this.calendarOptions.update((options) => ({
+      ...options,
+      weekends: !options.weekends,
+    }));
   }
 
   handleDateSelect(selectInfo: DateSelectArg) {
