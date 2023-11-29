@@ -15,14 +15,18 @@ runMonorepoHack('./node_modules/@fullcalendar/angular').catch((error) => {
 })
 
 async function runMonorepoHack(depPath) {
-  const symlinkPath = `${depPath}_orig`
+  const frozenPath = `${depPath}_orig`
+  const depStat = await fs.lstat(depPath)
 
-  await fs.lstat(symlinkPath).catch(() => {
-    return fs.rename(depPath, symlinkPath)
-  })
+  // clear depPath and ensure frozenPath is a symlink
+  if (depStat.isSymbolicLink()) {
+    await fs.rm(frozenPath, { recursive: true, force: true })
+    await fs.rename(depPath, frozenPath)
+  } else {
+    await fs.rm(depPath, { recursive: true, force: true })
+  }
 
-  const sourcePath = await fs.realpath(symlinkPath)
+  const sourcePath = await fs.realpath(frozenPath)
 
-  await fs.rm(depPath, { recursive: true, force: true })
   await fs.cp(sourcePath, depPath, { recursive: true })
 }
