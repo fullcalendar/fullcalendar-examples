@@ -6,9 +6,9 @@
   "license": "ISC",
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "webpack",
-    "watch": "webpack --watch",
-    "start": "webpack serve"
+    "build": "NODE_OPTIONS=--openssl-legacy-provider webpack",
+    "watch": "NODE_OPTIONS=--openssl-legacy-provider webpack --watch",
+    "start": "NODE_OPTIONS=--openssl-legacy-provider webpack serve"
   },
   "dependencies": {
     "@fullcalendar/core": "^6.1.9",
