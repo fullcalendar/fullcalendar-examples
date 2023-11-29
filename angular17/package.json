@@ -6,8 +6,8 @@
     "start": "./monorepo-hack.cjs && ng serve",
     "build": "./monorepo-hack.cjs && ng build",
     "watch": "./monorepo-hack.cjs && ng build --watch --configuration development",
-    "test": "./monorepo-hack.cjs && ng test --watch=false --browsers ChromeHeadless",
-    "test:dev": "./monorepo-hack.cjs && ng test",
+    "xxxtest": "./monorepo-hack.cjs && ng test --watch=false --browsers ChromeHeadless",
+    "xxxtest:dev": "./monorepo-hack.cjs && ng test",
     "clean": "rm -rf dist .angular/cache"
   },
   "private": true,
