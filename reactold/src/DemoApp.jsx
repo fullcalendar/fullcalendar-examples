@@ -4,7 +4,6 @@ import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
-import multiMonthPlugin from '@fullcalendar/multimonth'
 import { INITIAL_EVENTS, createEventId } from './event-utils'
 
 export default function DemoApp() {
@@ -43,7 +42,6 @@ export default function DemoApp() {
   }
 
   return (
-    
     <div className='demo-app'>
       <Sidebar
         weekendsVisible={weekendsVisible}
@@ -52,13 +50,13 @@ export default function DemoApp() {
       />
       <div className='demo-app-main'>
         <FullCalendar
-          plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin, multiMonthPlugin]}
+          plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
           headerToolbar={{
             left: 'prev,next today',
             center: 'title',
-            right: 'multiMonthYear,dayGridMonth,timeGridWeek,dayGridDay'
+            right: 'dayGridMonth,timeGridWeek,timeGridDay'
           }}
-          initialView='dayGridWeek'
+          initialView='dayGridMonth'
           editable={true}
           selectable={true}
           selectMirror={true}
@@ -69,11 +67,11 @@ export default function DemoApp() {
           eventContent={renderEventContent} // custom render function
           eventClick={handleEventClick}
           eventsSet={handleEvents} // called after events are initialized/added/changed/removed
-        /* you can update a remote database when these fire:
-        eventAdd={function(){}}
-        eventChange={function(){}}
-        eventRemove={function(){}}
-        */
+          /* you can update a remote database when these fire:
+          eventAdd={function(){}}
+          eventChange={function(){}}
+          eventRemove={function(){}}
+          */
         />
       </div>
     </div>
@@ -125,7 +123,7 @@ function Sidebar({ weekendsVisible, handleWeekendsToggle, currentEvents }) {
 function SidebarEvent({ event }) {
   return (
     <li key={event.id}>
-      <b>{formatDate(event.start, { year: 'numeric', month: 'short', day: 'numeric' })}</b>
+      <b>{formatDate(event.start, {year: 'numeric', month: 'short', day: 'numeric'})}</b>
       <i>{event.title}</i>
     </li>
   )
