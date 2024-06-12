@@ -11,6 +11,11 @@ export const INITIAL_EVENTS: EventInput[] = [
   },
   {
     id: createEventId(),
+    title: 'All-day event',
+    start: todayStr +  'T20:00:00'
+  },
+  {
+    id: createEventId(),
     title: 'Timed event',
     start: todayStr + 'T12:00:00'
   }
