@@ -1,5 +1,5 @@
 
-# FullCalendar Example Projects
+# [FullCalendar](https://fullcalendar.io/) Example Projects
 
 A collection of simple example projects to show how to use FullCalendar with various build setups.
 
