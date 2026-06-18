@@ -6,8 +6,9 @@
 
 <script lang="ts">
 import FullCalendar from '@fullcalendar/vue3'
-import interactionPlugin from '@fullcalendar/interaction'
-import timeGridPlugin from '@fullcalendar/timegrid'
+import classicThemePlugin from '@fullcalendar/vue3/themes/classic'
+import interactionPlugin from '@fullcalendar/vue3/interaction'
+import timeGridPlugin from '@fullcalendar/vue3/timegrid'
 
 export default {
   components: {
@@ -16,7 +17,7 @@ export default {
   data() {
     return {
       calendarOptions: {
-        plugins: [interactionPlugin, timeGridPlugin],
+        plugins: [classicThemePlugin, interactionPlugin, timeGridPlugin],
         initialView: 'timeGridWeek',
         nowIndicator: true,
         editable: true,

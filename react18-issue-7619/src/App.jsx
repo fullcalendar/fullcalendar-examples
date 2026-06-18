@@ -1,16 +1,21 @@
 import React, { useState } from 'react';
 import { addHours, startOfDay } from 'date-fns';
 import FullCalendar from '@fullcalendar/react';
-import momentPlugin from '@fullcalendar/moment';
-import timeGridPlugin from '@fullcalendar/timegrid';
-import scrollGrid from '@fullcalendar/scrollgrid';
-import interactionPlugin from '@fullcalendar/interaction';
+import themePlugin from '@fullcalendar/react/themes/classic';
+import momentPlugin from '@fullcalendar/format-moment';
+import timeGridPlugin from '@fullcalendar/react/timegrid';
+import scrollGrid from '@fullcalendar/react-scheduler/scrollgrid';
+import interactionPlugin from '@fullcalendar/react/interaction';
 
-function today() {
-  return startOfDay(new Date()); //new Date();
-}
+import '@fullcalendar/react/skeleton.css';
+import '@fullcalendar/react/themes/classic/theme.css';
+import '@fullcalendar/react/themes/classic/palette.css';
+
+const todayStr = new Date().toISOString().replace(/T.*$/, '') // YYYY-MM-DD of today
+const today = startOfDay(new Date(todayStr));
 
 const PLUGINS = [
+  themePlugin,
   momentPlugin,
   // resourceTimeGridPlugin,
   scrollGrid,
@@ -21,20 +26,20 @@ const PLUGINS = [
 const event = {
   id: '12',
   title: 'Hello',
-  start: addHours(today(), 10),
-  end: addHours(today(), 2),
-  backgroundColor: 'cyan',
-  textColor: 'black',
+  start: addHours(today, 10),
+  end: addHours(today, 2),
+  color: 'cyan',
+  contrastColor: 'black',
 };
 
 const ghost = {
   id: '12-ghost',
   title: 'Hello',
-  start: addHours(today(), 10),
-  end: addHours(today(), 2),
-  backgroundColor: 'yellow',
+  start: addHours(today, 10),
+  end: addHours(today, 2),
   display: 'background',
-  textColor: 'black',
+  color: 'yellow',
+  contrastColor: 'black',
 };
 
 export const DEFAULT_EVENT_BACKGROUND_COLOUR = '#F4F4F4';
@@ -76,7 +81,7 @@ export function App() {
         eventStartEditable={true}
         eventDurationEditable={true}
         eventDragMinDistance={30}
-        stickyHeaderDates={true}
+        tableHeaderSticky={true}
       />
     </div>
   );

@@ -1,8 +1,14 @@
 import { createContext } from "react";
-import { observable, action } from "mobx";
-import { EventInput, DateSelectArg, EventChangeArg } from "@fullcalendar/core";
+import { observable, action, makeObservable } from "mobx";
+import { EventInput, DateSelectInfo, EventChangeInfo } from "@fullcalendar/react";
+
+const todayStr = new Date().toISOString().replace(/T.*$/, '') // YYYY-MM-DD of today
 
 export class EventStore {
+  constructor() {
+    makeObservable(this);
+  }
+
   @observable
   weekendsVisible = true;
 
@@ -13,13 +19,13 @@ export class EventStore {
     {
       id: this.createEventId(),
       title: "All-day event",
-      start: new Date(),
+      start: todayStr,
       allDay: true,
     },
     {
       id: this.createEventId(),
       title: "Timed event",
-      start: new Date(),
+      start: todayStr + 'T12:00:00',
       allDay: false,
     },
   ];
@@ -33,7 +39,7 @@ export class EventStore {
   }
 
   @action
-  addEvent(selectInfo: DateSelectArg, title: string | null) {
+  addEvent(selectInfo: DateSelectInfo, title: string | null) {
     this.events.push({
       id: this.createEventId(),
       title: title || "New Event",
@@ -52,7 +58,7 @@ export class EventStore {
   }
 
   @action
-  changeEvent(changeInfo: EventChangeArg) {
+  changeEvent(changeInfo: EventChangeInfo) {
     const newEvent = changeInfo.event;
     const storedEvent = this.events.find((e) => e.id == changeInfo.event.id);
     if (storedEvent) {

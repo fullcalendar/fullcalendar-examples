@@ -1,10 +1,12 @@
 import { Component, signal, ChangeDetectorRef } from '@angular/core';
-import { CalendarOptions, DateSelectArg, EventClickArg, EventApi } from '@fullcalendar/core';
-import interactionPlugin from '@fullcalendar/interaction';
-import dayGridPlugin from '@fullcalendar/daygrid';
-import timeGridPlugin from '@fullcalendar/timegrid';
-import listPlugin from '@fullcalendar/list';
+import { CalendarOptions, DateSelectInfo, EventClickInfo, EventApi } from '@fullcalendar/angular';
+import classicThemePlugin from '@fullcalendar/angular/themes/classic';
+import interactionPlugin from '@fullcalendar/angular/interaction';
+import dayGridPlugin from '@fullcalendar/angular/daygrid';
+import timeGridPlugin from '@fullcalendar/angular/timegrid';
+import listPlugin from '@fullcalendar/angular/list';
 import { INITIAL_EVENTS, createEventId } from './event-utils';
+
 
 @Component({
   selector: 'app-root',
@@ -15,6 +17,7 @@ export class AppComponent {
   calendarVisible = signal(true);
   calendarOptions = signal<CalendarOptions>({
     plugins: [
+      classicThemePlugin,
       interactionPlugin,
       dayGridPlugin,
       timeGridPlugin,
@@ -56,7 +59,7 @@ export class AppComponent {
     });
   }
 
-  handleDateSelect(selectInfo: DateSelectArg) {
+  handleDateSelect(selectInfo: DateSelectInfo) {
     const title = prompt('Please enter a new title for your event');
     const calendarApi = selectInfo.view.calendar;
 
@@ -73,7 +76,7 @@ export class AppComponent {
     }
   }
 
-  handleEventClick(clickInfo: EventClickArg) {
+  handleEventClick(clickInfo: EventClickInfo) {
     if (confirm(`Are you sure you want to delete the event '${clickInfo.event.title}'`)) {
       clickInfo.event.remove();
     }

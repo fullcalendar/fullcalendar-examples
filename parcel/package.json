@@ -1,15 +1,12 @@
 {
   "private": true,
   "name": "@fullcalendar-examples/parcel",
-  "version": "0.0.0",
+  "version": "0.0.1-beta.1",
   "license": "ISC",
   "author": "Adam Shaw <arshaw@arshaw.com> (http://arshaw.com/)",
   "dependencies": {
-    "@fullcalendar/core": "^6.1.10",
-    "@fullcalendar/daygrid": "^6.1.10",
-    "@fullcalendar/interaction": "^6.1.10",
-    "@fullcalendar/list": "^6.1.10",
-    "@fullcalendar/timegrid": "^6.1.10"
+    "fullcalendar": "7.0.0-rc.3",
+    "temporal-polyfill": "^0.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.13.16",

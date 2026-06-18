@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@fullcalendar-examples/rollup-scheduler",
-  "version": "0.0.0",
+  "version": "0.0.1-beta.1",
   "license": "ISC",
   "author": "Adam Shaw <arshaw@arshaw.com> (http://arshaw.com/)",
   "scripts": {
@@ -10,14 +10,9 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@fullcalendar/adaptive": "^6.1.10",
-    "@fullcalendar/core": "^6.1.10",
-    "@fullcalendar/daygrid": "^6.1.10",
-    "@fullcalendar/interaction": "^6.1.10",
-    "@fullcalendar/list": "^6.1.10",
-    "@fullcalendar/resource": "^6.1.10",
-    "@fullcalendar/resource-timeline": "^6.1.10",
-    "@fullcalendar/timegrid": "^6.1.10"
+    "fullcalendar": "7.0.0-rc.3",
+    "fullcalendar-scheduler": "7.0.0-rc.3",
+    "temporal-polyfill": "^0.3.2"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^14.0.1",

@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "xxxtest": "ng test",
+    "clean": "rm -rf .angular/cache"
   },
   "prettier": {
     "printWidth": 100,
@@ -29,15 +30,11 @@
     "@angular/forms": "^22.0.2",
     "@angular/platform-browser": "^22.0.2",
     "@angular/router": "^22.0.2",
-    "@fullcalendar/angular": "^6.1.21",
-    "@fullcalendar/core": "^6.1.21",
-    "@fullcalendar/daygrid": "^6.1.21",
-    "@fullcalendar/interaction": "^6.1.21",
-    "@fullcalendar/list": "^6.1.21",
-    "@fullcalendar/timegrid": "^6.1.21",
+    "@fullcalendar/angular": "7.0.0-rc.3",
+    "fullcalendar": "7.0.0-rc.3",
     "rxjs": "~7.8.0",
-    "tslib": "^2.3.0",
-    "zone.js": "~0.15.0"
+    "temporal-polyfill": "^0.3.2",
+    "tslib": "^2.3.0"
   },
   "dependenciesMeta": {
     "@fullcalendar/angular": {

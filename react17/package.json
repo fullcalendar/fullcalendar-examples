@@ -2,22 +2,18 @@
   "private": true,
   "name": "@fullcalendar-examples/react17",
   "title": "FullCalendar React 17 Example Project",
-  "version": "0.0.0",
+  "version": "0.0.1-beta.1",
   "license": "ISC",
   "scripts": {
-    "clean": "rm -rf dist",
-    "build": "webpack",
-    "watch": "webpack --watch",
-    "start": "webpack serve"
+    "clean": "rm -rf dist node_modules/.vite",
+    "build": "vite build",
+    "dev": "vite"
   },
   "dependencies": {
-    "@fullcalendar/core": "^6.1.10",
-    "@fullcalendar/daygrid": "^6.1.10",
-    "@fullcalendar/interaction": "^6.1.10",
-    "@fullcalendar/react": "^6.1.10",
-    "@fullcalendar/timegrid": "^6.1.10",
+    "@fullcalendar/react": "7.0.0-rc.3",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "temporal-polyfill": "^0.3.2"
   },
   "dependenciesMeta": {
     "@fullcalendar/react": {
@@ -25,19 +21,7 @@
     }
   },
   "devDependencies": {
-    "@babel/core": "^7.4.0",
-    "@babel/plugin-proposal-class-properties": "^7.0.0",
-    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
-    "@babel/plugin-proposal-throw-expressions": "^7.0.0",
-    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
-    "@babel/preset-env": "^7.0.0-beta.51",
-    "@babel/preset-react": "^7.0.0-beta.51",
-    "babel-loader": "^8.1.0",
-    "css-loader": "^4.3.0",
-    "html-webpack-plugin": "^4.5.0",
-    "style-loader": "^2.0.0",
-    "webpack": "^5.3.0",
-    "webpack-cli": "^4.1.0",
-    "webpack-dev-server": "^3.11.0"
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.0.11"
   }
 }

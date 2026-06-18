@@ -1,9 +1,14 @@
-import { Calendar, DayHeaderContentArg } from '@fullcalendar/core';
-import { Component, createElement } from '@fullcalendar/core/preact';
-import interactionPlugin from '@fullcalendar/interaction';
-import dayGridPlugin from '@fullcalendar/daygrid';
-import timeGridPlugin from '@fullcalendar/timegrid';
-import listPlugin from '@fullcalendar/list';
+import { Calendar, DayHeaderInfo } from 'fullcalendar';
+import { Component, createElement } from 'fullcalendar/preact';
+import interactionPlugin from 'fullcalendar/interaction';
+import dayGridPlugin from 'fullcalendar/daygrid';
+import timeGridPlugin from 'fullcalendar/timegrid';
+import listPlugin from 'fullcalendar/list';
+import classicThemePlugin from 'fullcalendar/themes/classic';
+
+import 'fullcalendar/skeleton.css';
+import 'fullcalendar/themes/classic/theme.css';
+import 'fullcalendar/themes/classic/palette.css';
 import './index.css';
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -16,7 +21,13 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   let calendar = new Calendar(calendarEl, {
-    plugins: [ interactionPlugin, dayGridPlugin, timeGridPlugin, listPlugin ],
+    plugins: [
+      classicThemePlugin,
+      interactionPlugin,
+      dayGridPlugin,
+      timeGridPlugin,
+      listPlugin,
+    ],
     headerToolbar: {
       left: 'prev,next today',
       center: 'title',
@@ -26,8 +37,8 @@ document.addEventListener('DOMContentLoaded', function() {
     navLinks: true, // can click day/week names to navigate views
     editable: true,
     dayMaxEvents: true, // allow "more" link when too many events
-    dayHeaderContent(arg: DayHeaderContentArg) {
-      return createElement(CustomDayHeader, { text: arg.text })
+    dayHeaderContent(info: DayHeaderInfo) {
+      return createElement(CustomDayHeader, { text: info.text })
     },
     events: [
       {

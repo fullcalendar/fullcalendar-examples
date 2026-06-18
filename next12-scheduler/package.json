@@ -9,14 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@fullcalendar/core": "^6.1.10",
-    "@fullcalendar/interaction": "^6.1.10",
-    "@fullcalendar/react": "^6.1.10",
-    "@fullcalendar/resource": "^6.1.10",
-    "@fullcalendar/resource-timeline": "^6.1.10",
+    "@fullcalendar/react": "7.0.0-rc.3",
+    "@fullcalendar/react-scheduler": "7.0.0-rc.3",
     "next": "^12.3.2",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "temporal-polyfill": "^0.3.2"
+  },
+  "dependenciesMeta": {
+    "@fullcalendar/react": {
+      "injected": true
+    },
+    "@fullcalendar/react-scheduler": {
+      "injected": true
+    }
   },
   "devDependencies": {
     "eslint": "^8.26.0",

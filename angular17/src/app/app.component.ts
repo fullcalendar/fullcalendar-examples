@@ -1,18 +1,18 @@
-import { Component , signal, ChangeDetectorRef } from '@angular/core';
+import { Component, signal, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
-import { FullCalendarModule } from '@fullcalendar/angular';
-import { CalendarOptions, DateSelectArg, EventClickArg, EventApi } from '@fullcalendar/core';
-import interactionPlugin from '@fullcalendar/interaction';
-import dayGridPlugin from '@fullcalendar/daygrid';
-import timeGridPlugin from '@fullcalendar/timegrid';
-import listPlugin from '@fullcalendar/list';
+import { FullCalendarModule, CalendarOptions, DateSelectInfo, EventClickInfo, EventApi } from '@fullcalendar/angular';
+import interactionPlugin from '@fullcalendar/angular/interaction';
+import dayGridPlugin from '@fullcalendar/angular/daygrid';
+import timeGridPlugin from '@fullcalendar/angular/timegrid';
+import listPlugin from '@fullcalendar/angular/list';
+import themePlugin from '@fullcalendar/angular/themes/classic';
 import { INITIAL_EVENTS, createEventId } from './event-utils';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, FullCalendarModule],
+  imports: [CommonModule, FullCalendarModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -24,6 +24,7 @@ export class AppComponent {
       dayGridPlugin,
       timeGridPlugin,
       listPlugin,
+      themePlugin,
     ],
     headerToolbar: {
       left: 'prev,next today',
@@ -62,7 +63,7 @@ export class AppComponent {
     }));
   }
 
-  handleDateSelect(selectInfo: DateSelectArg) {
+  handleDateSelect(selectInfo: DateSelectInfo) {
     const title = prompt('Please enter a new title for your event');
     const calendarApi = selectInfo.view.calendar;
 
@@ -79,7 +80,7 @@ export class AppComponent {
     }
   }
 
-  handleEventClick(clickInfo: EventClickArg) {
+  handleEventClick(clickInfo: EventClickInfo) {
     if (confirm(`Are you sure you want to delete the event '${clickInfo.event.title}'`)) {
       clickInfo.event.remove();
     }

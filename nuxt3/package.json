@@ -11,11 +11,8 @@
     "clean": "rm -rf .nuxt .output"
   },
   "dependencies": {
-    "@fullcalendar/core": "^6.1.10",
-    "@fullcalendar/daygrid": "^6.1.10",
-    "@fullcalendar/interaction": "^6.1.10",
-    "@fullcalendar/timegrid": "^6.1.10",
-    "@fullcalendar/vue3": "^6.1.10",
-    "nuxt": "^3.3.1"
+    "@fullcalendar/vue3": "7.0.0-rc.3",
+    "nuxt": "^3.3.1",
+    "temporal-polyfill": "^0.3.2"
   }
 }

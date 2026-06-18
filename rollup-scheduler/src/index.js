@@ -1,17 +1,30 @@
-import { Calendar } from '@fullcalendar/core';
-import adaptivePlugin from '@fullcalendar/adaptive';
-import interactionPlugin from '@fullcalendar/interaction';
-import dayGridPlugin from '@fullcalendar/daygrid';
-import listPlugin from '@fullcalendar/list';
-import timeGridPlugin from '@fullcalendar/timegrid';
-import resourceTimelinePlugin from '@fullcalendar/resource-timeline';
+import { Calendar } from 'fullcalendar';
+import interactionPlugin from 'fullcalendar/interaction';
+import dayGridPlugin from 'fullcalendar/daygrid';
+import timeGridPlugin from 'fullcalendar/timegrid';
+import listPlugin from 'fullcalendar/list';
+import classicThemePlugin from 'fullcalendar/themes/classic';
+import adaptivePlugin from 'fullcalendar-scheduler/adaptive';
+import resourceTimelinePlugin from 'fullcalendar-scheduler/resource-timeline';
+
+import 'fullcalendar/skeleton.css';
+import 'fullcalendar/themes/classic/theme.css';
+import 'fullcalendar/themes/classic/palette.css';
 import './index.css'
 
 document.addEventListener('DOMContentLoaded', function() {
   let calendarEl = document.getElementById('calendar');
 
   let calendar = new Calendar(calendarEl, {
-    plugins: [ adaptivePlugin, interactionPlugin, dayGridPlugin, listPlugin, timeGridPlugin, resourceTimelinePlugin ],
+    plugins: [
+      classicThemePlugin,
+      adaptivePlugin,
+      interactionPlugin,
+      dayGridPlugin,
+      listPlugin,
+      timeGridPlugin,
+      resourceTimelinePlugin,
+    ],
     now: '2018-02-07',
     editable: true, // enable draggable events
     aspectRatio: 1.8,
@@ -26,10 +39,14 @@ document.addEventListener('DOMContentLoaded', function() {
       resourceTimelineThreeDays: {
         type: 'resourceTimeline',
         duration: { days: 3 },
-        buttonText: '3 day'
       }
     },
-    resourceAreaHeaderContent: 'Rooms',
+    buttons: {
+      resourceTimelineThreeDays: {
+        text: '3 day',
+      }
+    },
+    resourceColumnHeaderContent: 'Rooms',
     resources: [
       { id: 'a', title: 'Auditorium A' },
       { id: 'b', title: 'Auditorium B', eventColor: 'green' },
